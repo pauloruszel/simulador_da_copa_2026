@@ -287,32 +287,6 @@ Exemplo de saida:
   - Sem mudanca em A05: Mexico x South Africa.
 ```
 
-Use com baixa frequencia, idealmente uma vez por dia ou manualmente apos uma rodada. Nao ha scraping de odds por padrao, porque odds sao dados comerciais e geralmente tem termos/anti-bot mais restritivos.
-
-## API-FOOTBALL Opcional
-
-A integracao com API-FOOTBALL/API-SPORTS esta em `src/external/api_football_client.py`. Ela usa `league=1` e `season=2026`.
-
-Para configurar a chave no PowerShell:
-
-```powershell
-$env:API_FOOTBALL_KEY="SUA_CHAVE_AQUI"
-```
-
-Para salvar no usuario do Windows:
-
-```powershell
-[Environment]::SetEnvironmentVariable("API_FOOTBALL_KEY", "SUA_CHAVE_AQUI", "User")
-```
-
-Depois abra um novo terminal e rode:
-
-```bash
-python main.py --update-results
-```
-
-Observacao: o plano gratis da API-FOOTBALL pode nao liberar a temporada 2026. Nesse caso, use o scraping gratuito.
-
 ## Dados
 
 - `data/groups.json`: grupos.
