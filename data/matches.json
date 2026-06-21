@@ -22,7 +22,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -33,7 +33,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -43,11 +43,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.538738Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "A02",
@@ -72,7 +72,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -83,7 +83,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -93,17 +93,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.538738Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "A03",
     "group": "A",
-    "home": "Mexico",
-    "away": "Czechia",
+    "home": "Czechia",
+    "away": "Mexico",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -121,7 +121,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -131,7 +131,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -140,17 +140,17 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.538738Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "A04",
     "group": "A",
-    "home": "South Korea",
-    "away": "South Africa",
+    "home": "South Africa",
+    "away": "South Korea",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -168,7 +168,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -178,7 +178,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -187,11 +187,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.538738Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "A05",
@@ -216,7 +216,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -227,7 +227,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -237,11 +237,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.538738Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "A06",
@@ -266,7 +266,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -277,7 +277,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -287,17 +287,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.538738Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "B01",
     "group": "B",
-    "home": "Canada",
-    "away": "Switzerland",
+    "home": "Switzerland",
+    "away": "Canada",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -315,7 +315,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -325,7 +325,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -334,11 +334,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.539739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "B02",
@@ -361,7 +361,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -371,7 +371,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -380,11 +380,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.539739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "last_verified_at": "2026-06-21T22:37:11.552274Z",
     "venue": "Seattle Stadium, Seattle"
   },
   {
@@ -409,7 +409,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -420,7 +420,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -430,18 +430,18 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.539739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "last_verified_at": "2026-06-21T22:37:11.551266Z",
     "venue": "Toronto Stadium, Toronto"
   },
   {
     "id": "B04",
     "group": "B",
-    "home": "Switzerland",
-    "away": "Qatar",
+    "home": "Qatar",
+    "away": "Switzerland",
     "home_score": 1,
     "away_score": 1,
     "status": "finished",
@@ -460,7 +460,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -471,7 +471,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -481,11 +481,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.539739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "B05",
@@ -510,7 +510,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -521,7 +521,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -531,11 +531,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.539739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "B06",
@@ -559,7 +559,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -570,7 +570,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -580,11 +580,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.539739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "last_verified_at": "2026-06-21T22:37:11.551266Z",
     "venue": "Los Angeles Stadium, Los Angeles"
   },
   {
@@ -610,7 +610,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -621,7 +621,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -631,17 +631,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.540740Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "C02",
     "group": "C",
-    "home": "Scotland",
-    "away": "Haiti",
+    "home": "Haiti",
+    "away": "Scotland",
     "home_score": 0,
     "away_score": 1,
     "status": "finished",
@@ -660,7 +660,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -671,7 +671,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -681,11 +681,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.540740Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "C03",
@@ -709,7 +709,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -719,7 +719,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -728,11 +728,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.540740Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "C04",
@@ -756,7 +756,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -766,7 +766,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -775,11 +775,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.540740Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "C05",
@@ -804,7 +804,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -815,7 +815,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -825,17 +825,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.540740Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "C06",
     "group": "C",
-    "home": "Morocco",
-    "away": "Scotland",
+    "home": "Scotland",
+    "away": "Morocco",
     "home_score": 0,
     "away_score": 1,
     "status": "finished",
@@ -854,7 +854,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -865,7 +865,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -875,11 +875,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.540740Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "D01",
@@ -903,7 +903,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -914,7 +914,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -924,11 +924,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.541735Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "last_verified_at": "2026-06-21T22:37:11.551266Z",
     "venue": "Los Angeles Stadium, Los Angeles"
   },
   {
@@ -954,7 +954,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -965,7 +965,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -975,11 +975,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.541735Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "D03",
@@ -1003,7 +1003,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1014,7 +1014,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1024,18 +1024,18 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.541735Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "last_verified_at": "2026-06-21T22:37:11.552274Z",
     "venue": "Seattle Stadium, Seattle"
   },
   {
     "id": "D04",
     "group": "D",
-    "home": "Paraguay",
-    "away": "Turkey",
+    "home": "Turkey",
+    "away": "Paraguay",
     "home_score": 0,
     "away_score": 1,
     "status": "finished",
@@ -1054,7 +1054,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1065,7 +1065,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1075,17 +1075,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.541735Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "D05",
     "group": "D",
-    "home": "United States",
-    "away": "Turkey",
+    "home": "Turkey",
+    "away": "United States",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -1102,7 +1102,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1112,7 +1112,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1121,11 +1121,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.541735Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "last_verified_at": "2026-06-21T22:37:11.552274Z",
     "venue": "Los Angeles Stadium, Los Angeles"
   },
   {
@@ -1150,7 +1150,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1160,7 +1160,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1169,11 +1169,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.541735Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "E01",
@@ -1198,7 +1198,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1209,7 +1209,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1219,11 +1219,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.541735Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "last_verified_at": "2026-06-21T22:37:11.552274Z",
     "live_home_score": 1,
     "live_away_score": 1,
     "live_status": "unknown"
@@ -1251,7 +1251,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1262,7 +1262,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1272,11 +1272,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.542731Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "last_verified_at": "2026-06-21T22:37:11.552274Z",
     "live_home_score": 0,
     "live_away_score": 0,
     "live_status": "unknown"
@@ -1284,8 +1284,8 @@
   {
     "id": "E03",
     "group": "E",
-    "home": "Germany",
-    "away": "Ecuador",
+    "home": "Ecuador",
+    "away": "Germany",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -1303,7 +1303,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1313,7 +1313,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1322,17 +1322,17 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.542731Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "E04",
     "group": "E",
-    "home": "Ivory Coast",
-    "away": "Curacao",
+    "home": "Curacao",
+    "away": "Ivory Coast",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -1350,7 +1350,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1360,7 +1360,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1369,11 +1369,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.542731Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "E05",
@@ -1398,7 +1398,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1409,7 +1409,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1419,11 +1419,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.541735Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "E06",
@@ -1448,7 +1448,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1459,7 +1459,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1469,11 +1469,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.541735Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "F01",
@@ -1498,7 +1498,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1509,7 +1509,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1519,20 +1519,20 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "F02",
     "group": "F",
-    "home": "Japan",
-    "away": "Tunisia",
-    "home_score": null,
-    "away_score": null,
-    "status": "scheduled",
+    "home": "Tunisia",
+    "away": "Japan",
+    "home_score": 0,
+    "away_score": 4,
+    "status": "finished",
     "date": "2026-06-21T04:00:00Z",
     "provider_id": "400021475",
     "source": "wikipedia",
@@ -1544,33 +1544,36 @@
         "confidence": 1.0,
         "fields": [
           "status",
+          "score",
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
         "confidence": 0.82,
         "fields": [
           "status",
+          "score",
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
         "confidence": 0.75,
         "fields": [
           "status",
+          "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "F03",
@@ -1595,7 +1598,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1606,7 +1609,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1616,11 +1619,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "F04",
@@ -1645,7 +1648,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1656,7 +1659,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1666,17 +1669,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "F05",
     "group": "F",
-    "home": "Netherlands",
-    "away": "Tunisia",
+    "home": "Tunisia",
+    "away": "Netherlands",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -1694,7 +1697,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1704,7 +1707,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1713,17 +1716,17 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "F06",
     "group": "F",
-    "home": "Sweden",
-    "away": "Japan",
+    "home": "Japan",
+    "away": "Sweden",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -1741,7 +1744,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1751,7 +1754,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1760,11 +1763,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "G01",
@@ -1789,7 +1792,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1800,7 +1803,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1810,11 +1813,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "G02",
@@ -1839,7 +1842,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1850,7 +1853,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1860,20 +1863,20 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "G03",
     "group": "G",
     "home": "Belgium",
     "away": "Iran",
-    "home_score": null,
-    "away_score": null,
-    "status": "scheduled",
+    "home_score": 0,
+    "away_score": 0,
+    "status": "finished",
     "date": "2026-06-21T19:00:00Z",
     "provider_id": "400021477",
     "source": "wikipedia",
@@ -1885,39 +1888,45 @@
         "confidence": 1.0,
         "fields": [
           "status",
+          "score",
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
         "confidence": 0.82,
         "fields": [
           "status",
+          "score",
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
         "confidence": 0.75,
         "fields": [
           "status",
+          "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z",
+    "live_home_score": 0,
+    "live_away_score": 0,
+    "live_status": "unknown"
   },
   {
     "id": "G04",
     "group": "G",
-    "home": "Egypt",
-    "away": "New Zealand",
+    "home": "New Zealand",
+    "away": "Egypt",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -1935,7 +1944,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1945,7 +1954,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -1954,17 +1963,17 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "G05",
     "group": "G",
-    "home": "Belgium",
-    "away": "New Zealand",
+    "home": "New Zealand",
+    "away": "Belgium",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -1982,7 +1991,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -1992,7 +2001,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2001,11 +2010,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "G06",
@@ -2029,7 +2038,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2039,7 +2048,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2048,17 +2057,17 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.543739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "H01",
     "group": "H",
-    "home": "Spain",
-    "away": "Uruguay",
+    "home": "Uruguay",
+    "away": "Spain",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -2076,7 +2085,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2086,7 +2095,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2095,17 +2104,17 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.544739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "H02",
     "group": "H",
-    "home": "Saudi Arabia",
-    "away": "Cape Verde",
+    "home": "Cape Verde",
+    "away": "Saudi Arabia",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -2123,7 +2132,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2133,7 +2142,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2142,20 +2151,20 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.544739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "H03",
     "group": "H",
     "home": "Spain",
     "away": "Saudi Arabia",
-    "home_score": null,
-    "away_score": null,
-    "status": "scheduled",
+    "home_score": 4,
+    "away_score": 0,
+    "status": "finished",
     "date": "2026-06-21T16:00:00Z",
     "provider_id": "400021483",
     "source": "wikipedia",
@@ -2167,33 +2176,39 @@
         "confidence": 1.0,
         "fields": [
           "status",
+          "score",
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
         "confidence": 0.82,
         "fields": [
           "status",
+          "score",
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
         "confidence": 0.75,
         "fields": [
           "status",
+          "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.544739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z",
+    "live_home_score": 3,
+    "live_away_score": 0,
+    "live_status": "unknown"
   },
   {
     "id": "H04",
@@ -2214,10 +2229,11 @@
         "confidence": 1.0,
         "fields": [
           "status",
+          "live_score",
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2227,7 +2243,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2236,11 +2252,14 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.544739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z",
+    "live_home_score": 0,
+    "live_away_score": 1,
+    "live_status": "unknown"
   },
   {
     "id": "H05",
@@ -2265,7 +2284,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2276,7 +2295,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2286,17 +2305,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.544739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "H06",
     "group": "H",
-    "home": "Uruguay",
-    "away": "Saudi Arabia",
+    "home": "Saudi Arabia",
+    "away": "Uruguay",
     "home_score": 1,
     "away_score": 1,
     "status": "finished",
@@ -2315,7 +2334,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2326,7 +2345,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2336,17 +2355,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.544739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "I01",
     "group": "I",
-    "home": "France",
-    "away": "Norway",
+    "home": "Norway",
+    "away": "France",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -2364,7 +2383,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2374,7 +2393,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2383,11 +2402,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.545739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "I02",
@@ -2411,7 +2430,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2421,7 +2440,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2430,11 +2449,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.545739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "I03",
@@ -2459,7 +2478,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2470,7 +2489,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2480,17 +2499,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.545739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "I04",
     "group": "I",
-    "home": "Norway",
-    "away": "Iraq",
+    "home": "Iraq",
+    "away": "Norway",
     "home_score": 1,
     "away_score": 4,
     "status": "finished",
@@ -2509,7 +2528,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2520,7 +2539,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2530,11 +2549,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.545739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "I05",
@@ -2558,7 +2577,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2568,7 +2587,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2577,11 +2596,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.545739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "I06",
@@ -2605,7 +2624,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2615,7 +2634,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2624,11 +2643,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.545739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "J01",
@@ -2652,7 +2671,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2662,7 +2681,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2671,17 +2690,17 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.546731Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "J02",
     "group": "J",
-    "home": "Algeria",
-    "away": "Jordan",
+    "home": "Jordan",
+    "away": "Algeria",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -2699,7 +2718,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2709,7 +2728,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2718,11 +2737,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.546731Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "J03",
@@ -2747,7 +2766,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2758,7 +2777,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2768,11 +2787,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.546731Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "J04",
@@ -2797,7 +2816,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2808,7 +2827,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2818,17 +2837,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.546731Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "J05",
     "group": "J",
-    "home": "Argentina",
-    "away": "Jordan",
+    "home": "Jordan",
+    "away": "Argentina",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -2846,7 +2865,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2856,7 +2875,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2865,17 +2884,17 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.546731Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "J06",
     "group": "J",
-    "home": "Austria",
-    "away": "Algeria",
+    "home": "Algeria",
+    "away": "Austria",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -2893,7 +2912,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2903,7 +2922,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2912,17 +2931,17 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.546731Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "K01",
     "group": "K",
-    "home": "Portugal",
-    "away": "Colombia",
+    "home": "Colombia",
+    "away": "Portugal",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -2940,7 +2959,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2950,7 +2969,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -2959,11 +2978,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.547739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "K02",
@@ -2987,7 +3006,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -2997,7 +3016,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -3006,11 +3025,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.547739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "K03",
@@ -3035,7 +3054,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -3046,7 +3065,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -3056,17 +3075,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.547739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "K04",
     "group": "K",
-    "home": "Colombia",
-    "away": "Uzbekistan",
+    "home": "Uzbekistan",
+    "away": "Colombia",
     "home_score": 1,
     "away_score": 3,
     "status": "finished",
@@ -3085,7 +3104,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -3096,7 +3115,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -3106,11 +3125,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.547739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "K05",
@@ -3134,7 +3153,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -3144,7 +3163,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -3153,11 +3172,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.547739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "K06",
@@ -3181,7 +3200,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -3191,7 +3210,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -3200,11 +3219,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.019654Z"
+        "fetched_at": "2026-06-21T22:37:11.547739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "L01",
@@ -3228,7 +3247,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -3238,7 +3257,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -3247,17 +3266,17 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.035706Z"
+        "fetched_at": "2026-06-21T22:37:11.548739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "L02",
     "group": "L",
-    "home": "Croatia",
-    "away": "Panama",
+    "home": "Panama",
+    "away": "Croatia",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -3275,7 +3294,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -3285,7 +3304,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -3294,11 +3313,11 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.035706Z"
+        "fetched_at": "2026-06-21T22:37:11.548739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "L03",
@@ -3323,7 +3342,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -3334,7 +3353,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -3344,11 +3363,11 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.035706Z"
+        "fetched_at": "2026-06-21T22:37:11.548739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "L04",
@@ -3373,7 +3392,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -3384,7 +3403,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -3394,17 +3413,17 @@
           "score",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.035706Z"
+        "fetched_at": "2026-06-21T22:37:11.548739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.551266Z"
   },
   {
     "id": "L05",
     "group": "L",
-    "home": "England",
-    "away": "Panama",
+    "home": "Panama",
+    "away": "England",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -3422,7 +3441,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -3432,7 +3451,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -3441,17 +3460,17 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.035706Z"
+        "fetched_at": "2026-06-21T22:37:11.548739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   },
   {
     "id": "L06",
     "group": "L",
-    "home": "Ghana",
-    "away": "Croatia",
+    "home": "Croatia",
+    "away": "Ghana",
     "home_score": null,
     "away_score": null,
     "status": "scheduled",
@@ -3469,7 +3488,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.543545Z"
+        "fetched_at": "2026-06-21T22:37:11.158653Z"
       },
       {
         "name": "openfootball_json",
@@ -3479,7 +3498,7 @@
           "date",
           "venue"
         ],
-        "fetched_at": "2026-06-21T03:31:33.685730Z"
+        "fetched_at": "2026-06-21T22:37:11.296328Z"
       },
       {
         "name": "wikipedia",
@@ -3488,10 +3507,10 @@
           "status",
           "date"
         ],
-        "fetched_at": "2026-06-21T03:31:34.035706Z"
+        "fetched_at": "2026-06-21T22:37:11.548739Z"
       }
     ],
     "resolved_confidence": "high",
-    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+    "last_verified_at": "2026-06-21T22:37:11.552274Z"
   }
 ]

@@ -217,6 +217,7 @@ class MultiSourceResultsUpdater:
             f"Warnings: {len(report.get('warnings', []))}",
             "",
             "Resumo de campos criticos:",
+            f"- team_order_updated: {_field_total(report, 'team_order')}",
             f"- score_final_updated: {_field_total(report, 'score_final_updated')}",
             f"- live_score_detected: {_field_total(report, 'live_score_detected')}",
             f"- live_score_not_applied: {_field_total(report, 'live_score_not_applied')}",
@@ -236,7 +237,7 @@ class MultiSourceResultsUpdater:
         lines += ["", "Campos atualizados por fonte:"]
         for source, fields in report.get("fields_by_source", {}).items():
             lines.append(f"- {source}:")
-            for field in ("score_final_updated", "score", "live_score_detected", "live_score_not_applied", "status", "date", "venue", "provider_id", "metadata"):
+            for field in ("team_order", "score_final_updated", "score", "live_score_detected", "live_score_not_applied", "status", "date", "venue", "provider_id", "metadata"):
                 lines.append(f"  - {field}: {fields.get(field, 0)}")
         if not report.get("fields_by_source"):
             lines.append("- nenhum")

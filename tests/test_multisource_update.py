@@ -462,3 +462,90 @@ def test_match_from_dict_accepts_live_score_metadata_without_breaking_domain_mod
     assert match.home_score is None
     assert match.away_score is None
     assert not hasattr(match, "future_metadata_field")
+
+
+def test_match_data_resolver_reorients_reversed_source_by_provider_id():
+    local = [{
+        "id": "D04",
+        "group": "D",
+        "home": "Paraguay",
+        "away": "Turkey",
+        "home_score": 0,
+        "away_score": 1,
+        "status": "finished",
+        "provider_id": "400021460",
+    }]
+    external = {
+        "id": "31",
+        "group": "D",
+        "provider_id": "400021460",
+        "home": "Türkiye",
+        "away": "Paraguay",
+        "home_score": 0,
+        "away_score": 1,
+        "status": "finished",
+        "source": "fifa_official",
+    }
+
+    result = resolve_match_updates(
+        local,
+        {"fifa_official": [external]},
+        {source["name"]: source for source in _config()["sources"]},
+        _config()["field_priority"],
+    )
+
+    match = result["matches"][0]
+    assert match["home"] == "Turkey"
+    assert match["away"] == "Paraguay"
+    assert match["home_score"] == 0
+    assert match["away_score"] == 1
+    assert result["conflicts"] == []
+    assert result["changed"] == ["D04: Turkey x Paraguay"]
+    assert result["fields_by_source"]["fifa_official"]["team_order"] == 1
+
+
+def test_match_data_resolver_normalizes_scores_before_conflict_detection_when_order_differs():
+    local = [{
+        "id": "F02",
+        "group": "F",
+        "home": "Japan",
+        "away": "Tunisia",
+        "home_score": 0,
+        "away_score": 4,
+        "status": "finished",
+        "provider_id": "400021475",
+    }]
+    fifa = {
+        "provider_id": "400021475",
+        "group": "F",
+        "home": "Tunisia",
+        "away": "Japan",
+        "home_score": 0,
+        "away_score": 4,
+        "status": "finished",
+        "source": "fifa_official",
+    }
+    wiki = {
+        "group": "F",
+        "home": "Tunisia",
+        "away": "Japan",
+        "home_score": 0,
+        "away_score": 4,
+        "status": "finished",
+        "source": "wikipedia",
+    }
+
+    result = resolve_match_updates(
+        local,
+        {"fifa_official": [fifa], "wikipedia": [wiki]},
+        {source["name"]: source for source in _config()["sources"]},
+        _config()["field_priority"],
+    )
+
+    match = result["matches"][0]
+    assert result["conflicts"] == []
+    assert match["home"] == "Tunisia"
+    assert match["away"] == "Japan"
+    assert match["home_score"] == 0
+    assert match["away_score"] == 4
+    assert match["resolved_confidence"] == "high"

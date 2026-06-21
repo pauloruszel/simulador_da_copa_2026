@@ -62,7 +62,7 @@ def resolve_match_updates(
                     "reason": "ambiguous_or_missing",
                 })
                 continue
-            candidate = dict(external)
+            candidate = _canonical_candidate(external)
             candidate["source"] = source_name
             candidates_by_idx[idx].append(candidate)
             candidate_rows += 1
@@ -153,11 +153,28 @@ def _resolve_one(
     conflicts: list[dict[str, Any]] = []
     field_changes: list[tuple[str, str]] = []
     fetched_at = _now()
-    score_values = _score_values(candidates)
+
+    # Match ids/provider ids are stable, but some upstream sources may list the
+    # teams in the opposite home/away order from older local data. Scores must
+    # always be interpreted in the same orientation as the canonical match row.
+    # Prefer the highest-priority source for the team order, then normalize every
+    # candidate score to that order before comparing/updating scores.
+    team_order_source = _pick_team_order_source(candidates, field_priority)
+    if team_order_source:
+        order_candidate = next(item for item in candidates if item["source"] == team_order_source)
+        if _same_team_set(current, order_candidate):
+            canonical_home = _team_name(order_candidate.get("home"))
+            canonical_away = _team_name(order_candidate.get("away"))
+            if canonical_home and canonical_away and (merged.get("home") != canonical_home or merged.get("away") != canonical_away):
+                merged["home"] = canonical_home
+                merged["away"] = canonical_away
+                field_changes.append((team_order_source, "team_order"))
+
+    score_values = _score_values(candidates, merged.get("home"), merged.get("away"))
     score_conflict = len({value for value in score_values.values() if value is not None}) > 1
 
     if score_conflict:
-        conflicts.append(_conflict_row(current, "score", current.get("home_score"), score_values, "score_conflict"))
+        conflicts.append(_conflict_row(merged, "score", (merged.get("home_score"), merged.get("away_score")), score_values, "score_conflict"))
     else:
         score_source = _pick_source(candidates, "score", field_priority)
         if score_source and score_values.get(score_source) is not None:
@@ -276,13 +293,29 @@ def _pick_live_score_source(candidates: list[dict[str, Any]], field_priority: di
     return None
 
 
-def _score_values(candidates: list[dict[str, Any]]) -> dict[str, tuple[int, int] | None]:
+def _score_values(
+    candidates: list[dict[str, Any]],
+    target_home: str | None = None,
+    target_away: str | None = None,
+) -> dict[str, tuple[int, int] | None]:
     values = {}
     for item in candidates:
+        source = item["source"]
         if not _has_field(item, "score"):
-            values[item["source"]] = None
+            values[source] = None
+            continue
+        item_home = _team_name(item.get("home"))
+        item_away = _team_name(item.get("away"))
+        raw_score = (item["home_score"], item["away_score"])
+        if target_home and target_away:
+            if item_home == target_home and item_away == target_away:
+                values[source] = raw_score
+            elif item_home == target_away and item_away == target_home:
+                values[source] = (raw_score[1], raw_score[0])
+            else:
+                values[source] = None
         else:
-            values[item["source"]] = (item["home_score"], item["away_score"])
+            values[source] = raw_score
     return values
 
 
@@ -345,6 +378,32 @@ def _team_name(name: str | None) -> str | None:
     if name is None:
         return None
     return TEAM_ALIASES.get(name, name)
+
+def _canonical_candidate(candidate: dict[str, Any]) -> dict[str, Any]:
+    out = dict(candidate)
+    if out.get("home") is not None:
+        out["home"] = _team_name(str(out.get("home")))
+    if out.get("away") is not None:
+        out["away"] = _team_name(str(out.get("away")))
+    return out
+
+
+def _same_team_set(left: dict[str, Any], right: dict[str, Any]) -> bool:
+    left_teams = {_team_name(left.get("home")), _team_name(left.get("away"))}
+    right_teams = {_team_name(right.get("home")), _team_name(right.get("away"))}
+    return None not in left_teams and left_teams == right_teams
+
+
+def _pick_team_order_source(candidates: list[dict[str, Any]], field_priority: dict[str, list[str]]) -> str | None:
+    priorities = field_priority.get("team_order") or field_priority.get("score") or []
+    for source in priorities:
+        if any(item["source"] == source and item.get("home") and item.get("away") for item in candidates):
+            return source
+    for item in candidates:
+        if item.get("home") and item.get("away"):
+            return item["source"]
+    return None
+
 
 
 def _is_knockout_placeholder_match(match: dict[str, Any]) -> bool:
@@ -473,7 +532,7 @@ def _parse_datetime(value: str | None) -> datetime | None:
 
 
 def _material_changed(current: dict[str, Any], resolved: dict[str, Any]) -> bool:
-    material_fields = ("home_score", "away_score", "status", "date", "venue")
+    material_fields = ("home", "away", "home_score", "away_score", "status", "date", "venue")
     return any(current.get(field) != resolved.get(field) for field in material_fields)
 
 

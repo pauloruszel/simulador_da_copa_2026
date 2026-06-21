@@ -33,10 +33,13 @@ def _scenario_label(model: str) -> str:
 
 def _simulation_step_message(team: str, team_row: dict) -> str:
     return (
-        f"{team}: campeao={team_row['winner_pct']:.2f}%, final={team_row['final_pct']:.2f}%, "
-        f"quartas={team_row.get('quarterfinal_pct', 0):.2f}%, semi={team_row['semifinal_pct']:.2f}%, "
-        f"final={team_row['final_pct']:.2f}%, campeao={team_row['winner_pct']:.2f}%, "
-        f"mata_mata={team_row['round32_pct']:.2f}%, adversario_mata_mata={team_row.get('most_common_round32_opponent', '')}"
+        f"{team}: mata_mata={team_row['round32_pct']:.2f}%, "
+        f"oitavas={team_row.get('round16_pct', 0):.2f}%, "
+        f"quartas={team_row.get('quarterfinal_pct', 0):.2f}%, "
+        f"semi={team_row['semifinal_pct']:.2f}%, "
+        f"final={team_row['final_pct']:.2f}%, "
+        f"campeao={team_row['winner_pct']:.2f}%, "
+        f"adversario_mata_mata={team_row.get('most_common_round32_opponent', '')}"
     )
 
 
