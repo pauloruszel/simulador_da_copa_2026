@@ -1,0 +1,10 @@
+{
+  "action": "workflow_team",
+  "command": "python main.py --workflow full --team Japan --global-report --simulations 200000 --seed 42",
+  "returncode": 0,
+  "ok": true,
+  "stdout": "[ok] weight files comparison: output/weights_comparison_Japan.csv\n[ok] workflow full\n  [ok] source-health-check: fifa_official=ok(104), openfootball_json=ok(104), wikipedia=ok(72)\n  [ok] dry-run-multisource: alteradas=0, live_score=0, metadata=72, conflitos=0, warnings=0\n  [ok] update-results-multisource-only: alteradas=0, live_score=0, metadata=72, conflitos=0, warnings=0\n  [ok] audit-group: grupo F auditado para Japan\n  [ok] backtest: jogos=35, Brier=0.637, LogLoss=1.055\n  [ok] tune-weights: testadas=300, original=0.637, melhor=0.625, melhora=0.011\n  [ok] simulation-balanced: Japan: campeao=0.43%, final=1.52%, quartas=13.00%, semi=4.56%, final=1.52%, campeao=0.43%, mata_mata=79.05%, adversario_mata_mata=Brazil\n  [ok] simulation-tuned: Japan: campeao=0.44%, final=1.56%, quartas=13.23%, semi=4.68%, final=1.56%, campeao=0.44%, mata_mata=76.04%, adversario_mata_mata=Brazil\n  [ok] global-report: panorama geral gerado; favorito Modelo Padrão=Argentina\n  [ok] compare-weight-files: comparacao gerada para Japan\n  Relatorio: output\\workflows\\latest_full_report.txt\n",
+  "stderr": "",
+  "started_at": "2026-06-21T03:31:31.937800+00:00",
+  "finished_at": "2026-06-21T03:38:36.742545+00:00"
+}

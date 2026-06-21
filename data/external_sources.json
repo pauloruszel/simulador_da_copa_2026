@@ -1,0 +1,46 @@
+{
+  "sources": {
+    "fifa": {
+      "enabled": false,
+      "type": "official",
+      "base_url": "https://www.fifa.com",
+      "notes": "Fonte oficial para calendario, grupos, partidas e ranking quando houver endpoint publico estavel configurado"
+    },
+    "api_football": {
+      "enabled": false,
+      "type": "api",
+      "base_url": "https://v3.football.api-sports.io",
+      "api_key_env": "API_FOOTBALL_KEY",
+      "league": 1,
+      "season": 2026,
+      "max_odds_fixtures": 10,
+      "notes": "API-FOOTBALL/API-SPORTS para fixtures, resultados, status, standings, predictions e odds da Copa 2026"
+    },
+    "wikipedia": {
+      "enabled": true,
+      "type": "scraping",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+      "notes": "Fonte publica gratuita para scraping leve de fixtures/resultados; usar no maximo diariamente"
+    },
+    "football_data": {
+      "enabled": false,
+      "type": "api",
+      "base_url": null,
+      "api_key_env": "FOOTBALL_DATA_API_KEY",
+      "notes": "Provider futuro para placares e partidas"
+    },
+    "odds": {
+      "enabled": false,
+      "type": "api",
+      "base_url": null,
+      "api_key_env": "ODDS_API_KEY",
+      "notes": "Provider futuro para odds pre-jogo"
+    },
+    "elo": {
+      "enabled": false,
+      "type": "static_or_api",
+      "base_url": null,
+      "notes": "Provider futuro para ratings Elo"
+    }
+  }
+}

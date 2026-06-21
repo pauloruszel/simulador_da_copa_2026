@@ -1,0 +1,20 @@
+{
+  "round_of_32": [
+    {"match_id":73,"slot_a":"2A","slot_b":"2B"},{"match_id":74,"slot_a":"1E","slot_b":"3A/B/C/D/F"},{"match_id":75,"slot_a":"1F","slot_b":"2C"},{"match_id":76,"slot_a":"1C","slot_b":"2F"},{"match_id":77,"slot_a":"1I","slot_b":"3C/D/F/G/H"},{"match_id":78,"slot_a":"2E","slot_b":"2I"},{"match_id":79,"slot_a":"1A","slot_b":"3C/E/F/H/I"},{"match_id":80,"slot_a":"1L","slot_b":"3E/H/I/J/K"},{"match_id":81,"slot_a":"1D","slot_b":"3B/E/F/I/J"},{"match_id":82,"slot_a":"1G","slot_b":"3A/E/H/I/J"},{"match_id":83,"slot_a":"2K","slot_b":"2L"},{"match_id":84,"slot_a":"1H","slot_b":"2J"},{"match_id":85,"slot_a":"1B","slot_b":"3E/F/G/I/J"},{"match_id":86,"slot_a":"1J","slot_b":"2H"},{"match_id":87,"slot_a":"1K","slot_b":"3D/E/I/J/L"},{"match_id":88,"slot_a":"2D","slot_b":"2G"}
+  ],
+  "round_of_16": [
+    {"match_id":89,"slot_a":"W73","slot_b":"W75"},{"match_id":90,"slot_a":"W74","slot_b":"W77"},{"match_id":91,"slot_a":"W76","slot_b":"W78"},{"match_id":92,"slot_a":"W79","slot_b":"W80"},{"match_id":93,"slot_a":"W83","slot_b":"W84"},{"match_id":94,"slot_a":"W81","slot_b":"W82"},{"match_id":95,"slot_a":"W86","slot_b":"W88"},{"match_id":96,"slot_a":"W85","slot_b":"W87"}
+  ],
+  "quarterfinals": [
+    {"match_id":97,"slot_a":"W89","slot_b":"W90"},{"match_id":98,"slot_a":"W93","slot_b":"W94"},{"match_id":99,"slot_a":"W91","slot_b":"W92"},{"match_id":100,"slot_a":"W95","slot_b":"W96"}
+  ],
+  "semifinals": [
+    {"match_id":101,"slot_a":"W97","slot_b":"W98"},{"match_id":102,"slot_a":"W99","slot_b":"W100"}
+  ],
+  "final": [
+    {"match_id":104,"slot_a":"W101","slot_b":"W102"}
+  ],
+  "third_place": [
+    {"match_id":103,"slot_a":"L101","slot_b":"L102"}
+  ]
+}

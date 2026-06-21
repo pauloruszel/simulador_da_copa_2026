@@ -1,0 +1,152 @@
+Workflow: full
+Team: Brazil
+Simulacoes: 50000
+Seed: 42
+
+Secao executiva
+Status geral: ATENCAO
+Melhor modelo pelo backtest: modelo atual (Brier 0.623, Log Loss 1.041)
+
+Secao executiva global
+Top favoritos ao titulo - balanced:
+1. Argentina (J) - 20.86%
+2. France (I) - 13.93%
+3. England (L) - 12.55%
+4. Spain (H) - 12.48%
+5. Brazil (C) - 8.79%
+6. Portugal (K) - 7.23%
+7. Germany (E) - 4.48%
+8. Netherlands (F) - 4.20%
+9. Morocco (C) - 3.29%
+10. Belgium (G) - 2.50%
+Top favoritos ao titulo - tuned:
+1. Argentina (J) - 20.84%
+2. France (I) - 14.35%
+3. Spain (H) - 12.29%
+4. England (L) - 11.97%
+5. Brazil (C) - 8.48%
+6. Portugal (K) - 7.10%
+7. Germany (E) - 4.68%
+8. Netherlands (F) - 4.36%
+9. Morocco (C) - 3.12%
+10. Belgium (G) - 2.41%
+Grupos mais indefinidos para liderança:
+- Grupo B: Canada 52.28%, Switzerland 47.72%, gap liderança 4.56%
+- Grupo H: Spain 59.16%, Uruguay 29.65%, gap liderança 29.51%
+- Grupo G: Belgium 51.50%, Egypt 20.65%, gap liderança 30.85%
+- Grupo K: Portugal 55.12%, Uzbekistan 21.99%, gap liderança 33.13%
+- Grupo F: Netherlands 77.18%, Sweden 10.95%, gap liderança 66.23%
+Grupos mais indefinidos para classificação:
+- Grupo L: Ghana 82.95%, Croatia 77.75%, gap classificação 5.19%
+- Grupo G: Egypt 70.81%, Iran 58.93%, gap classificação 11.87%
+- Grupo F: Sweden 90.26%, Japan 78.29%, gap classificação 11.97%
+- Grupo C: Morocco 81.06%, Scotland 63.05%, gap classificação 18.02%
+- Grupo K: Uzbekistan 76.72%, DR Congo 58.51%, gap classificação 18.21%
+Seleções mais sensíveis à calibração:
+- Maior alta no tuned: United States (0.52% título)
+- Maior queda no tuned: England (-0.59% título)
+- Maior variação absoluta: England (-0.59% título)
+Maiores riscos globais:
+- Liderancas mais indefinidas: Grupo B (gap 4.56%); Grupo H (gap 29.51%); Grupo G (gap 30.85%)
+- Classificacoes mais indefinidas: Grupo L (2v3 5.19%); Grupo G (2v3 11.87%); Grupo F (2v3 11.97%)
+- Concentracao dos 5 maiores favoritos ao titulo: 68.62%
+- Favoritos com maior risco antes do R32: Croatia elim. grupo 22.25%; Morocco elim. grupo 18.94%; Uruguay elim. grupo 18.71%; Belgium elim. grupo 10.36%; Portugal elim. grupo 7.14%
+
+Secao executiva do time
+Time analisado: Brazil
+Probabilidades principais:
+- balanced: campeao 8.79%, final 16.22%, semi 30.88%, R32 100.00%
+- tuned: campeao 8.48%, final 16.20%, semi 30.05%, R32 100.00%
+Principal adversario provavel no R32: Japan
+Maiores riscos do caminho:
+- Adversarios mais provaveis no R32: Japan (40.34%); Sweden (33.22%); Netherlands (24.39%); Tunisia (0.83%); Germany (0.74%)
+- Estagios de eliminacao mais frequentes: Round of 32 (29.52%); Quarterfinal (23.31%); Round of 16 (16.29%); Semifinal (14.66%); Final (7.43%)
+- Maior funil estimado: quartas -> semi no balanced, queda de 23.31%
+- Maior funil estimado: quartas -> semi no tuned, queda de 22.08%
+Arquivos gerados:
+- output/audit_group_C.txt
+- output/backtest_errors_top.csv
+- output/backtest_report.txt
+- output/backtest_results.csv
+- output/best_model_weights.json
+- output/global_group_leadership_outlook.csv
+- output/global_group_outlook.csv
+- output/global_group_qualification_outlook.csv
+- output/global_model_sensitivity.csv
+- output/global_risk_report.txt
+- output/global_stage_probabilities.csv
+- output/global_title_ranking.csv
+- output/group_integrity_report.txt
+- output/latest_global_report.txt
+- output/model_explanation.txt
+- output/multisource_update_report.txt
+- output/probabilities.csv
+- output/probabilities.json
+- output/rating_breakdown.csv
+- output/rating_breakdown.json
+- output/source_health_report.txt
+- output/summary.txt
+- output/team_paths_Brazil.json
+- output/weights_comparison_Brazil.csv
+- output/weights_comparison_Brazil.txt
+- output\workflows\2026-06-21_01-51-16_full_report.txt
+- output\workflows\latest_full_report.txt
+- output\workflows\latest_report.txt
+Recomendacao executiva: dados confiaveis com alerta leve: ha placar live/nao-final ignorado com seguranca
+
+Etapas:
+[ok] source-health-check - fifa_official=ok(104), openfootball_json=ok(104), wikipedia=ok(72)
+  output: output/source_health_report.txt
+[warning] dry-run-multisource - alteradas=0, live_score=0, metadata=72, conflitos=0, warnings=1
+  output: output/multisource_update_report.txt
+  output: output/group_integrity_report.txt
+[ok] update-results-multisource-only - alteradas=0, live_score=0, metadata=72, conflitos=0, warnings=1
+  output: output/multisource_update_report.txt
+  output: output/group_integrity_report.txt
+[ok] audit-group - grupo C auditado para Brazil
+  output: output/audit_group_C.txt
+[ok] backtest - jogos=34, Brier=0.623, LogLoss=1.041
+  output: output/backtest_report.txt
+  output: output/backtest_results.csv
+  output: output/backtest_errors_top.csv
+[ok] tune-weights - testadas=300, original=0.623, melhor=0.617, melhora=0.007
+  output: output/best_model_weights.json
+[ok] simulation-balanced - Brazil: campeao=8.79%, final=16.22%, semi=30.88%, R32=100.00%, adversario_R32=Japan
+  output: output/probabilities.csv
+  output: output/probabilities.json
+  output: output/summary.txt
+  output: output/team_paths_Brazil.json
+  output: output/model_explanation.txt
+  output: output/rating_breakdown.csv
+  output: output/rating_breakdown.json
+[ok] simulation-tuned - Brazil: campeao=8.48%, final=16.20%, semi=30.05%, R32=100.00%, adversario_R32=Japan
+  output: output/probabilities.csv
+  output: output/probabilities.json
+  output: output/summary.txt
+  output: output/team_paths_Brazil.json
+  output: output/model_explanation.txt
+  output: output/rating_breakdown.csv
+  output: output/rating_breakdown.json
+[ok] global-report - panorama geral gerado; favorito balanced=Argentina
+  output: output/latest_global_report.txt
+  output: output/global_title_ranking.csv
+  output: output/global_stage_probabilities.csv
+  output: output/global_group_outlook.csv
+  output: output/global_group_leadership_outlook.csv
+  output: output/global_group_qualification_outlook.csv
+  output: output/global_model_sensitivity.csv
+  output: output/global_risk_report.txt
+[ok] compare-weight-files - comparacao gerada para Brazil
+  output: output/weights_comparison_Brazil.csv
+  output: output/weights_comparison_Brazil.txt
+
+Metricas principais:
+dry_run: {"changed_real": 0, "non_final_score_detected": 0, "metadata_only": 72, "conflicts": 0, "warnings": 1}
+update: {"changed_real": 0, "non_final_score_detected": 0, "metadata_only": 72, "conflicts": 0, "warnings": 1}
+backtest: {"matches": 34, "brier": 0.6233847914036377, "log_loss": 1.0408601462055564, "uniform_brier": 0.6666666666666667, "uniform_log_loss": 1.0986122886681098, "rating_brier": 0.6319241144786153, "rating_log_loss": 1.0513369554543186}
+tuning: {"tested": 300, "baseline_brier": 0.6233847914036377, "best_brier": 0.6166196200820527, "improvement": 0.00676517132158494}
+balanced: {"winner_pct": 8.788, "final_pct": 16.222, "semifinal_pct": 30.884, "quarterfinal_pct": 54.196, "round16_pct": 70.484, "round32_pct": 100.0, "group_winner_pct": 94.036, "group_runner_up_pct": 4.732, "best_third_pct": 1.232, "group_eliminated_pct": 0.0, "winner_ci_low": 8.539834113193228, "winner_ci_high": 9.036165886806772, "most_common_round32_opponent": "Japan"}
+tuned: {"winner_pct": 8.476, "final_pct": 16.2, "semifinal_pct": 30.054, "quarterfinal_pct": 52.134, "round16_pct": 69.226, "round32_pct": 100.0, "group_winner_pct": 89.936, "group_runner_up_pct": 8.234, "best_third_pct": 1.83, "group_eliminated_pct": 0.0, "winner_ci_low": 8.231862754990624, "winner_ci_high": 8.720137245009377, "most_common_round32_opponent": "Japan"}
+global_report: {"top_title_balanced": [{"team": "Argentina", "group": "J", "pct": 20.862, "winner_pct": 20.862, "final_pct": 32.02, "semifinal_pct": 48.292, "round32_pct": 99.976}, {"team": "France", "group": "I", "pct": 13.934, "winner_pct": 13.934, "final_pct": 24.77, "semifinal_pct": 38.544, "round32_pct": 99.892}, {"team": "England", "group": "L", "pct": 12.554, "winner_pct": 12.554, "final_pct": 21.876, "semifinal_pct": 39.3, "round32_pct": 99.966}, {"team": "Spain", "group": "H", "pct": 12.484, "winner_pct": 12.484, "final_pct": 22.102, "semifinal_pct": 36.468, "round32_pct": 93.466}, {"team": "Brazil", "group": "C", "pct": 8.788, "winner_pct": 8.788, "final_pct": 16.222, "semifinal_pct": 30.884, "round32_pct": 100.0}, {"team": "Portugal", "group": "K", "pct": 7.226, "winner_pct": 7.226, "final_pct": 14.09, "semifinal_pct": 26.354, "round32_pct": 92.86}, {"team": "Germany", "group": "E", "pct": 4.482, "winner_pct": 4.482, "final_pct": 10.696, "semifinal_pct": 20.284, "round32_pct": 100.0}, {"team": "Netherlands", "group": "F", "pct": 4.198, "winner_pct": 4.198, "final_pct": 9.74, "semifinal_pct": 18.97, "round32_pct": 100.0}, {"team": "Morocco", "group": "C", "pct": 3.286, "winner_pct": 3.286, "final_pct": 7.91, "semifinal_pct": 15.166, "round32_pct": 81.064}, {"team": "Belgium", "group": "G", "pct": 2.502, "winner_pct": 2.502, "final_pct": 6.842, "semifinal_pct": 16.096, "round32_pct": 89.642}], "top_title_tuned": [{"team": "Argentina", "group": "J", "pct": 20.842, "winner_pct": 20.842, "final_pct": 31.66, "semifinal_pct": 47.94, "round32_pct": 99.946}, {"team": "France", "group": "I", "pct": 14.348, "winner_pct": 14.348, "final_pct": 24.77, "semifinal_pct": 38.522, "round32_pct": 99.766}, {"team": "Spain", "group": "H", "pct": 12.288, "winner_pct": 12.288, "final_pct": 21.436, "semifinal_pct": 34.666, "round32_pct": 89.782}, {"team": "England", "group": "L", "pct": 11.966, "winner_pct": 11.966, "final_pct": 21.074, "semifinal_pct": 37.634, "round32_pct": 99.83}, {"team": "Brazil", "group": "C", "pct": 8.476, "winner_pct": 8.476, "final_pct": 16.2, "semifinal_pct": 30.054, "round32_pct": 100.0}, {"team": "Portugal", "group": "K", "pct": 7.102, "winner_pct": 7.102, "final_pct": 13.682, "semifinal_pct": 25.554, "round32_pct": 88.714}, {"team": "Germany", "group": "E", "pct": 4.676, "winner_pct": 4.676, "final_pct": 10.874, "semifinal_pct": 21.434, "round32_pct": 100.0}, {"team": "Netherlands", "group": "F", "pct": 4.362, "winner_pct": 4.362, "final_pct": 10.15, "semifinal_pct": 19.846, "round32_pct": 100.0}, {"team": "Morocco", "group": "C", "pct": 3.12, "winner_pct": 3.12, "final_pct": 7.192, "semifinal_pct": 13.834, "round32_pct": 70.55}, {"team": "Belgium", "group": "G", "pct": 2.406, "winner_pct": 2.406, "final_pct": 6.34, "semifinal_pct": 15.05, "round32_pct": 86.04}], "top_final_balanced": [{"team": "Argentina", "group": "J", "pct": 32.02, "winner_pct": 20.862, "final_pct": 32.02, "semifinal_pct": 48.292, "round32_pct": 99.976}, {"team": "France", "group": "I", "pct": 24.77, "winner_pct": 13.934, "final_pct": 24.77, "semifinal_pct": 38.544, "round32_pct": 99.892}, {"team": "Spain", "group": "H", "pct": 22.102, "winner_pct": 12.484, "final_pct": 22.102, "semifinal_pct": 36.468, "round32_pct": 93.466}, {"team": "England", "group": "L", "pct": 21.876, "winner_pct": 12.554, "final_pct": 21.876, "semifinal_pct": 39.3, "round32_pct": 99.966}, {"team": "Brazil", "group": "C", "pct": 16.222, "winner_pct": 8.788, "final_pct": 16.222, "semifinal_pct": 30.884, "round32_pct": 100.0}, {"team": "Portugal", "group": "K", "pct": 14.09, "winner_pct": 7.226, "final_pct": 14.09, "semifinal_pct": 26.354, "round32_pct": 92.86}, {"team": "Germany", "group": "E", "pct": 10.696, "winner_pct": 4.482, "final_pct": 10.696, "semifinal_pct": 20.284, "round32_pct": 100.0}, {"team": "Netherlands", "group": "F", "pct": 9.74, "winner_pct": 4.198, "final_pct": 9.74, "semifinal_pct": 18.97, "round32_pct": 100.0}, {"team": "Morocco", "group": "C", "pct": 7.91, "winner_pct": 3.286, "final_pct": 7.91, "semifinal_pct": 15.166, "round32_pct": 81.064}, {"team": "Belgium", "group": "G", "pct": 6.842, "winner_pct": 2.502, "final_pct": 6.842, "semifinal_pct": 16.096, "round32_pct": 89.642}], "top_semifinal_balanced": [{"team": "Argentina", "group": "J", "pct": 48.292, "winner_pct": 20.862, "final_pct": 32.02, "semifinal_pct": 48.292, "round32_pct": 99.976}, {"team": "England", "group": "L", "pct": 39.3, "winner_pct": 12.554, "final_pct": 21.876, "semifinal_pct": 39.3, "round32_pct": 99.966}, {"team": "France", "group": "I", "pct": 38.544, "winner_pct": 13.934, "final_pct": 24.77, "semifinal_pct": 38.544, "round32_pct": 99.892}, {"team": "Spain", "group": "H", "pct": 36.468, "winner_pct": 12.484, "final_pct": 22.102, "semifinal_pct": 36.468, "round32_pct": 93.466}, {"team": "Brazil", "group": "C", "pct": 30.884, "winner_pct": 8.788, "final_pct": 16.222, "semifinal_pct": 30.884, "round32_pct": 100.0}, {"team": "Portugal", "group": "K", "pct": 26.354, "winner_pct": 7.226, "final_pct": 14.09, "semifinal_pct": 26.354, "round32_pct": 92.86}, {"team": "Germany", "group": "E", "pct": 20.284, "winner_pct": 4.482, "final_pct": 10.696, "semifinal_pct": 20.284, "round32_pct": 100.0}, {"team": "Netherlands", "group": "F", "pct": 18.97, "winner_pct": 4.198, "final_pct": 9.74, "semifinal_pct": 18.97, "round32_pct": 100.0}, {"team": "United States", "group": "D", "pct": 16.712, "winner_pct": 1.826, "final_pct": 5.942, "semifinal_pct": 16.712, "round32_pct": 100.0}, {"team": "Belgium", "group": "G", "pct": 16.096, "winner_pct": 2.502, "final_pct": 6.842, "semifinal_pct": 16.096, "round32_pct": 89.642}], "most_uncertain_groups_balanced": [{"model": "balanced", "group": "G", "favorite_to_win_group": "Belgium", "favorite_group_winner_pct": 51.5, "winner_gap_pct": 30.854, "qualification_gap_2v3_pct": 11.873999999999995, "uncertainty_score": 80.53399999999999, "teams_by_round32_pct": "Belgium (89.64%); Egypt (70.81%); Iran (58.93%); New Zealand (40.45%)"}, {"model": "balanced", "group": "K", "favorite_to_win_group": "Portugal", "favorite_group_winner_pct": 55.124, "winner_gap_pct": 33.134, "qualification_gap_2v3_pct": 18.209999999999994, "uncertainty_score": 75.8204, "teams_by_round32_pct": "Portugal (92.86%); Uzbekistan (76.72%); DR Congo (58.51%); Colombia (54.53%)"}, {"model": "balanced", "group": "H", "favorite_to_win_group": "Spain", "favorite_group_winner_pct": 59.16, "winner_gap_pct": 29.505999999999997, "qualification_gap_2v3_pct": 29.180000000000007, "uncertainty_score": 70.6896, "teams_by_round32_pct": "Spain (93.47%); Uruguay (81.29%); Saudi Arabia (52.11%); Cape Verde (39.68%)"}, {"model": "balanced", "group": "F", "favorite_to_win_group": "Netherlands", "favorite_group_winner_pct": 77.176, "winner_gap_pct": 66.23, "qualification_gap_2v3_pct": 11.971999999999994, "uncertainty_score": 66.3248, "teams_by_round32_pct": "Netherlands (100.00%); Sweden (90.26%); Japan (78.29%); Tunisia (12.17%)"}, {"model": "balanced", "group": "L", "favorite_to_win_group": "England", "favorite_group_winner_pct": 90.058, "winner_gap_pct": 82.792, "qualification_gap_2v3_pct": 5.191999999999993, "uncertainty_score": 63.76800000000001, "teams_by_round32_pct": "England (99.97%); Ghana (82.95%); Croatia (77.75%); Panama (7.06%)"}], "most_uncertain_leadership_groups_balanced": [{"model": "balanced", "group": "B", "favorite_to_win_group": "Canada", "favorite_group_winner_pct": 52.278, "second_group_winner_candidate": "Switzerland", "second_group_winner_pct": 47.722, "leadership_gap_pct": 4.555999999999997, "leadership_uncertainty_score": 95.444, "teams_by_group_winner_pct": "Canada (52.28%); Switzerland (47.72%); Bosnia and Herzegovina (0.00%); Qatar (0.00%)"}, {"model": "balanced", "group": "H", "favorite_to_win_group": "Spain", "favorite_group_winner_pct": 59.16, "second_group_winner_candidate": "Uruguay", "second_group_winner_pct": 29.654, "leadership_gap_pct": 29.505999999999997, "leadership_uncertainty_score": 70.494, "teams_by_group_winner_pct": "Spain (59.16%); Uruguay (29.65%); Saudi Arabia (7.21%); Cape Verde (3.98%)"}, {"model": "balanced", "group": "G", "favorite_to_win_group": "Belgium", "favorite_group_winner_pct": 51.5, "second_group_winner_candidate": "Egypt", "second_group_winner_pct": 20.646, "leadership_gap_pct": 30.854, "leadership_uncertainty_score": 69.146, "teams_by_group_winner_pct": "Belgium (51.50%); Egypt (20.65%); Iran (19.44%); New Zealand (8.42%)"}, {"model": "balanced", "group": "K", "favorite_to_win_group": "Portugal", "favorite_group_winner_pct": 55.124, "second_group_winner_candidate": "Uzbekistan", "second_group_winner_pct": 21.99, "leadership_gap_pct": 33.134, "leadership_uncertainty_score": 66.866, "teams_by_group_winner_pct": "Portugal (55.12%); Uzbekistan (21.99%); Colombia (12.20%); DR Congo (10.69%)"}, {"model": "balanced", "group": "F", "favorite_to_win_group": "Netherlands", "favorite_group_winner_pct": 77.176, "second_group_winner_candidate": "Sweden", "second_group_winner_pct": 10.946, "leadership_gap_pct": 66.23, "leadership_uncertainty_score": 33.769999999999996, "teams_by_group_winner_pct": "Netherlands (77.18%); Sweden (10.95%); Japan (10.51%); Tunisia (1.37%)"}], "most_uncertain_qualification_groups_balanced": [{"model": "balanced", "group": "L", "second_round32_candidate": "Ghana", "second_round32_pct": 82.946, "third_round32_candidate": "Croatia", "third_round32_pct": 77.754, "qualification_gap_2v3_pct": 5.191999999999993, "qualification_uncertainty_score": 94.808, "teams_by_round32_pct": "England (99.97%); Ghana (82.95%); Croatia (77.75%); Panama (7.06%)"}, {"model": "balanced", "group": "G", "second_round32_candidate": "Egypt", "second_round32_pct": 70.806, "third_round32_candidate": "Iran", "third_round32_pct": 58.932, "qualification_gap_2v3_pct": 11.873999999999995, "qualification_uncertainty_score": 88.126, "teams_by_round32_pct": "Belgium (89.64%); Egypt (70.81%); Iran (58.93%); New Zealand (40.45%)"}, {"model": "balanced", "group": "F", "second_round32_candidate": "Sweden", "second_round32_pct": 90.262, "third_round32_candidate": "Japan", "third_round32_pct": 78.29, "qualification_gap_2v3_pct": 11.971999999999994, "qualification_uncertainty_score": 88.028, "teams_by_round32_pct": "Netherlands (100.00%); Sweden (90.26%); Japan (78.29%); Tunisia (12.17%)"}, {"model": "balanced", "group": "C", "second_round32_candidate": "Morocco", "second_round32_pct": 81.064, "third_round32_candidate": "Scotland", "third_round32_pct": 63.048, "qualification_gap_2v3_pct": 18.01599999999999, "qualification_uncertainty_score": 81.98400000000001, "teams_by_round32_pct": "Brazil (100.00%); Morocco (81.06%); Scotland (63.05%); Haiti (20.57%)"}, {"model": "balanced", "group": "K", "second_round32_candidate": "Uzbekistan", "second_round32_pct": 76.722, "third_round32_candidate": "DR Congo", "third_round32_pct": 58.512, "qualification_gap_2v3_pct": 18.209999999999994, "qualification_uncertainty_score": 81.79, "teams_by_round32_pct": "Portugal (92.86%); Uzbekistan (76.72%); DR Congo (58.51%); Colombia (54.53%)"}], "model_sensitivity_top_gains": [{"team": "United States", "group": "D", "balanced_winner_pct": 1.826, "tuned_winner_pct": 2.342, "delta_winner_pct": 0.516, "delta_final_pct": 1.032, "delta_semifinal_pct": 1.4819999999999993, "delta_round32_pct": 0.0, "delta_group_eliminated_pct": 0.0, "abs_delta_winner_pct": 0.516}, {"team": "France", "group": "I", "balanced_winner_pct": 13.934, "tuned_winner_pct": 14.348, "delta_winner_pct": 0.4140000000000015, "delta_final_pct": 0.0, "delta_semifinal_pct": -0.021999999999998465, "delta_round32_pct": -0.12599999999999056, "delta_group_eliminated_pct": 0.126, "abs_delta_winner_pct": 0.4140000000000015}, {"team": "Germany", "group": "E", "balanced_winner_pct": 4.482, "tuned_winner_pct": 4.676, "delta_winner_pct": 0.19399999999999995, "delta_final_pct": 0.17800000000000082, "delta_semifinal_pct": 1.1500000000000021, "delta_round32_pct": 0.0, "delta_group_eliminated_pct": 0.0, "abs_delta_winner_pct": 0.19399999999999995}, {"team": "Mexico", "group": "A", "balanced_winner_pct": 0.482, "tuned_winner_pct": 0.648, "delta_winner_pct": 0.16600000000000004, "delta_final_pct": 0.44599999999999973, "delta_semifinal_pct": 1.0939999999999994, "delta_round32_pct": 0.0, "delta_group_eliminated_pct": 0.0, "abs_delta_winner_pct": 0.16600000000000004}, {"team": "Netherlands", "group": "F", "balanced_winner_pct": 4.198, "tuned_winner_pct": 4.362, "delta_winner_pct": 0.1639999999999997, "delta_final_pct": 0.41000000000000014, "delta_semifinal_pct": 0.8760000000000012, "delta_round32_pct": 0.0, "delta_group_eliminated_pct": 0.0, "abs_delta_winner_pct": 0.1639999999999997}], "model_sensitivity_top_drops": [{"team": "England", "group": "L", "balanced_winner_pct": 12.554, "tuned_winner_pct": 11.966, "delta_winner_pct": -0.588000000000001, "delta_final_pct": -0.8019999999999996, "delta_semifinal_pct": -1.6659999999999968, "delta_round32_pct": -0.13599999999999568, "delta_group_eliminated_pct": 0.136, "abs_delta_winner_pct": 0.588000000000001}, {"team": "Brazil", "group": "C", "balanced_winner_pct": 8.788, "tuned_winner_pct": 8.476, "delta_winner_pct": -0.3119999999999994, "delta_final_pct": -0.022000000000002018, "delta_semifinal_pct": -0.8300000000000018, "delta_round32_pct": 0.0, "delta_group_eliminated_pct": 0.0, "abs_delta_winner_pct": 0.3119999999999994}, {"team": "Spain", "group": "H", "balanced_winner_pct": 12.484, "tuned_winner_pct": 12.288, "delta_winner_pct": -0.19599999999999973, "delta_final_pct": -0.6660000000000004, "delta_semifinal_pct": -1.8020000000000067, "delta_round32_pct": -3.6839999999999975, "delta_group_eliminated_pct": 3.684, "abs_delta_winner_pct": 0.19599999999999973}, {"team": "Morocco", "group": "C", "balanced_winner_pct": 3.286, "tuned_winner_pct": 3.12, "delta_winner_pct": -0.16599999999999993, "delta_final_pct": -0.718, "delta_semifinal_pct": -1.3320000000000007, "delta_round32_pct": -10.513999999999996, "delta_group_eliminated_pct": 10.514, "abs_delta_winner_pct": 0.16599999999999993}, {"team": "Portugal", "group": "K", "balanced_winner_pct": 7.226, "tuned_winner_pct": 7.102, "delta_winner_pct": -0.12399999999999967, "delta_final_pct": -0.4079999999999995, "delta_semifinal_pct": -0.8000000000000007, "delta_round32_pct": -4.146000000000001, "delta_group_eliminated_pct": 4.146, "abs_delta_winner_pct": 0.12399999999999967}], "model_sensitivity_abs": [{"team": "England", "group": "L", "balanced_winner_pct": 12.554, "tuned_winner_pct": 11.966, "delta_winner_pct": -0.588000000000001, "delta_final_pct": -0.8019999999999996, "delta_semifinal_pct": -1.6659999999999968, "delta_round32_pct": -0.13599999999999568, "delta_group_eliminated_pct": 0.136, "abs_delta_winner_pct": 0.588000000000001}, {"team": "United States", "group": "D", "balanced_winner_pct": 1.826, "tuned_winner_pct": 2.342, "delta_winner_pct": 0.516, "delta_final_pct": 1.032, "delta_semifinal_pct": 1.4819999999999993, "delta_round32_pct": 0.0, "delta_group_eliminated_pct": 0.0, "abs_delta_winner_pct": 0.516}, {"team": "France", "group": "I", "balanced_winner_pct": 13.934, "tuned_winner_pct": 14.348, "delta_winner_pct": 0.4140000000000015, "delta_final_pct": 0.0, "delta_semifinal_pct": -0.021999999999998465, "delta_round32_pct": -0.12599999999999056, "delta_group_eliminated_pct": 0.126, "abs_delta_winner_pct": 0.4140000000000015}, {"team": "Brazil", "group": "C", "balanced_winner_pct": 8.788, "tuned_winner_pct": 8.476, "delta_winner_pct": -0.3119999999999994, "delta_final_pct": -0.022000000000002018, "delta_semifinal_pct": -0.8300000000000018, "delta_round32_pct": 0.0, "delta_group_eliminated_pct": 0.0, "abs_delta_winner_pct": 0.3119999999999994}, {"team": "Spain", "group": "H", "balanced_winner_pct": 12.484, "tuned_winner_pct": 12.288, "delta_winner_pct": -0.19599999999999973, "delta_final_pct": -0.6660000000000004, "delta_semifinal_pct": -1.8020000000000067, "delta_round32_pct": -3.6839999999999975, "delta_group_eliminated_pct": 3.684, "abs_delta_winner_pct": 0.19599999999999973}], "top_round32_risks_balanced": [{"team": "Croatia", "group": "L", "winner_pct": 1.044, "group_eliminated_pct": 22.246}, {"team": "Morocco", "group": "C", "winner_pct": 3.286, "group_eliminated_pct": 18.936}, {"team": "Uruguay", "group": "H", "winner_pct": 1.572, "group_eliminated_pct": 18.71}, {"team": "Belgium", "group": "G", "winner_pct": 2.502, "group_eliminated_pct": 10.358}, {"team": "Portugal", "group": "K", "winner_pct": 7.226, "group_eliminated_pct": 7.14}, {"team": "Spain", "group": "H", "winner_pct": 12.484, "group_eliminated_pct": 6.534}, {"team": "France", "group": "I", "winner_pct": 13.934, "group_eliminated_pct": 0.108}, {"team": "England", "group": "L", "winner_pct": 12.554, "group_eliminated_pct": 0.034}, {"team": "Argentina", "group": "J", "winner_pct": 20.862, "group_eliminated_pct": 0.024}, {"team": "Brazil", "group": "C", "winner_pct": 8.788, "group_eliminated_pct": 0.0}], "files": ["output/latest_global_report.txt", "output/global_title_ranking.csv", "output/global_stage_probabilities.csv", "output/global_group_outlook.csv", "output/global_group_leadership_outlook.csv", "output/global_group_qualification_outlook.csv", "output/global_model_sensitivity.csv", "output/global_risk_report.txt"]}
+
+Recomendacao final: dados confiaveis com alerta leve: ha placar live/nao-final ignorado com seguranca

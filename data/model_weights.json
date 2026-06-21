@@ -1,0 +1,48 @@
+{
+  "rating_model": {
+    "base_rating_weight": 0.5,
+    "fifa_rating_weight": 0.1,
+    "elo_rating_weight": 0.15,
+    "tournament_form_weight": 0.2,
+    "market_odds_weight": 0.05
+  },
+  "form_adjustment": {
+    "max_positive_delta": 60,
+    "max_negative_delta": 60,
+    "goal_difference_weight": 6,
+    "opponent_strength_weight": 0.08,
+    "recency_weight": 1.0,
+    "cap_single_match_delta": 25
+  },
+  "home_advantage": {
+    "enabled": true,
+    "host_teams": [
+      "United States",
+      "Mexico",
+      "Canada"
+    ],
+    "rating_bonus": 25
+  },
+  "knockout": {
+    "sensitivity": 420,
+    "upset_floor": 0.08,
+    "favorite_ceiling": 0.88
+  },
+  "poisson": {
+    "base_goals": 1.25,
+    "goal_advantage_scale": 0.0022,
+    "min_expected_goals": 0.2,
+    "max_expected_goals": 3.2,
+    "draw_correction_factor": 1.05
+  },
+  "group_stage_calibration": {
+    "enabled": true,
+    "draw_floor_group_stage": 0.2,
+    "draw_floor_balanced_game": 0.26,
+    "favorite_ceiling_group_stage": 0.84,
+    "favorite_ceiling_strong_favorite": 0.76,
+    "upset_floor_group_stage": 0.08,
+    "probability_temperature": 1.05,
+    "strong_favorite_rating_gap_threshold": 250
+  }
+}

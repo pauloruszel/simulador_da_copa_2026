@@ -1,0 +1,51 @@
+{
+  "balanced": {
+    "description": "Equilibrio entre rating base, forma recente e mercado.",
+    "base_rating_weight": 0.50,
+    "tournament_form_weight": 0.20,
+    "market_odds_weight": 0.20,
+    "home_advantage_weight": 0.10,
+    "knockout_sensitivity": 420
+  },
+  "conservative": {
+    "description": "Da mais peso a forca historica/base.",
+    "base_rating_weight": 0.75,
+    "tournament_form_weight": 0.10,
+    "market_odds_weight": 0.10,
+    "home_advantage_weight": 0.05,
+    "knockout_sensitivity": 390
+  },
+  "recent_form": {
+    "description": "Da mais peso ao desempenho dentro da Copa.",
+    "base_rating_weight": 0.45,
+    "tournament_form_weight": 0.35,
+    "market_odds_weight": 0.10,
+    "home_advantage_weight": 0.10,
+    "knockout_sensitivity": 430
+  },
+  "market_weighted": {
+    "description": "Da mais peso as odds de mercado.",
+    "base_rating_weight": 0.35,
+    "tournament_form_weight": 0.15,
+    "market_odds_weight": 0.40,
+    "home_advantage_weight": 0.10,
+    "knockout_sensitivity": 420
+  },
+  "high_upset": {
+    "description": "Aumenta chance de zebras.",
+    "base_rating_weight": 0.45,
+    "tournament_form_weight": 0.20,
+    "market_odds_weight": 0.20,
+    "home_advantage_weight": 0.15,
+    "knockout_sensitivity": 520
+  },
+  "favorite_heavy": {
+    "description": "Favorece mais selecoes fortes.",
+    "base_rating_weight": 0.65,
+    "tournament_form_weight": 0.15,
+    "market_odds_weight": 0.15,
+    "home_advantage_weight": 0.05,
+    "knockout_sensitivity": 340
+  }
+}
+

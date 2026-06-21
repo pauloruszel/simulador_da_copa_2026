@@ -1,0 +1,3497 @@
+[
+  {
+    "id": "A01",
+    "group": "A",
+    "home": "Mexico",
+    "away": "South Korea",
+    "home_score": 1,
+    "away_score": 0,
+    "status": "finished",
+    "date": "2026-06-19T01:00:00Z",
+    "provider_id": "400021442",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Guadalajara Stadium, Guadalajara",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "A02",
+    "group": "A",
+    "home": "Czechia",
+    "away": "South Africa",
+    "home_score": 1,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-18T16:00:00Z",
+    "provider_id": "400021440",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Atlanta Stadium, Atlanta",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "A03",
+    "group": "A",
+    "home": "Mexico",
+    "away": "Czechia",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-25T01:00:00Z",
+    "provider_id": "400021444",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Mexico City Stadium, Mexico City",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "A04",
+    "group": "A",
+    "home": "South Korea",
+    "away": "South Africa",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-25T01:00:00Z",
+    "provider_id": "400021445",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Monterrey Stadium, Monterrey",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "A05",
+    "group": "A",
+    "home": "Mexico",
+    "away": "South Africa",
+    "home_score": 2,
+    "away_score": 0,
+    "status": "finished",
+    "date": "2026-06-11T19:00:00Z",
+    "provider_id": "400021443",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Mexico City Stadium, Mexico City",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "A06",
+    "group": "A",
+    "home": "South Korea",
+    "away": "Czechia",
+    "home_score": 2,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-12T02:00:00Z",
+    "provider_id": "400021441",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Guadalajara Stadium, Guadalajara",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "B01",
+    "group": "B",
+    "home": "Canada",
+    "away": "Switzerland",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-24T19:00:00Z",
+    "provider_id": "400021451",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "BC Place Vancouver, Vancouver",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "B02",
+    "group": "B",
+    "home": "Bosnia and Herzegovina",
+    "away": "Qatar",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-24T19:00:00Z",
+    "provider_id": "400021448",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "venue": "Seattle Stadium, Seattle"
+  },
+  {
+    "id": "B03",
+    "group": "B",
+    "home": "Canada",
+    "away": "Bosnia and Herzegovina",
+    "home_score": 1,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-12T19:00:00Z",
+    "provider_id": "400021449",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "venue": "Toronto Stadium, Toronto"
+  },
+  {
+    "id": "B04",
+    "group": "B",
+    "home": "Switzerland",
+    "away": "Qatar",
+    "home_score": 1,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-13T19:00:00Z",
+    "provider_id": "400021447",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "San Francisco Bay Area Stadium, San Francisco Bay Area",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "B05",
+    "group": "B",
+    "home": "Canada",
+    "away": "Qatar",
+    "home_score": 6,
+    "away_score": 0,
+    "status": "finished",
+    "date": "2026-06-18T22:00:00Z",
+    "provider_id": "400021450",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "BC Place Vancouver, Vancouver",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "B06",
+    "group": "B",
+    "home": "Switzerland",
+    "away": "Bosnia and Herzegovina",
+    "home_score": 4,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-18T19:00:00Z",
+    "provider_id": "400021446",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "venue": "Los Angeles Stadium, Los Angeles"
+  },
+  {
+    "id": "C01",
+    "group": "C",
+    "home": "Brazil",
+    "away": "Morocco",
+    "home_score": 1,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-13T22:00:00Z",
+    "provider_id": "400021456",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "New York/New Jersey Stadium, New Jersey",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "C02",
+    "group": "C",
+    "home": "Scotland",
+    "away": "Haiti",
+    "home_score": 0,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-14T01:00:00Z",
+    "provider_id": "400021453",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Boston Stadium, Boston",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "C03",
+    "group": "C",
+    "home": "Scotland",
+    "away": "Brazil",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-24T22:00:00Z",
+    "provider_id": "400021455",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Miami Stadium, Miami",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "C04",
+    "group": "C",
+    "home": "Morocco",
+    "away": "Haiti",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-24T22:00:00Z",
+    "provider_id": "400021452",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Atlanta Stadium, Atlanta",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "C05",
+    "group": "C",
+    "home": "Brazil",
+    "away": "Haiti",
+    "home_score": 3,
+    "away_score": 0,
+    "status": "finished",
+    "date": "2026-06-20T00:30:00Z",
+    "provider_id": "400021457",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Philadelphia Stadium, Philadelphia",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "C06",
+    "group": "C",
+    "home": "Morocco",
+    "away": "Scotland",
+    "home_score": 0,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-19T22:00:00Z",
+    "provider_id": "400021454",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Boston Stadium, Boston",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "D01",
+    "group": "D",
+    "home": "United States",
+    "away": "Paraguay",
+    "home_score": 4,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-13T01:00:00Z",
+    "provider_id": "400021458",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "venue": "Los Angeles Stadium, Los Angeles"
+  },
+  {
+    "id": "D02",
+    "group": "D",
+    "home": "Australia",
+    "away": "Turkey",
+    "home_score": 2,
+    "away_score": 0,
+    "status": "finished",
+    "date": "2026-06-14T04:00:00Z",
+    "provider_id": "400021463",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "BC Place Vancouver, Vancouver",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "D03",
+    "group": "D",
+    "home": "United States",
+    "away": "Australia",
+    "home_score": 2,
+    "away_score": 0,
+    "status": "finished",
+    "date": "2026-06-19T19:00:00Z",
+    "provider_id": "400021462",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "venue": "Seattle Stadium, Seattle"
+  },
+  {
+    "id": "D04",
+    "group": "D",
+    "home": "Paraguay",
+    "away": "Turkey",
+    "home_score": 0,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-20T03:00:00Z",
+    "provider_id": "400021460",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "San Francisco Bay Area Stadium, San Francisco Bay Area",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "D05",
+    "group": "D",
+    "home": "United States",
+    "away": "Turkey",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-26T02:00:00Z",
+    "provider_id": "400021459",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "venue": "Los Angeles Stadium, Los Angeles"
+  },
+  {
+    "id": "D06",
+    "group": "D",
+    "home": "Paraguay",
+    "away": "Australia",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-26T02:00:00Z",
+    "provider_id": "400021461",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "San Francisco Bay Area Stadium, San Francisco Bay Area",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "E01",
+    "group": "E",
+    "home": "Germany",
+    "away": "Ivory Coast",
+    "home_score": 2,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-20T20:00:00Z",
+    "provider_id": "400021469",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Toronto Stadium, Toronto",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "live_home_score": 1,
+    "live_away_score": 1,
+    "live_status": "unknown"
+  },
+  {
+    "id": "E02",
+    "group": "E",
+    "home": "Ecuador",
+    "away": "Curacao",
+    "home_score": 0,
+    "away_score": 0,
+    "status": "finished",
+    "date": "2026-06-21T00:00:00Z",
+    "provider_id": "400021465",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Kansas City Stadium, Kansas City",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z",
+    "live_home_score": 0,
+    "live_away_score": 0,
+    "live_status": "unknown"
+  },
+  {
+    "id": "E03",
+    "group": "E",
+    "home": "Germany",
+    "away": "Ecuador",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-25T20:00:00Z",
+    "provider_id": "400021466",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "New York/New Jersey Stadium, New Jersey",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "E04",
+    "group": "E",
+    "home": "Ivory Coast",
+    "away": "Curacao",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-25T20:00:00Z",
+    "provider_id": "400021468",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Philadelphia Stadium, Philadelphia",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "E05",
+    "group": "E",
+    "home": "Germany",
+    "away": "Curacao",
+    "home_score": 7,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-14T17:00:00Z",
+    "provider_id": "400021464",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Houston Stadium, Houston",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "E06",
+    "group": "E",
+    "home": "Ivory Coast",
+    "away": "Ecuador",
+    "home_score": 1,
+    "away_score": 0,
+    "status": "finished",
+    "date": "2026-06-14T23:00:00Z",
+    "provider_id": "400021467",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Philadelphia Stadium, Philadelphia",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "F01",
+    "group": "F",
+    "home": "Netherlands",
+    "away": "Sweden",
+    "home_score": 5,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-20T17:00:00Z",
+    "provider_id": "400021472",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Houston Stadium, Houston",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "F02",
+    "group": "F",
+    "home": "Japan",
+    "away": "Tunisia",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-21T04:00:00Z",
+    "provider_id": "400021475",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Monterrey Stadium, Monterrey",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "F03",
+    "group": "F",
+    "home": "Netherlands",
+    "away": "Japan",
+    "home_score": 2,
+    "away_score": 2,
+    "status": "finished",
+    "date": "2026-06-14T20:00:00Z",
+    "provider_id": "400021470",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Dallas Stadium, Dallas",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "F04",
+    "group": "F",
+    "home": "Sweden",
+    "away": "Tunisia",
+    "home_score": 5,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-15T02:00:00Z",
+    "provider_id": "400021474",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Monterrey Stadium, Monterrey",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "F05",
+    "group": "F",
+    "home": "Netherlands",
+    "away": "Tunisia",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-25T23:00:00Z",
+    "provider_id": "400021473",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Kansas City Stadium, Kansas City",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "F06",
+    "group": "F",
+    "home": "Sweden",
+    "away": "Japan",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-25T23:00:00Z",
+    "provider_id": "400021471",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Dallas Stadium, Dallas",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "G01",
+    "group": "G",
+    "home": "Belgium",
+    "away": "Egypt",
+    "home_score": 1,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-15T19:00:00Z",
+    "provider_id": "400021478",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Seattle Stadium, Seattle",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "G02",
+    "group": "G",
+    "home": "Iran",
+    "away": "New Zealand",
+    "home_score": 2,
+    "away_score": 2,
+    "status": "finished",
+    "date": "2026-06-16T01:00:00Z",
+    "provider_id": "400021476",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Los Angeles Stadium, Los Angeles",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "G03",
+    "group": "G",
+    "home": "Belgium",
+    "away": "Iran",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-21T19:00:00Z",
+    "provider_id": "400021477",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Los Angeles Stadium, Los Angeles",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "G04",
+    "group": "G",
+    "home": "Egypt",
+    "away": "New Zealand",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-22T01:00:00Z",
+    "provider_id": "400021480",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "BC Place Vancouver, Vancouver",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "G05",
+    "group": "G",
+    "home": "Belgium",
+    "away": "New Zealand",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-27T03:00:00Z",
+    "provider_id": "400021481",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "BC Place Vancouver, Vancouver",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "G06",
+    "group": "G",
+    "home": "Egypt",
+    "away": "Iran",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-27T03:00:00Z",
+    "provider_id": "400021479",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Seattle Stadium, Seattle",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "H01",
+    "group": "H",
+    "home": "Spain",
+    "away": "Uruguay",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-27T00:00:00Z",
+    "provider_id": "400021484",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Guadalajara Stadium, Guadalajara",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "H02",
+    "group": "H",
+    "home": "Saudi Arabia",
+    "away": "Cape Verde",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-27T00:00:00Z",
+    "provider_id": "400021485",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Houston Stadium, Houston",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "H03",
+    "group": "H",
+    "home": "Spain",
+    "away": "Saudi Arabia",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-21T16:00:00Z",
+    "provider_id": "400021483",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Atlanta Stadium, Atlanta",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "H04",
+    "group": "H",
+    "home": "Uruguay",
+    "away": "Cape Verde",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-21T22:00:00Z",
+    "provider_id": "400021487",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Miami Stadium, Miami",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "H05",
+    "group": "H",
+    "home": "Spain",
+    "away": "Cape Verde",
+    "home_score": 0,
+    "away_score": 0,
+    "status": "finished",
+    "date": "2026-06-15T16:00:00Z",
+    "provider_id": "400021482",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Atlanta Stadium, Atlanta",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "H06",
+    "group": "H",
+    "home": "Uruguay",
+    "away": "Saudi Arabia",
+    "home_score": 1,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-15T22:00:00Z",
+    "provider_id": "400021486",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Miami Stadium, Miami",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "I01",
+    "group": "I",
+    "home": "France",
+    "away": "Norway",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-26T19:00:00Z",
+    "provider_id": "400021489",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Boston Stadium, Boston",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "I02",
+    "group": "I",
+    "home": "Senegal",
+    "away": "Iraq",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-26T19:00:00Z",
+    "provider_id": "400021493",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Toronto Stadium, Toronto",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "I03",
+    "group": "I",
+    "home": "France",
+    "away": "Senegal",
+    "home_score": 3,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-16T19:00:00Z",
+    "provider_id": "400021490",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "New York/New Jersey Stadium, New Jersey",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "I04",
+    "group": "I",
+    "home": "Norway",
+    "away": "Iraq",
+    "home_score": 1,
+    "away_score": 4,
+    "status": "finished",
+    "date": "2026-06-16T22:00:00Z",
+    "provider_id": "400021488",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Boston Stadium, Boston",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "I05",
+    "group": "I",
+    "home": "France",
+    "away": "Iraq",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-22T21:00:00Z",
+    "provider_id": "400021492",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Philadelphia Stadium, Philadelphia",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "I06",
+    "group": "I",
+    "home": "Norway",
+    "away": "Senegal",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-23T00:00:00Z",
+    "provider_id": "400021491",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "New York/New Jersey Stadium, New Jersey",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "J01",
+    "group": "J",
+    "home": "Argentina",
+    "away": "Austria",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-22T17:00:00Z",
+    "provider_id": "400021494",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Dallas Stadium, Dallas",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "J02",
+    "group": "J",
+    "home": "Algeria",
+    "away": "Jordan",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-23T03:00:00Z",
+    "provider_id": "400021499",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "San Francisco Bay Area Stadium, San Francisco Bay Area",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "J03",
+    "group": "J",
+    "home": "Argentina",
+    "away": "Algeria",
+    "home_score": 3,
+    "away_score": 0,
+    "status": "finished",
+    "date": "2026-06-17T01:00:00Z",
+    "provider_id": "400021496",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Kansas City Stadium, Kansas City",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "J04",
+    "group": "J",
+    "home": "Austria",
+    "away": "Jordan",
+    "home_score": 3,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-17T04:00:00Z",
+    "provider_id": "400021498",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "San Francisco Bay Area Stadium, San Francisco Bay Area",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "J05",
+    "group": "J",
+    "home": "Argentina",
+    "away": "Jordan",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-28T02:00:00Z",
+    "provider_id": "400021495",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Dallas Stadium, Dallas",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "J06",
+    "group": "J",
+    "home": "Austria",
+    "away": "Algeria",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-28T02:00:00Z",
+    "provider_id": "400021497",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Kansas City Stadium, Kansas City",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "K01",
+    "group": "K",
+    "home": "Portugal",
+    "away": "Colombia",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-27T23:30:00Z",
+    "provider_id": "400021505",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Miami Stadium, Miami",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "K02",
+    "group": "K",
+    "home": "DR Congo",
+    "away": "Uzbekistan",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-27T23:30:00Z",
+    "provider_id": "400021500",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Atlanta Stadium, Atlanta",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "K03",
+    "group": "K",
+    "home": "Portugal",
+    "away": "DR Congo",
+    "home_score": 1,
+    "away_score": 1,
+    "status": "finished",
+    "date": "2026-06-17T17:00:00Z",
+    "provider_id": "400021502",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Houston Stadium, Houston",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "K04",
+    "group": "K",
+    "home": "Colombia",
+    "away": "Uzbekistan",
+    "home_score": 1,
+    "away_score": 3,
+    "status": "finished",
+    "date": "2026-06-18T02:00:00Z",
+    "provider_id": "400021504",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Mexico City Stadium, Mexico City",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "K05",
+    "group": "K",
+    "home": "Portugal",
+    "away": "Uzbekistan",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-23T17:00:00Z",
+    "provider_id": "400021503",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Houston Stadium, Houston",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "K06",
+    "group": "K",
+    "home": "Colombia",
+    "away": "DR Congo",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-24T02:00:00Z",
+    "provider_id": "400021501",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Guadalajara Stadium, Guadalajara",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.019654Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "L01",
+    "group": "L",
+    "home": "England",
+    "away": "Ghana",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-23T20:00:00Z",
+    "provider_id": "400021506",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Boston Stadium, Boston",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.035706Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "L02",
+    "group": "L",
+    "home": "Croatia",
+    "away": "Panama",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-23T23:00:00Z",
+    "provider_id": "400021511",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Toronto Stadium, Toronto",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.035706Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "L03",
+    "group": "L",
+    "home": "England",
+    "away": "Croatia",
+    "home_score": 4,
+    "away_score": 2,
+    "status": "finished",
+    "date": "2026-06-17T20:00:00Z",
+    "provider_id": "400021507",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Dallas Stadium, Dallas",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.035706Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "L04",
+    "group": "L",
+    "home": "Ghana",
+    "away": "Panama",
+    "home_score": 1,
+    "away_score": 0,
+    "status": "finished",
+    "date": "2026-06-17T23:00:00Z",
+    "provider_id": "400021510",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Toronto Stadium, Toronto",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "score",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "score",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.035706Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "L05",
+    "group": "L",
+    "home": "England",
+    "away": "Panama",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-27T21:00:00Z",
+    "provider_id": "400021508",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "New York/New Jersey Stadium, New Jersey",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.035706Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  },
+  {
+    "id": "L06",
+    "group": "L",
+    "home": "Ghana",
+    "away": "Croatia",
+    "home_score": null,
+    "away_score": null,
+    "status": "scheduled",
+    "date": "2026-06-27T21:00:00Z",
+    "provider_id": "400021509",
+    "source": "wikipedia",
+    "last_updated": "2026-06-20T14:12:37.011313Z",
+    "venue": "Philadelphia Stadium, Philadelphia",
+    "sources": [
+      {
+        "name": "fifa_official",
+        "confidence": 1.0,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.543545Z"
+      },
+      {
+        "name": "openfootball_json",
+        "confidence": 0.82,
+        "fields": [
+          "status",
+          "date",
+          "venue"
+        ],
+        "fetched_at": "2026-06-21T03:31:33.685730Z"
+      },
+      {
+        "name": "wikipedia",
+        "confidence": 0.75,
+        "fields": [
+          "status",
+          "date"
+        ],
+        "fetched_at": "2026-06-21T03:31:34.035706Z"
+      }
+    ],
+    "resolved_confidence": "high",
+    "last_verified_at": "2026-06-21T03:31:34.035706Z"
+  }
+]

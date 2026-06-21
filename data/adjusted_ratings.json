@@ -1,0 +1,513 @@
+{
+  "source": "tournament_form",
+  "last_updated": "2026-06-20T17:11:59.816785Z",
+  "config": {
+    "max_delta": 80,
+    "win_bonus": 18,
+    "draw_bonus": 6,
+    "loss_penalty": -12,
+    "goal_diff_factor": 4,
+    "goal_diff_cap": 20,
+    "upset_factor": 0.08
+  },
+  "ratings": {
+    "Argentina": 2170,
+    "Spain": 2116,
+    "France": 2126,
+    "England": 2101,
+    "Portugal": 2061,
+    "Brazil": 2081,
+    "Morocco": 2036,
+    "Netherlands": 2001,
+    "Germany": 2023,
+    "Belgium": 1966,
+    "Uruguay": 1951,
+    "Colombia": 1961,
+    "Croatia": 1890,
+    "United States": 1936,
+    "Switzerland": 1906,
+    "Japan": 1881,
+    "Senegal": 1835,
+    "Norway": 1875,
+    "Austria": 1866,
+    "Sweden": 1869,
+    "Mexico": 1873,
+    "Ecuador": 1799,
+    "Ivory Coast": 1828,
+    "Iran": 1801,
+    "Ghana": 1802,
+    "Australia": 1776,
+    "Turkey": 1729,
+    "Paraguay": 1758,
+    "Egypt": 1777,
+    "Canada": 1789,
+    "South Korea": 1746,
+    "Czechia": 1725,
+    "Algeria": 1706,
+    "Tunisia": 1687,
+    "Saudi Arabia": 1721,
+    "DR Congo": 1721,
+    "Bosnia and Herzegovina": 1667,
+    "New Zealand": 1677,
+    "South Africa": 1647,
+    "Scotland": 1656,
+    "Qatar": 1628,
+    "Iraq": 1601,
+    "Panama": 1599,
+    "Cape Verde": 1656,
+    "Uzbekistan": 1585,
+    "Jordan": 1560,
+    "Haiti": 1500,
+    "Curacao": 1468
+  },
+  "rows": [
+    {
+      "team": "United States",
+      "base_rating": 1880,
+      "adjusted_rating": 1936,
+      "delta": 56,
+      "details": [
+        "D01: +30.0",
+        "D03: +26.0"
+      ]
+    },
+    {
+      "team": "Mexico",
+      "base_rating": 1825,
+      "adjusted_rating": 1873,
+      "delta": 48,
+      "details": [
+        "A01: +22.0",
+        "A05: +26.0"
+      ]
+    },
+    {
+      "team": "Cape Verde",
+      "base_rating": 1610,
+      "adjusted_rating": 1656,
+      "delta": 46,
+      "details": [
+        "H05: +46.0"
+      ]
+    },
+    {
+      "team": "Canada",
+      "base_rating": 1745,
+      "adjusted_rating": 1789,
+      "delta": 44,
+      "details": [
+        "B03: +6.0",
+        "B05: +38.0"
+      ]
+    },
+    {
+      "team": "Germany",
+      "base_rating": 1985,
+      "adjusted_rating": 2023,
+      "delta": 38,
+      "details": [
+        "E05: +38.0"
+      ]
+    },
+    {
+      "team": "Brazil",
+      "base_rating": 2045,
+      "adjusted_rating": 2081,
+      "delta": 36,
+      "details": [
+        "C01: +6.0",
+        "C05: +30.0"
+      ]
+    },
+    {
+      "team": "Switzerland",
+      "base_rating": 1870,
+      "adjusted_rating": 1906,
+      "delta": 36,
+      "details": [
+        "B04: +6.0",
+        "B06: +30.0"
+      ]
+    },
+    {
+      "team": "DR Congo",
+      "base_rating": 1685,
+      "adjusted_rating": 1721,
+      "delta": 36,
+      "details": [
+        "K03: +35.6"
+      ]
+    },
+    {
+      "team": "Sweden",
+      "base_rating": 1835,
+      "adjusted_rating": 1869,
+      "delta": 34,
+      "details": [
+        "F04: +34.0"
+      ]
+    },
+    {
+      "team": "Morocco",
+      "base_rating": 2005,
+      "adjusted_rating": 2036,
+      "delta": 31,
+      "details": [
+        "C01: +9.2",
+        "C06: +22.0"
+      ]
+    },
+    {
+      "team": "Argentina",
+      "base_rating": 2140,
+      "adjusted_rating": 2170,
+      "delta": 30,
+      "details": [
+        "J03: +30.0"
+      ]
+    },
+    {
+      "team": "Norway",
+      "base_rating": 1845,
+      "adjusted_rating": 1875,
+      "delta": 30,
+      "details": [
+        "I04: +30.0"
+      ]
+    },
+    {
+      "team": "France",
+      "base_rating": 2100,
+      "adjusted_rating": 2126,
+      "delta": 26,
+      "details": [
+        "I03: +26.0"
+      ]
+    },
+    {
+      "team": "England",
+      "base_rating": 2075,
+      "adjusted_rating": 2101,
+      "delta": 26,
+      "details": [
+        "L03: +26.0"
+      ]
+    },
+    {
+      "team": "Colombia",
+      "base_rating": 1935,
+      "adjusted_rating": 1961,
+      "delta": 26,
+      "details": [
+        "K04: +26.0"
+      ]
+    },
+    {
+      "team": "Austria",
+      "base_rating": 1840,
+      "adjusted_rating": 1866,
+      "delta": 26,
+      "details": [
+        "J04: +26.0"
+      ]
+    },
+    {
+      "team": "Saudi Arabia",
+      "base_rating": 1695,
+      "adjusted_rating": 1721,
+      "delta": 26,
+      "details": [
+        "H06: +26.0"
+      ]
+    },
+    {
+      "team": "Ivory Coast",
+      "base_rating": 1805,
+      "adjusted_rating": 1828,
+      "delta": 23,
+      "details": [
+        "E06: +22.8"
+      ]
+    },
+    {
+      "team": "Ghana",
+      "base_rating": 1780,
+      "adjusted_rating": 1802,
+      "delta": 22,
+      "details": [
+        "L04: +22.0"
+      ]
+    },
+    {
+      "team": "Egypt",
+      "base_rating": 1755,
+      "adjusted_rating": 1777,
+      "delta": 22,
+      "details": [
+        "G01: +22.4"
+      ]
+    },
+    {
+      "team": "New Zealand",
+      "base_rating": 1660,
+      "adjusted_rating": 1677,
+      "delta": 17,
+      "details": [
+        "G02: +16.8"
+      ]
+    },
+    {
+      "team": "Japan",
+      "base_rating": 1865,
+      "adjusted_rating": 1881,
+      "delta": 16,
+      "details": [
+        "F03: +16.4"
+      ]
+    },
+    {
+      "team": "Spain",
+      "base_rating": 2110,
+      "adjusted_rating": 2116,
+      "delta": 6,
+      "details": [
+        "H05: +6.0"
+      ]
+    },
+    {
+      "team": "Portugal",
+      "base_rating": 2055,
+      "adjusted_rating": 2061,
+      "delta": 6,
+      "details": [
+        "K03: +6.0"
+      ]
+    },
+    {
+      "team": "Netherlands",
+      "base_rating": 1995,
+      "adjusted_rating": 2001,
+      "delta": 6,
+      "details": [
+        "F03: +6.0"
+      ]
+    },
+    {
+      "team": "Belgium",
+      "base_rating": 1960,
+      "adjusted_rating": 1966,
+      "delta": 6,
+      "details": [
+        "G01: +6.0"
+      ]
+    },
+    {
+      "team": "Uruguay",
+      "base_rating": 1945,
+      "adjusted_rating": 1951,
+      "delta": 6,
+      "details": [
+        "H06: +6.0"
+      ]
+    },
+    {
+      "team": "Iran",
+      "base_rating": 1795,
+      "adjusted_rating": 1801,
+      "delta": 6,
+      "details": [
+        "G02: +6.0"
+      ]
+    },
+    {
+      "team": "Australia",
+      "base_rating": 1770,
+      "adjusted_rating": 1776,
+      "delta": 6,
+      "details": [
+        "D02: +26.0",
+        "D03: -20.0"
+      ]
+    },
+    {
+      "team": "South Korea",
+      "base_rating": 1740,
+      "adjusted_rating": 1746,
+      "delta": 6,
+      "details": [
+        "A01: -16.0",
+        "A06: +22.0"
+      ]
+    },
+    {
+      "team": "Scotland",
+      "base_rating": 1650,
+      "adjusted_rating": 1656,
+      "delta": 6,
+      "details": [
+        "C02: +22.0",
+        "C06: -16.0"
+      ]
+    },
+    {
+      "team": "Paraguay",
+      "base_rating": 1760,
+      "adjusted_rating": 1758,
+      "delta": -2,
+      "details": [
+        "D01: -24.0",
+        "D04: +22.4"
+      ]
+    },
+    {
+      "team": "Qatar",
+      "base_rating": 1635,
+      "adjusted_rating": 1628,
+      "delta": -7,
+      "details": [
+        "B04: +24.8",
+        "B05: -32.0"
+      ]
+    },
+    {
+      "team": "South Africa",
+      "base_rating": 1655,
+      "adjusted_rating": 1647,
+      "delta": -8,
+      "details": [
+        "A02: +12.4",
+        "A05: -20.0"
+      ]
+    },
+    {
+      "team": "Czechia",
+      "base_rating": 1735,
+      "adjusted_rating": 1725,
+      "delta": -10,
+      "details": [
+        "A02: +6.0",
+        "A06: -16.0"
+      ]
+    },
+    {
+      "team": "Bosnia and Herzegovina",
+      "base_rating": 1680,
+      "adjusted_rating": 1667,
+      "delta": -13,
+      "details": [
+        "B03: +11.2",
+        "B06: -24.0"
+      ]
+    },
+    {
+      "team": "Ecuador",
+      "base_rating": 1815,
+      "adjusted_rating": 1799,
+      "delta": -16,
+      "details": [
+        "E06: -16.0"
+      ]
+    },
+    {
+      "team": "Panama",
+      "base_rating": 1615,
+      "adjusted_rating": 1599,
+      "delta": -16,
+      "details": [
+        "L04: -16.0"
+      ]
+    },
+    {
+      "team": "Croatia",
+      "base_rating": 1910,
+      "adjusted_rating": 1890,
+      "delta": -20,
+      "details": [
+        "L03: -20.0"
+      ]
+    },
+    {
+      "team": "Senegal",
+      "base_rating": 1855,
+      "adjusted_rating": 1835,
+      "delta": -20,
+      "details": [
+        "I03: -20.0"
+      ]
+    },
+    {
+      "team": "Uzbekistan",
+      "base_rating": 1605,
+      "adjusted_rating": 1585,
+      "delta": -20,
+      "details": [
+        "K04: -20.0"
+      ]
+    },
+    {
+      "team": "Jordan",
+      "base_rating": 1580,
+      "adjusted_rating": 1560,
+      "delta": -20,
+      "details": [
+        "J04: -20.0"
+      ]
+    },
+    {
+      "team": "Algeria",
+      "base_rating": 1730,
+      "adjusted_rating": 1706,
+      "delta": -24,
+      "details": [
+        "J03: -24.0"
+      ]
+    },
+    {
+      "team": "Iraq",
+      "base_rating": 1625,
+      "adjusted_rating": 1601,
+      "delta": -24,
+      "details": [
+        "I04: -24.0"
+      ]
+    },
+    {
+      "team": "Tunisia",
+      "base_rating": 1715,
+      "adjusted_rating": 1687,
+      "delta": -28,
+      "details": [
+        "F04: -28.0"
+      ]
+    },
+    {
+      "team": "Curacao",
+      "base_rating": 1500,
+      "adjusted_rating": 1468,
+      "delta": -32,
+      "details": [
+        "E05: -32.0"
+      ]
+    },
+    {
+      "team": "Turkey",
+      "base_rating": 1765,
+      "adjusted_rating": 1729,
+      "delta": -36,
+      "details": [
+        "D02: -20.0",
+        "D04: -16.0"
+      ]
+    },
+    {
+      "team": "Haiti",
+      "base_rating": 1540,
+      "adjusted_rating": 1500,
+      "delta": -40,
+      "details": [
+        "C02: -16.0",
+        "C05: -24.0"
+      ]
+    }
+  ]
+}

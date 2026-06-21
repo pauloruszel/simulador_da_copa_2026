@@ -1,0 +1,39 @@
+{
+  "sources": [
+    {
+      "name": "fifa_official",
+      "enabled": true,
+      "priority": 1,
+      "confidence": 1.0,
+      "type": "official_dynamic"
+    },
+    {
+      "name": "openfootball_json",
+      "enabled": true,
+      "priority": 2,
+      "confidence": 0.82,
+      "type": "open_json"
+    },
+    {
+      "name": "wikipedia",
+      "enabled": true,
+      "priority": 3,
+      "confidence": 0.75,
+      "type": "html_scraper"
+    },
+    {
+      "name": "news_crosscheck",
+      "enabled": false,
+      "priority": 4,
+      "confidence": 0.86,
+      "type": "crosscheck"
+    }
+  ],
+  "field_priority": {
+    "date": ["fifa_official", "openfootball_json", "wikipedia"],
+    "venue": ["fifa_official", "openfootball_json", "wikipedia"],
+    "status": ["fifa_official", "news_crosscheck", "wikipedia"],
+    "score": ["fifa_official", "news_crosscheck", "wikipedia", "openfootball_json"],
+    "knockout_bracket": ["fifa_official", "fifa_regulations_pdf"]
+  }
+}

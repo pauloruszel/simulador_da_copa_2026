@@ -1,0 +1,231 @@
+[
+  {
+    "timestamp": "2026-06-20T13:48:34.848811Z",
+    "source": "api_football",
+    "category": "results",
+    "status": "error",
+    "message": "API-FOOTBALL retornou erro: {'plan': 'Free plans do not have access to this season, try from 2022 to 2024.'}"
+  },
+  {
+    "timestamp": "2026-06-20T14:11:39.448867Z",
+    "source": "wikipedia",
+    "category": "scrape_results",
+    "status": "error",
+    "message": "Falha ao buscar Wikipedia: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente"
+  },
+  {
+    "timestamp": "2026-06-20T14:11:55.523043Z",
+    "source": "wikipedia",
+    "category": "scrape_results",
+    "status": "ok",
+    "message": "72 partidas lidas. Atualizado jogo A05: Mexico x South Africa.; Atualizado jogo A06: South Korea x Czechia.; Atualizado jogo A02: Czechia x South Africa.; Atualizado jogo A01: Mexico x South Korea.; Atualizado jogo A03: Mexico x Czechia.; Atualizado jogo A04: South Korea x South Africa.; Atualizado jogo B03: Canada x Bosnia and Herzegovina.; Atualizado jogo B04: Switzerland x Qatar.; Atualizado jogo B06: Switzerland x Bosnia and Herzegovina.; Atualizado jogo B05: Canada x Qatar.; Atualizado jogo B01: Canada x Switzerland.; Atualizado jogo B02: Bosnia and Herzegovina x Qatar."
+  },
+  {
+    "timestamp": "2026-06-20T14:12:37.059124Z",
+    "source": "wikipedia",
+    "category": "scrape_results",
+    "status": "ok",
+    "message": "72 partidas lidas. Atualizado jogo A05: Mexico x South Africa.; Atualizado jogo A06: South Korea x Czechia.; Atualizado jogo A02: Czechia x South Africa.; Atualizado jogo A01: Mexico x South Korea.; Atualizado jogo A03: Mexico x Czechia.; Atualizado jogo A04: South Korea x South Africa.; Atualizado jogo B03: Canada x Bosnia and Herzegovina.; Atualizado jogo B04: Switzerland x Qatar.; Atualizado jogo B06: Switzerland x Bosnia and Herzegovina.; Atualizado jogo B05: Canada x Qatar.; Atualizado jogo B01: Canada x Switzerland.; Atualizado jogo B02: Bosnia and Herzegovina x Qatar."
+  },
+  {
+    "timestamp": "2026-06-20T14:16:15.050922Z",
+    "source": "wikipedia",
+    "category": "scrape_results",
+    "status": "ok",
+    "message": "72 partidas lidas. Sem mudanca em A05: Mexico x South Africa.; Sem mudanca em A06: South Korea x Czechia.; Sem mudanca em A02: Czechia x South Africa.; Sem mudanca em A01: Mexico x South Korea.; Sem mudanca em A03: Mexico x Czechia.; Sem mudanca em A04: South Korea x South Africa.; Sem mudanca em B03: Canada x Bosnia and Herzegovina.; Sem mudanca em B04: Switzerland x Qatar.; Sem mudanca em B06: Switzerland x Bosnia and Herzegovina.; Sem mudanca em B05: Canada x Qatar.; Sem mudanca em B01: Canada x Switzerland.; Sem mudanca em B02: Bosnia and Herzegovina x Qatar."
+  },
+  {
+    "timestamp": "2026-06-20T14:17:15.608736Z",
+    "source": "wikipedia",
+    "category": "scrape_results",
+    "status": "ok",
+    "message": "72 partidas lidas. Sem mudanca em A05: Mexico x South Africa.; Sem mudanca em A06: South Korea x Czechia.; Sem mudanca em A02: Czechia x South Africa.; Sem mudanca em A01: Mexico x South Korea.; Sem mudanca em A03: Mexico x Czechia.; Sem mudanca em A04: South Korea x South Africa.; Sem mudanca em B03: Canada x Bosnia and Herzegovina.; Sem mudanca em B04: Switzerland x Qatar.; Sem mudanca em B06: Switzerland x Bosnia and Herzegovina.; Sem mudanca em B05: Canada x Qatar.; Sem mudanca em B01: Canada x Switzerland.; Sem mudanca em B02: Bosnia and Herzegovina x Qatar."
+  },
+  {
+    "timestamp": "2026-06-20T14:17:41.896132Z",
+    "source": "wikipedia",
+    "category": "scrape_results",
+    "status": "ok",
+    "message": "72 partidas lidas. Sem mudanca em A05: Mexico x South Africa.; Sem mudanca em A06: South Korea x Czechia.; Sem mudanca em A02: Czechia x South Africa.; Sem mudanca em A01: Mexico x South Korea.; Sem mudanca em A03: Mexico x Czechia.; Sem mudanca em A04: South Korea x South Africa.; Sem mudanca em B03: Canada x Bosnia and Herzegovina.; Sem mudanca em B04: Switzerland x Qatar.; Sem mudanca em B06: Switzerland x Bosnia and Herzegovina.; Sem mudanca em B05: Canada x Qatar.; Sem mudanca em B01: Canada x Switzerland.; Sem mudanca em B02: Bosnia and Herzegovina x Qatar."
+  },
+  {
+    "timestamp": "2026-06-20T14:20:15.944744Z",
+    "source": "wikipedia",
+    "category": "scrape_results",
+    "status": "ok",
+    "message": "72 partidas lidas; 0 atualizadas; 72 sem mudanca; 0 ignoradas.",
+    "details": {
+      "summary": {
+        "updated": 0,
+        "unchanged": 72,
+        "skipped": 0
+      },
+      "sample": [
+        "Sem mudanca em A05: Mexico x South Africa.",
+        "Sem mudanca em A06: South Korea x Czechia.",
+        "Sem mudanca em A02: Czechia x South Africa.",
+        "Sem mudanca em A01: Mexico x South Korea.",
+        "Sem mudanca em A03: Mexico x Czechia.",
+        "Sem mudanca em A04: South Korea x South Africa.",
+        "Sem mudanca em B03: Canada x Bosnia and Herzegovina.",
+        "Sem mudanca em B04: Switzerland x Qatar.",
+        "Sem mudanca em B06: Switzerland x Bosnia and Herzegovina.",
+        "Sem mudanca em B05: Canada x Qatar.",
+        "Sem mudanca em B01: Canada x Switzerland.",
+        "Sem mudanca em B02: Bosnia and Herzegovina x Qatar.",
+        "Sem mudanca em C01: Brazil x Morocco.",
+        "Sem mudanca em C02: Scotland x Haiti.",
+        "Sem mudanca em C06: Morocco x Scotland.",
+        "Sem mudanca em C05: Brazil x Haiti.",
+        "Sem mudanca em C03: Scotland x Brazil.",
+        "Sem mudanca em C04: Morocco x Haiti.",
+        "Sem mudanca em D01: United States x Paraguay.",
+        "Sem mudanca em D02: Australia x Turkey."
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-06-20T14:20:47.192840Z",
+    "source": "wikipedia",
+    "category": "scrape_results",
+    "status": "ok",
+    "message": "72 partidas lidas; 0 atualizadas; 72 sem mudanca; 0 ignoradas.",
+    "details": {
+      "summary": {
+        "updated": 0,
+        "unchanged": 72,
+        "skipped": 0
+      },
+      "sample": [
+        "Sem mudanca em A05: Mexico x South Africa.",
+        "Sem mudanca em A06: South Korea x Czechia.",
+        "Sem mudanca em A02: Czechia x South Africa.",
+        "Sem mudanca em A01: Mexico x South Korea.",
+        "Sem mudanca em A03: Mexico x Czechia.",
+        "Sem mudanca em A04: South Korea x South Africa.",
+        "Sem mudanca em B03: Canada x Bosnia and Herzegovina.",
+        "Sem mudanca em B04: Switzerland x Qatar.",
+        "Sem mudanca em B06: Switzerland x Bosnia and Herzegovina.",
+        "Sem mudanca em B05: Canada x Qatar.",
+        "Sem mudanca em B01: Canada x Switzerland.",
+        "Sem mudanca em B02: Bosnia and Herzegovina x Qatar.",
+        "Sem mudanca em C01: Brazil x Morocco.",
+        "Sem mudanca em C02: Scotland x Haiti.",
+        "Sem mudanca em C06: Morocco x Scotland.",
+        "Sem mudanca em C05: Brazil x Haiti.",
+        "Sem mudanca em C03: Scotland x Brazil.",
+        "Sem mudanca em C04: Morocco x Haiti.",
+        "Sem mudanca em D01: United States x Paraguay.",
+        "Sem mudanca em D02: Australia x Turkey."
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-06-20T18:46:38.830606Z",
+    "source": "wikipedia",
+    "category": "scrape_results",
+    "status": "ok",
+    "message": "72 partidas lidas; 0 atualizadas; 72 sem mudanca; 0 ignoradas.",
+    "details": {
+      "summary": {
+        "updated": 0,
+        "unchanged": 72,
+        "skipped": 0
+      },
+      "sample": [
+        "Sem mudanca em A05: Mexico x South Africa.",
+        "Sem mudanca em A06: South Korea x Czechia.",
+        "Sem mudanca em A02: Czechia x South Africa.",
+        "Sem mudanca em A01: Mexico x South Korea.",
+        "Sem mudanca em A03: Mexico x Czechia.",
+        "Sem mudanca em A04: South Korea x South Africa.",
+        "Sem mudanca em B03: Canada x Bosnia and Herzegovina.",
+        "Sem mudanca em B04: Switzerland x Qatar.",
+        "Sem mudanca em B06: Switzerland x Bosnia and Herzegovina.",
+        "Sem mudanca em B05: Canada x Qatar.",
+        "Sem mudanca em B01: Canada x Switzerland.",
+        "Sem mudanca em B02: Bosnia and Herzegovina x Qatar.",
+        "Sem mudanca em C01: Brazil x Morocco.",
+        "Sem mudanca em C02: Scotland x Haiti.",
+        "Sem mudanca em C06: Morocco x Scotland.",
+        "Sem mudanca em C05: Brazil x Haiti.",
+        "Sem mudanca em C03: Scotland x Brazil.",
+        "Sem mudanca em C04: Morocco x Haiti.",
+        "Sem mudanca em D01: United States x Paraguay.",
+        "Sem mudanca em D02: Australia x Turkey."
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-06-20T18:47:47.964562Z",
+    "source": "wikipedia",
+    "category": "scrape_results",
+    "status": "ok",
+    "message": "72 partidas lidas; 0 atualizadas; 72 sem mudanca; 0 ignoradas.",
+    "details": {
+      "summary": {
+        "updated": 0,
+        "unchanged": 72,
+        "skipped": 0
+      },
+      "sample": [
+        "Sem mudanca em A05: Mexico x South Africa.",
+        "Sem mudanca em A06: South Korea x Czechia.",
+        "Sem mudanca em A02: Czechia x South Africa.",
+        "Sem mudanca em A01: Mexico x South Korea.",
+        "Sem mudanca em A03: Mexico x Czechia.",
+        "Sem mudanca em A04: South Korea x South Africa.",
+        "Sem mudanca em B03: Canada x Bosnia and Herzegovina.",
+        "Sem mudanca em B04: Switzerland x Qatar.",
+        "Sem mudanca em B06: Switzerland x Bosnia and Herzegovina.",
+        "Sem mudanca em B05: Canada x Qatar.",
+        "Sem mudanca em B01: Canada x Switzerland.",
+        "Sem mudanca em B02: Bosnia and Herzegovina x Qatar.",
+        "Sem mudanca em C01: Brazil x Morocco.",
+        "Sem mudanca em C02: Scotland x Haiti.",
+        "Sem mudanca em C06: Morocco x Scotland.",
+        "Sem mudanca em C05: Brazil x Haiti.",
+        "Sem mudanca em C03: Scotland x Brazil.",
+        "Sem mudanca em C04: Morocco x Haiti.",
+        "Sem mudanca em D01: United States x Paraguay.",
+        "Sem mudanca em D02: Australia x Turkey."
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-06-20T18:49:56.388206Z",
+    "source": "wikipedia",
+    "category": "scrape_results",
+    "status": "ok",
+    "message": "72 partidas lidas; 0 atualizadas; 72 sem mudanca; 0 ignoradas.",
+    "details": {
+      "summary": {
+        "updated": 0,
+        "unchanged": 72,
+        "skipped": 0
+      },
+      "sample": [
+        "Sem mudanca em A05: Mexico x South Africa.",
+        "Sem mudanca em A06: South Korea x Czechia.",
+        "Sem mudanca em A02: Czechia x South Africa.",
+        "Sem mudanca em A01: Mexico x South Korea.",
+        "Sem mudanca em A03: Mexico x Czechia.",
+        "Sem mudanca em A04: South Korea x South Africa.",
+        "Sem mudanca em B03: Canada x Bosnia and Herzegovina.",
+        "Sem mudanca em B04: Switzerland x Qatar.",
+        "Sem mudanca em B06: Switzerland x Bosnia and Herzegovina.",
+        "Sem mudanca em B05: Canada x Qatar.",
+        "Sem mudanca em B01: Canada x Switzerland.",
+        "Sem mudanca em B02: Bosnia and Herzegovina x Qatar.",
+        "Sem mudanca em C01: Brazil x Morocco.",
+        "Sem mudanca em C02: Scotland x Haiti.",
+        "Sem mudanca em C06: Morocco x Scotland.",
+        "Sem mudanca em C05: Brazil x Haiti.",
+        "Sem mudanca em C03: Scotland x Brazil.",
+        "Sem mudanca em C04: Morocco x Haiti.",
+        "Sem mudanca em D01: United States x Paraguay.",
+        "Sem mudanca em D02: Australia x Turkey."
+      ]
+    }
+  }
+]
