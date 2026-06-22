@@ -362,3 +362,87 @@ O simulador valida que `third_place_mapping.json` tem exatamente 495 combinacoes
 - Melhorar calibracao com odds quando houver fonte acessivel.
 - Adicionar dashboard web.
 - Adicionar historico comparativo antes/depois de cada rodada.
+
+## Odds de mercado via Oddschecker
+
+O projeto possui uma coleta leve de odds do mercado `Vencedor da Copa` no Oddschecker. A coleta alimenta um CSV local e, em seguida, normaliza as odds em `data/odds.json`, que é lido pelo modelo calibrado como uma âncora leve de mercado.
+
+### Coletar odds uma vez
+
+```powershell
+python main.py --fetch-market-odds-only
+```
+
+Arquivos gerados/atualizados:
+
+```text
+data/market_odds_manual.csv
+data/odds.json
+output/market_odds_report.txt
+```
+
+### Coletar de tempos em tempos
+
+```powershell
+python main.py --fetch-market-odds-only --market-odds-runs 4 --market-odds-interval-minutes 30
+```
+
+Esse comando faz 4 coletas, com 30 minutos entre elas. Se o scraping falhar, o sistema usa o CSV local como cache, exceto se `--no-market-odds-cache` for informado.
+
+### Usar CSV manual sem scraping
+
+```powershell
+python main.py --import-market-odds --market-odds-csv data/market_odds_manual.csv
+```
+
+### Comparar modelo vs mercado
+
+Depois de rodar o workflow com relatório global:
+
+```powershell
+python main.py --market-comparison
+```
+
+Saídas:
+
+```text
+output/market_comparison.csv
+output/market_comparison_report.txt
+```
+
+### Workflow completo com odds
+
+```powershell
+python main.py --workflow full --all-teams --simulations 300000 --seed 42 --with-market-odds
+```
+
+O workflow busca odds antes das simulações, alimenta `data/odds.json`, usa o componente de mercado no rating calibrado e gera comparação modelo vs mercado no final.
+
+## Workflow unificado com odds de mercado
+
+O painel de **Operações** possui o botão **Workflow com odds**. Ele executa em um único job:
+
+1. coleta odds do Oddschecker;
+2. preserva registros do CSV/cache manual quando o scraping retorna dados parciais;
+3. normaliza `data/odds.json`;
+4. roda o workflow global;
+5. gera comparação `modelo x mercado`.
+
+Comando equivalente:
+
+```powershell
+python main.py --workflow odds --all-teams --simulations 300000 --seed 42
+```
+
+Comandos individuais continuam disponíveis:
+
+```powershell
+python main.py --fetch-market-odds-only
+python main.py --fetch-market-odds-only --market-odds-runs 4 --market-odds-interval-minutes 30
+python main.py --import-market-odds --market-odds-csv data/market_odds_manual.csv
+python main.py --market-comparison
+python main.py --workflow full --all-teams --simulations 300000 --seed 42 --with-market-odds
+```
+
+O scraping é tratado como fonte opcional: se falhar ou vier parcial, o projeto usa o CSV/cache local como fallback e não quebra o workflow.
+

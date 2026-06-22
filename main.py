@@ -14,6 +14,21 @@ from src.calibration.tournament_form import recalibrate_ratings_from_results
 from src.cli_args import parse_args
 from src.data_provider import LocalJsonDataProvider, apply_scenario
 from src.storage.json_store import JsonStore
+from src.market_odds import (
+    ODDSCHECKER_WINNER_URL,
+    fetch_market_odds_periodically,
+    load_market_probabilities,
+    read_market_odds_csv,
+    write_market_comparison,
+    write_market_comparison_full,
+    write_normalized_market_odds,
+)
+from src.market_anchor import (
+    apply_title_anchor,
+    load_anchor_config,
+    write_market_alerts,
+    write_title_anchor_outputs,
+)
 
 
 def main() -> None:
@@ -41,8 +56,22 @@ def main() -> None:
         or args.compare_presets
         or args.backtest
         or args.tune_weights
+        or args.fetch_market_odds
+        or args.fetch_market_odds_only
+        or args.market_comparison
+        or args.import_market_odds
         or bool(args.compare_weight_files)
     )
+    if args.fetch_market_odds or args.fetch_market_odds_only:
+        fetch_market_odds(args)
+        if args.fetch_market_odds_only:
+            return
+    if args.import_market_odds:
+        normalize_market_odds_from_csv(args.market_odds_csv)
+        return
+    if args.market_comparison:
+        run_market_comparison(limit=getattr(args, "market_comparison_limit", None))
+        return
     if args.source_health_check:
         result = MultiSourceResultsUpdater().health_check()
         print("[ok] source health check")
@@ -155,6 +184,45 @@ def main() -> None:
     if rating_source == "calibrated":
         print("output/rating_breakdown.csv")
         print("output/rating_breakdown.json")
+
+def fetch_market_odds(args) -> None:
+    url = args.market_odds_url or ODDSCHECKER_WINNER_URL
+    payload = fetch_market_odds_periodically(
+        url=url,
+        csv_path=args.market_odds_csv,
+        odds_json_path="data/odds.json",
+        runs=args.market_odds_runs,
+        interval_minutes=args.market_odds_interval_minutes,
+        use_cache_on_fail=not args.no_market_odds_cache,
+    )
+    print("[ok] market odds")
+    print(f"  Selecoes com odds de campeao: {len(payload.get('outrights', []))}")
+    if payload.get("overround"):
+        print(f"  Overround bruto: {payload['overround'] * 100:.2f}%")
+    print(f"  CSV: {args.market_odds_csv}")
+    print("  JSON: data/odds.json")
+    print("  Relatorio: output/market_odds_report.txt")
+
+
+def run_market_comparison(limit: int | None = None) -> None:
+    rows = write_market_comparison_full(limit=limit)
+    rows_with_odds = [r for r in rows if r.get("market_winner_pct") is not None]
+    rows_without_odds = [r for r in rows if r.get("market_winner_pct") is None]
+    print("[ok] market comparison")
+    print(f"  Selecoes comparadas com odds: {len(rows_with_odds)}")
+    print(f"  Selecoes sem odds:            {len(rows_without_odds)}")
+    if limit:
+        print(f"  (exibindo top {limit} no relatorio)")
+    print("  CSV: output/market_comparison.csv")
+    print("  Relatorio: output/market_comparison_report.txt")
+
+
+def normalize_market_odds_from_csv(path: str = "data/market_odds_manual.csv") -> None:
+    records = read_market_odds_csv(path)
+    payload = write_normalized_market_odds(records, "data/odds.json")
+    print("[ok] market odds csv")
+    print(f"  Selecoes carregadas: {len(payload.get('outrights', []))}")
+
 
 def print_update_event(event: dict) -> None:
     print(f"[{event['status']}] {event['source']}:{event['category']}")
@@ -474,10 +542,20 @@ def _diagnosis(title_delta: float, ci_overlap: bool, a: dict, b: dict) -> str:
 
 
 def run_workflow(args) -> None:
-    if args.workflow != "full":
+    if args.workflow not in {"full", "odds"}:
         raise SystemExit(f"Workflow nao suportado: {args.workflow}")
+    workflow_name = args.workflow
+    if workflow_name == "odds":
+        args.with_market_odds = True
+        args.global_report = True
+        # market_mode padrão já foi definido em parse_args (title_anchor)
+        if not getattr(args, "market_mode", None):
+            args.market_mode = "title_anchor"
     report = _run_full_workflow(args)
-    print("[ok] workflow full")
+    print(f"[ok] workflow {workflow_name}")
+    market_mode = getattr(args, "market_mode", None)
+    if market_mode:
+        print(f"  market_mode: {market_mode}")
     for step in report["steps"]:
         print(f"  [{step['status']}] {step['name']}: {step['message']}")
     print(f"  Relatorio: {report['latest_report']}")
@@ -561,7 +639,31 @@ def _run_full_workflow(args) -> dict:
             add_step("update-results-multisource-only", "error", str(exc), ["output/multisource_update_report.txt", "output/group_integrity_report.txt"])
             return _write_workflow_report("full", steps, metrics, outputs)
 
-    # 4. auditoria de grupo/time
+    # 4. odds de mercado opcionais
+    if args.with_market_odds:
+        try:
+            url = args.market_odds_url or ODDSCHECKER_WINNER_URL
+            market_payload = fetch_market_odds_periodically(
+                url=url,
+                csv_path=args.market_odds_csv,
+                odds_json_path="data/odds.json",
+                runs=args.market_odds_runs,
+                interval_minutes=args.market_odds_interval_minutes,
+                use_cache_on_fail=not args.no_market_odds_cache,
+            )
+            msg = f"selecoes={len(market_payload.get('outrights', []))}"
+            if market_payload.get("overround"):
+                msg += f", overround={market_payload['overround'] * 100:.2f}%"
+            add_step("market-odds", "ok", msg, [args.market_odds_csv, "data/odds.json", "output/market_odds_report.txt"], market_payload)
+            metrics["market_odds"] = {
+                "teams": len(market_payload.get("outrights", [])),
+                "overround": market_payload.get("overround"),
+                "last_updated": market_payload.get("last_updated"),
+            }
+        except Exception as exc:
+            add_step("market-odds", "warning", str(exc), [args.market_odds_csv, "data/odds.json", "output/market_odds_report.txt"])
+
+    # 5. auditoria de grupo/time
     try:
         group = _group_for_team(team)
         audit = updater.audit_group(group)
@@ -656,7 +758,109 @@ def _run_full_workflow(args) -> dict:
         except Exception as exc:
             add_step("global-report", "warning", str(exc), _global_report_outputs())
 
-    # 10. compare-weight-files
+    # 10. comparacao com odds de mercado + market_mode
+    if args.with_market_odds:
+        market_mode = getattr(args, "market_mode", "title_anchor") or "title_anchor"
+        comparison_limit = getattr(args, "market_comparison_limit", None)
+        # 10a. market-comparison (todas as seleções)
+        try:
+            comparison_rows = write_market_comparison_full(limit=comparison_limit)
+            rows_with = [r for r in comparison_rows if r.get("market_winner_pct") is not None]
+            rows_without = [r for r in comparison_rows if r.get("market_winner_pct") is None]
+            add_step(
+                "market-comparison",
+                "ok",
+                f"selecoes comparadas={len(rows_with)}, sem_odds={len(rows_without)}, market_mode={market_mode}",
+                ["output/market_comparison.csv", "output/market_comparison_report.txt"],
+                {"rows_with_odds": len(rows_with), "rows_without_odds": len(rows_without), "market_mode": market_mode},
+            )
+            metrics["market_comparison"] = {
+                "rows": len(comparison_rows),
+                "rows_with_odds": len(rows_with),
+                "rows_without_odds": len(rows_without),
+                "market_mode": market_mode,
+                "top_discrepancies": comparison_rows[:5],
+            }
+        except Exception as exc:
+            add_step("market-comparison", "warning", str(exc), ["output/market_comparison.csv", "output/market_comparison_report.txt"])
+
+        # 10b. title_anchor: gerar cenário market_calibrated
+        if market_mode == "title_anchor" and balanced_result is not None:
+            try:
+                market_probs_raw = {
+                    item["team"]: item["raw_implied_probability"]
+                    for item in (JsonStore().read("data/odds.json", {}).get("outrights") or [])
+                    if item.get("raw_implied_probability")
+                }
+                group_map = {t: g for g, ts in JsonStore().read("data/groups.json", {}).items() for t in ts}
+                anchor_config = load_anchor_config("data/model_weights.json")
+                anchor_rows = apply_title_anchor(
+                    balanced_result["rows"],
+                    market_probs_raw,
+                    config=anchor_config,
+                    group_map=group_map,
+                )
+                anchor_outputs = write_title_anchor_outputs(anchor_rows, market_probs_raw, market_mode="title_anchor")
+                alerts_output = write_market_alerts(anchor_rows)
+                # Gravar cenário market_calibrated no CSV global para o dashboard
+                _write_market_calibrated_csv(anchor_rows)
+                anchor_summary = anchor_outputs["summary"]
+                leader_anchor = anchor_rows[0]["team"] if anchor_rows else "n/d"
+                msg = (
+                    f"favorito_mercado={leader_anchor}; "
+                    f"overround={anchor_summary.get('overround_pct', 'n/d')}%; "
+                    f"alertas={anchor_summary.get('alerts_count', 0)}; "
+                    f"maior_acima={anchor_summary.get('biggest_above_market', {}).get('team', 'n/d')}"
+                )
+                anchor_files = [
+                    "output/market_title_anchor.csv",
+                    "output/market_title_anchor.json",
+                    "output/market_title_anchor_report.txt",
+                    "output/market_alerts.json",
+                    "output/market_alerts.txt",
+                ]
+                add_step("market-title-anchor", "ok", msg, anchor_files, anchor_summary)
+                metrics["market_title_anchor"] = {
+                    "market_mode": market_mode,
+                    "leader": leader_anchor,
+                    "summary": anchor_summary,
+                }
+            except Exception as exc:
+                add_step("market-title-anchor", "warning", str(exc), [
+                    "output/market_title_anchor.csv", "output/market_title_anchor.json",
+                    "output/market_title_anchor_report.txt", "output/market_alerts.json",
+                ])
+
+        # 10c. benchmark: apenas diagnóstico, sem alterar nada
+        elif market_mode == "benchmark":
+            try:
+                market_probs_raw = {
+                    item["team"]: item["raw_implied_probability"]
+                    for item in (JsonStore().read("data/odds.json", {}).get("outrights") or [])
+                    if item.get("raw_implied_probability")
+                }
+                group_map = {t: g for g, ts in JsonStore().read("data/groups.json", {}).items() for t in ts}
+                n_odds = len(market_probs_raw)
+                MIN_BENCHMARK_COVERAGE = 8
+                coverage_warning = ""
+                if n_odds < MIN_BENCHMARK_COVERAGE:
+                    coverage_warning = f" AVISO: apenas {n_odds} seleções com odds (mínimo recomendado: {MIN_BENCHMARK_COVERAGE})"
+                if balanced_result and market_probs_raw:
+                    # benchmark: market_weight=0 → nenhum ajuste de probabilidade aplicado
+                    anchor_rows_bm = apply_title_anchor(
+                        balanced_result["rows"],
+                        market_probs_raw,
+                        config={"market_weight": 0, "model_weight": 1, "min_market_coverage_teams": 1},
+                        group_map=group_map,
+                    )
+                    write_market_alerts(anchor_rows_bm)
+                    bm_msg = f"market_mode=benchmark; {n_odds} seleções com odds; apenas diagnóstico{coverage_warning}"
+                    add_step("market-benchmark", "ok" if not coverage_warning else "warning", bm_msg, ["output/market_alerts.json", "output/market_alerts.txt"])
+                    metrics["market_benchmark"] = {"market_mode": "benchmark", "teams_with_odds": n_odds, "coverage_warning": bool(coverage_warning)}
+            except Exception as exc:
+                add_step("market-benchmark", "warning", str(exc), ["output/market_alerts.json"])
+
+    # 11. compare-weight-files
     if args.no_run_tuned or not best_weights.exists():
         add_step("compare-weight-files", "skipped", "sem simulação ajustada/arquivo de pesos")
     else:
@@ -708,6 +912,65 @@ def _team_path_metrics(result: dict, team: str) -> dict:
         "round32_matches": path.get("round32_matches", [])[:5],
         "elimination_stages": path.get("elimination_stages", [])[:5],
     }
+
+
+def _write_market_calibrated_csv(anchor_rows: list[dict]) -> None:
+    """Adiciona cenário market_calibrated ao CSV global de stage_probabilities."""
+    # Lê global_stage_probabilities.csv existente para copiar campos de uma linha balanced
+    global_csv = Path("output/global_stage_probabilities.csv")
+    title_csv = Path("output/global_title_ranking.csv")
+    if not global_csv.exists():
+        return
+    # Lê linhas balanced como template de campos
+    balanced_rows: dict[str, dict] = {}
+    with global_csv.open(newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        fieldnames = reader.fieldnames or []
+        for row in reader:
+            if row.get("model") == "balanced":
+                balanced_rows[row["team"]] = dict(row)
+    if not fieldnames or not balanced_rows:
+        return
+    # Constrói linhas market_calibrated usando anchor_winner_pct
+    anchor_map = {r["team"]: r for r in anchor_rows}
+    new_rows = []
+    for team, base_row in balanced_rows.items():
+        anchor = anchor_map.get(team)
+        new_row = dict(base_row)
+        new_row["model"] = "market_calibrated"
+        if anchor:
+            new_row["winner_pct"] = str(round(anchor["anchor_winner_pct"], 4))
+        new_rows.append(new_row)
+    # Lê todas as linhas existentes (exclui market_calibrated anterior se existir)
+    with global_csv.open(newline="", encoding="utf-8") as f:
+        all_rows = [r for r in csv.DictReader(f) if r.get("model") != "market_calibrated"]
+    all_rows.extend(new_rows)
+    with global_csv.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(all_rows)
+    # Também atualiza global_title_ranking.csv
+    if title_csv.exists():
+        title_rows: list[dict] = []
+        title_fields: list[str] = []
+        with title_csv.open(newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            title_fields = reader.fieldnames or []
+            title_rows = [r for r in reader if r.get("model") != "market_calibrated"]
+        anchor_sorted = sorted(anchor_rows, key=lambda r: float(r["anchor_winner_pct"] or 0), reverse=True)
+        for idx, anchor in enumerate(anchor_sorted):
+            team = anchor["team"]
+            base = balanced_rows.get(team, {})
+            new_title_row = {f: base.get(f, "") for f in title_fields}
+            new_title_row["model"] = "market_calibrated"
+            new_title_row["team"] = team
+            new_title_row["rank"] = str(idx + 1)
+            new_title_row["winner_pct"] = str(round(anchor["anchor_winner_pct"], 4))
+            title_rows.append(new_title_row)
+        with title_csv.open("w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=title_fields)
+            writer.writeheader()
+            writer.writerows(title_rows)
 
 
 from src.workflow_reports import (

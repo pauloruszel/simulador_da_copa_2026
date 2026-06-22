@@ -1,4 +1,4 @@
-export type ModelName = "balanced" | "tuned";
+export type ModelName = "balanced" | "tuned" | "market_calibrated";
 
 export type TeamProbability = {
   model?: ModelName;
@@ -148,4 +148,77 @@ export type DashboardJob = {
   finished_at?: string | null;
   result?: CommandResult | null;
   error?: string | null;
+};
+
+export type MarketAnchorRow = {
+  team: string;
+  group: string;
+  model_winner_pct: number;
+  market_winner_pct: number | null;
+  anchor_winner_pct: number;
+  delta_model_vs_market_pp: number | null;
+  delta_anchor_vs_market_pp: number | null;
+  adjustment_applied_pp: number;
+  anchor_reason: string;
+  market_rank: number | null;
+  model_rank: number | null;
+  anchor_rank: number | null;
+};
+
+export type MarketAlert = {
+  team: string;
+  group: string;
+  model_winner_pct: number;
+  market_winner_pct: number;
+  anchor_winner_pct: number;
+  delta_pp: number;
+  direction: "above" | "below";
+  severity: "high" | "medium" | "low";
+};
+
+export type MarketAnchorSummary = {
+  teams_with_odds: number;
+  teams_without_odds: number;
+  overround_pct: number | null;
+  biggest_above_market: { team: string; delta_pp: number } | null;
+  biggest_below_market: { team: string; delta_pp: number } | null;
+  alerts_count: number;
+  alerts: { team: string; delta_pp: number; direction: "above" | "below" }[];
+};
+
+export type MarketAnchorReport = {
+  market_mode: string;
+  generated_at: string;
+  summary: MarketAnchorSummary;
+  rows: MarketAnchorRow[];
+};
+
+export type MarketAlertsReport = {
+  generated_at: string;
+  threshold_pp: number;
+  alert_count: number;
+  alerts: MarketAlert[];
+};
+
+export type MarketComparisonRow = {
+  team: string;
+  model: string;
+  model_winner_pct: number;
+  market_winner_pct: number | null;
+  delta_pp: number | null;
+  interpretation: string;
+};
+
+export type MarketReport = {
+  anchor: MarketAnchorReport;
+  alerts: MarketAlertsReport;
+  odds_summary: {
+    teams: number;
+    overround_pct: number;
+    last_updated: string | null;
+  };
+  comparison: {
+    rows_with_odds: MarketComparisonRow[];
+    rows_without_odds: MarketComparisonRow[];
+  };
 };

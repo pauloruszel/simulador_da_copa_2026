@@ -36,6 +36,29 @@ class ReportStore:
             "status": self._run_status(latest),
         }
 
+    def market_report(self) -> dict[str, Any]:
+        """Dados para a aba Mercado: anchor rows, alerts, odds payload."""
+        anchor_json = self.read_json("market_title_anchor.json", default={})
+        alerts_json = self.read_json("market_alerts.json", default={})
+        # odds.json fica em data/, fora de output/ — leitura direta via ROOT
+        odds_json = self._read_json_from_root("data/odds.json", default={})
+        comparison = self.read_csv("market_comparison.csv")
+        rows_with = [r for r in comparison if r.get("market_winner_pct") is not None]
+        rows_without = [r for r in comparison if r.get("market_winner_pct") is None]
+        return {
+            "anchor": anchor_json,
+            "alerts": alerts_json,
+            "odds_summary": {
+                "teams": len((odds_json.get("outrights") or [])),
+                "overround_pct": round((odds_json.get("overround") or 0) * 100, 2),
+                "last_updated": odds_json.get("last_updated"),
+            },
+            "comparison": {
+                "rows_with_odds": rows_with,
+                "rows_without_odds": rows_without,
+            },
+        }
+
     def global_report(self) -> dict[str, Any]:
         return {
             "title_ranking": self.read_csv("global_title_ranking.csv"),
@@ -100,11 +123,22 @@ class ReportStore:
 
     def available_models(self) -> list[str]:
         rows = self.read_csv("global_stage_probabilities.csv")
-        models = sorted({str(row.get("model")) for row in rows if row.get("model")})
-        return models or ["balanced"]
+        known_order = ["balanced", "tuned", "market_calibrated"]
+        models_found = sorted({str(row.get("model")) for row in rows if row.get("model")})
+        # retorna na ordem preferida, depois os extras
+        ordered = [m for m in known_order if m in models_found]
+        extras = [m for m in models_found if m not in known_order]
+        return ordered + extras or ["balanced"]
 
     def read_json(self, name: str, default: Any = None) -> Any:
         path = self._safe_path(name)
+        if not path.exists():
+            return default
+        return json.loads(path.read_text(encoding="utf-8"))
+
+    def _read_json_from_root(self, relative_path: str, default: Any = None) -> Any:
+        """Lê um JSON relativo à raiz do projeto (fora de output/)."""
+        path = (ROOT / relative_path).resolve()
         if not path.exists():
             return default
         return json.loads(path.read_text(encoding="utf-8"))
@@ -166,7 +200,7 @@ class ReportStore:
 
     def _normalize_model(self, model: str) -> str:
         value = (model or "balanced").lower().strip()
-        return value if value in {"balanced", "tuned"} else "balanced"
+        return value if value in {"balanced", "tuned", "market_calibrated"} else "balanced"
 
     def _safe_path(self, name: str) -> Path:
         path = (self.output_dir / name).resolve()

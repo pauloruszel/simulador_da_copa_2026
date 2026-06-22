@@ -87,3 +87,7 @@ export async function cancelJob(jobId: string): Promise<DashboardJob> {
 export function fetchJobs(): Promise<{ jobs: DashboardJob[] }> {
   return getJson<{ jobs: DashboardJob[] }>("/api/jobs");
 }
+
+export function fetchMarketReport(): Promise<import("./types").MarketReport> {
+  return getJson<import("./types").MarketReport>("/api/market");
+}

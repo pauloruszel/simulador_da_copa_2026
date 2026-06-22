@@ -96,7 +96,7 @@ body {
 .model-selector {
   display: grid;
   gap: 4px;
-  width: 322px;
+  width: min(430px, 100%);
 }
 
 .model-selector > span {
@@ -116,7 +116,7 @@ body {
 
 .model-selector .mode-toggle {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
 }
 
@@ -124,6 +124,8 @@ body {
   min-width: 0;
   padding: 0 8px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ghost-button {
@@ -871,5 +873,134 @@ button:disabled {
 
   .phase-toggle {
     justify-content: flex-start;
+  }
+}
+
+/* Informações executivas por menu */
+.info-banner,
+.table-note {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 12px 16px;
+}
+
+.table-note {
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.dashboard-model-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dashboard-model-grid article {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+}
+
+.dashboard-model-grid strong {
+  color: #172033;
+}
+
+.delta-neutral {
+  color: #647087;
+  font-weight: 800;
+}
+
+.impact-badge {
+  background: #f1f5f9;
+  border-radius: 999px;
+  color: #475569;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 4px 8px;
+}
+
+.impact-badge.mudança-leve,
+.impact-badge.mudança-moderada {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.impact-badge.mudança-relevante {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.calibration-summary {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1100px) {
+  .dashboard-model-grid,
+  .calibration-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Market tab ─────────────────────────────────────────────── */
+.severity-high td { background: rgba(239,68,68,.06); }
+.severity-medium td { background: rgba(245,158,11,.05); }
+.severity-low td { background: transparent; }
+
+.badge { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 0.72rem; font-weight: 600; }
+.badge-high   { background: #fee2e2; color: #b91c1c; }
+.badge-medium { background: #fef3c7; color: #b45309; }
+.badge-low    { background: #f0fdf4; color: #15803d; }
+
+/* ── Step highlight (odds_workflow_anchor) ──────────────────── */
+.workflow-step.step-highlight { border: 2px solid var(--accent, #4f46e5); }
+.workflow-step.step-highlight .step-index { background: var(--accent, #4f46e5); color: #fff; }
+.command-button.primary { background: var(--accent, #4f46e5); color: #fff; border-color: transparent; }
+.command-button.primary:hover:not(:disabled) { background: #4338ca; }
+
+
+/* Mercado: evita cards e tabelas espremidos em uma coluna do grid principal */
+.market-page {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.market-page .panel {
+  width: 100%;
+}
+
+.market-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  padding: 16px;
+}
+
+.market-summary-grid .metric-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.market-summary-grid .metric-card strong,
+.market-summary-grid .metric-card small,
+.market-summary-grid .metric-card span {
+  overflow-wrap: anywhere;
+}
+
+.market-page .table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 760px) {
+  .model-selector .mode-toggle {
+    grid-template-columns: 1fr;
   }
 }

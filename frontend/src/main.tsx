@@ -2,11 +2,11 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { Activity, AlertTriangle, BarChart3, Clock, Database, FileText, Play, RefreshCw, RotateCcw, ShieldAlert, Square, Trophy, Users } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { cancelJob, fetchCommands, fetchDashboard, fetchGlobalReport, fetchJob, fetchJobs, retryJob, submitJob } from "./api";
-import type { CommandAction, DashboardJob, DashboardSummary, GlobalReport, GroupLeadershipRow, GroupQualificationRow, ModelName, ModelSensitivityRow, TeamProbability } from "./types";
+import { cancelJob, fetchCommands, fetchDashboard, fetchGlobalReport, fetchJob, fetchJobs, fetchMarketReport, retryJob, submitJob } from "./api";
+import type { CommandAction, DashboardJob, DashboardSummary, GlobalReport, GroupLeadershipRow, GroupQualificationRow, MarketAnchorRow, MarketReport, ModelName, ModelSensitivityRow, TeamProbability } from "./types";
 import "./styles.css";
 
-type TabKey = "dashboard" | "teams" | "groups" | "calibration" | "operations";
+type TabKey = "dashboard" | "teams" | "groups" | "calibration" | "operations" | "market";
 type MetricKey = "round32_pct" | "round16_pct" | "quarterfinal_pct" | "semifinal_pct" | "final_pct" | "winner_pct";
 
 const metricLabels: Record<MetricKey, string> = {
@@ -21,11 +21,13 @@ const metricLabels: Record<MetricKey, string> = {
 const modelLabels: Record<ModelName, string> = {
   balanced: "Modelo Padrão",
   tuned: "Modelo Ajustado",
+  market_calibrated: "Modelo Mercado",
 };
 
 const modelHelp: Record<ModelName, string> = {
-  balanced: "Usa os pesos principais do simulador.",
-  tuned: "Usa pesos otimizados pelo backtest mais recente.",
+  balanced: "Usa a configuração principal e mais estável do simulador.",
+  tuned: "Aplica a calibração encontrada no backtest como visão alternativa.",
+  market_calibrated: "Probabilidade de campeão ancorada pelas odds do mercado (title_anchor).",
 };
 const metricHelp: Record<MetricKey, string> = {
   round32_pct: "Chance de passar da fase de grupos e entrar na primeira fase eliminatória.",
@@ -38,12 +40,18 @@ const metricHelp: Record<MetricKey, string> = {
 
 
 function pct(value: number | string | undefined | null): string {
-  return `${Number(value ?? 0).toFixed(2)}%`;
+  const num = Number(value ?? 0);
+  if (num > 0 && num < 0.01) return "<0.01%";
+  return `${num.toFixed(2)}%`;
 }
 
 function pp(value: number | string | undefined | null): string {
   const num = Number(value ?? 0);
   return `${num >= 0 ? "+" : ""}${num.toFixed(2)} p.p.`;
+}
+
+function gapPp(value: number | string | undefined | null): string {
+  return `${Number(value ?? 0).toFixed(2)} p.p.`;
 }
 
 function formatDate(value?: string | null): string {
@@ -55,6 +63,87 @@ function formatDate(value?: string | null): string {
 
 function normalizeText(value: string): string {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
+function displayRunStatus(status?: string | null, recommendation?: string | null): string {
+  const raw = normalizeText(status ?? "");
+  const rec = normalizeText(recommendation ?? "");
+  if (raw === "atencao" && rec.includes("alerta leve")) return "Atenção leve";
+  if (raw === "atencao") return "Atenção";
+  if (raw === "erro") return "Erro";
+  if (raw === "ok") return "OK";
+  if (raw === "indisponivel") return "Indisponível";
+  return status || "n/d";
+}
+
+function displayRecommendation(value?: string | null): string {
+  const normalized = normalizeText(value ?? "");
+  if (!value) return "n/d";
+  if (normalized.includes("placar live") || normalized.includes("placar ao vivo")) return "Dados confiáveis, com alerta leve: foi detectado um placar ao vivo/não final, mas ele foi ignorado com segurança.";
+  if (normalized.includes("warnings do multi-source")) return "Dados confiáveis, com alerta leve: há warnings do multi-source sem conflitos; revise o relatório da atualização.";
+  if (normalized.includes("dados confiaveis com alerta leve")) return "Dados confiáveis, com alerta leve: revise o relatório da atualização.";
+  if (normalized === "dados confiaveis") return "Dados confiáveis.";
+  if (normalized.includes("nao recomendado confiar")) return "Não recomendado confiar: houve erro no workflow.";
+  if (normalized.includes("conflitos de fontes")) return "Dados com alerta: há conflitos de fontes.";
+  if (normalized.includes("workflow sem observacoes criticas")) return "Sem observações críticas. O alerta atual, quando houver, é apenas preventivo.";
+  return value;
+}
+
+function workflowMetrics(dashboard: DashboardSummary): Record<string, unknown> {
+  const metrics = dashboard.latest_workflow?.metrics;
+  return metrics && typeof metrics === "object" && !Array.isArray(metrics) ? metrics : {};
+}
+
+function metricObject(metrics: Record<string, unknown>, key: string): Record<string, unknown> {
+  const value = metrics[key];
+  return value && typeof value === "object" && !Array.isArray(value) ? value as Record<string, unknown> : {};
+}
+
+function numberMetric(value: unknown): number | null {
+  return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
+
+function backtestSummary(dashboard: DashboardSummary): string {
+  const metrics = workflowMetrics(dashboard);
+  const backtest = metricObject(metrics, "backtest");
+  const brier = numberMetric(backtest.brier);
+  const logLoss = numberMetric(backtest.log_loss);
+  if (brier === null && logLoss === null) return dashboard.status?.best_backtest_model ?? "n/d";
+  return `Modelo atual — Brier ${brier?.toFixed(3) ?? "n/d"}, Log Loss ${logLoss?.toFixed(3) ?? "n/d"}`;
+}
+
+function tuningSummary(dashboard: DashboardSummary): string {
+  const tuning = metricObject(workflowMetrics(dashboard), "tuning");
+  const tested = numberMetric(tuning.tested);
+  const best = numberMetric(tuning.best_brier);
+  const improvement = numberMetric(tuning.improvement);
+  if (best === null && improvement === null) return "n/d";
+  return `${tested?.toFixed(0) ?? "n/d"} combinações testadas; melhor Brier ${best?.toFixed(3) ?? "n/d"}; melhora ${improvement?.toFixed(3) ?? "n/d"}`;
+}
+
+function deltaClass(value: number): string {
+  if (value > 0) return "delta-positive";
+  if (value < 0) return "delta-negative";
+  return "delta-neutral";
+}
+
+function impactLabel(value: number): string {
+  const abs = Math.abs(value);
+  if (abs < 0.25) return "Estável";
+  if (abs < 1) return "Mudança leve";
+  if (abs < 3) return "Mudança moderada";
+  return "Mudança relevante";
+}
+
+type RiskHighlight = { team: string; pct: string };
+
+function firstRiskHighlight(riskText: string): RiskHighlight | null {
+  const match = riskText.match(/Favoritos com maior risco antes do (?:R32|mata-mata): ([^\n]+)/i);
+  const first = match?.[1]?.split(";")[0]?.trim();
+  if (!first) return null;
+  const parts = first.match(/^(.+?)\s+elim\. grupo\s+([0-9.,]+%)/i);
+  if (!parts) return { team: first, pct: "n/d" };
+  return { team: parts[1], pct: parts[2] };
 }
 
 
@@ -73,11 +162,11 @@ function ProgressBar({ value, label }: { value: number | string | undefined | nu
 
 function GapChip({ label, value, tone }: { label: string; value: number | string | undefined | null; tone: "leadership" | "qualification" }) {
   const num = Number(value ?? 0);
-  const risk = num <= 10 ? "alto" : num <= 25 ? "médio" : "baixo";
+  const risk = num <= 10 ? "alta" : num <= 25 ? "média" : "baixa";
   return (
     <div className={`gap-chip gap-${tone}`}>
       <span>{label}</span>
-      <strong>{num.toFixed(2)} p.p.</strong>
+      <strong>{gapPp(num)}</strong>
       <small>Disputa {risk}</small>
     </div>
   );
@@ -101,7 +190,7 @@ function ModelToggle({ model, onChange, available }: { model: ModelName; onChang
     <div className="model-selector">
       <span>Modelo de simulação</span>
       <div className="mode-toggle" aria-label="Modelo exibido">
-        {(["balanced", "tuned"] as ModelName[]).map((item) => (
+        {(["balanced", "tuned", "market_calibrated"] as ModelName[]).map((item) => (
           <button key={item} type="button" title={`${modelLabels[item]}: ${modelHelp[item]}`} className={model === item ? "active" : ""} disabled={!available.includes(item)} onClick={() => onChange(item)}>
             {modelLabels[item]}
           </button>
@@ -133,9 +222,15 @@ function RankingTable({ title, rows, field }: { title: string; rows: TeamProbabi
 }
 
 function GroupOutlook({ title, rows, mode }: { title: string; rows: GroupLeadershipRow[] | GroupQualificationRow[]; mode: "leadership" | "qualification" }) {
+  const isLeadershipMode = mode === "leadership";
   return (
     <section className="panel">
-      <header className="panel-header"><h2>{title}</h2></header>
+      <header className="panel-header">
+        <div>
+          <h2>{title}</h2>
+          <small>{isLeadershipMode ? "Menor diferença entre 1º e 2º favoritos ao topo do grupo." : "Menor diferença entre 2º e 3º em probabilidade de mata-mata; não é necessariamente o corte exato dos melhores terceiros."}</small>
+        </div>
+      </header>
       <div className="stack-list cards-list">
         {rows.slice(0, 6).map((row) => {
           const isLeadership = mode === "leadership";
@@ -146,12 +241,12 @@ function GroupOutlook({ title, rows, mode }: { title: string; rows: GroupLeaders
           const gap = isLeadership ? (row as GroupLeadershipRow).leadership_gap_pct : (row as GroupQualificationRow).qualification_gap_2v3_pct;
           return (
             <article className="group-row group-row-card" key={`${title}-${row.model}-${row.group}`}>
-              <div className="group-row-title"><strong>Grupo {row.group}</strong><span>{isLeadership ? "Disputa pelo 1º lugar" : "Disputa por vaga no mata-mata"}</span></div>
+              <div className="group-row-title"><strong>Grupo {row.group}</strong><span>{isLeadership ? "Disputa pelo 1º lugar" : "Disputa 2º x 3º"}</span></div>
               <div className="duel-line"><span>{leftName}</span><strong>{pct(leftPct)}</strong></div>
               <ProgressBar value={leftPct} />
               <div className="duel-line"><span>{rightName}</span><strong>{pct(rightPct)}</strong></div>
               <ProgressBar value={rightPct} />
-              <GapChip label={isLeadership ? "Gap de liderança" : "Gap de classificação"} value={gap} tone={isLeadership ? "leadership" : "qualification"} />
+              <GapChip label={isLeadership ? "Gap de liderança" : "Gap 2º x 3º"} value={gap} tone={isLeadership ? "leadership" : "qualification"} />
             </article>
           );
         })}
@@ -161,21 +256,27 @@ function GroupOutlook({ title, rows, mode }: { title: string; rows: GroupLeaders
 }
 
 function SensitivityTable({ rows }: { rows: ModelSensitivityRow[] }) {
-  const sorted = [...rows].sort((a, b) => b.abs_delta_winner_pct - a.abs_delta_winner_pct).slice(0, 8);
+  const sorted = [...rows].sort((a, b) => b.abs_delta_winner_pct - a.abs_delta_winner_pct).slice(0, 10);
   return (
     <section className="panel wide">
-      <header className="panel-header"><h2>Sensibilidade à calibração</h2><small>Diferença Modelo Ajustado vs Modelo Padrão</small></header>
+      <header className="panel-header">
+        <div>
+          <h2>Impacto do Modelo Ajustado</h2>
+          <small>Diferença entre Modelo Ajustado e Modelo Padrão. Probabilidades usam %, diferenças usam p.p.</small>
+        </div>
+      </header>
       <div className="table-wrap">
         <table>
-          <thead><tr><th>Seleção</th><th>Grupo</th><th>Título padrão</th><th>Título ajustado</th><th>Delta título</th><th>Delta final</th><th>Delta semi</th><th>Delta R32</th></tr></thead>
+          <thead><tr><th>Seleção</th><th>Grupo</th><th>Campeão — Padrão</th><th>Campeão — Ajustado</th><th>Δ Campeão</th><th>Δ Final</th><th>Δ Semifinal</th><th>Δ Mata-mata</th><th>Interpretação</th></tr></thead>
           <tbody>
             {sorted.map((row) => (
               <tr key={row.team}>
                 <td>{row.team}</td><td>{row.group}</td><td>{pct(row.balanced_winner_pct)}</td><td>{pct(row.tuned_winner_pct)}</td>
-                <td className={row.delta_winner_pct >= 0 ? "delta-positive" : "delta-negative"}>{pp(row.delta_winner_pct)}</td>
-                <td className={row.delta_final_pct >= 0 ? "delta-positive" : "delta-negative"}>{pp(row.delta_final_pct)}</td>
-                <td className={row.delta_semifinal_pct >= 0 ? "delta-positive" : "delta-negative"}>{pp(row.delta_semifinal_pct)}</td>
-                <td className={row.delta_round32_pct >= 0 ? "delta-positive" : "delta-negative"}>{pp(row.delta_round32_pct)}</td>
+                <td className={deltaClass(row.delta_winner_pct)}>{pp(row.delta_winner_pct)}</td>
+                <td className={deltaClass(row.delta_final_pct)}>{pp(row.delta_final_pct)}</td>
+                <td className={deltaClass(row.delta_semifinal_pct)}>{pp(row.delta_semifinal_pct)}</td>
+                <td className={deltaClass(row.delta_round32_pct)}>{pp(row.delta_round32_pct)}</td>
+                <td><span className={`impact-badge ${impactLabel(row.delta_winner_pct).toLowerCase().replace(/ /g, "-")}`}>{impactLabel(row.delta_winner_pct)}</span></td>
               </tr>
             ))}
           </tbody>
@@ -186,16 +287,16 @@ function SensitivityTable({ rows }: { rows: ModelSensitivityRow[] }) {
 }
 
 function RiskCards({ riskText, leadership, qualification }: { riskText: string; leadership: GroupLeadershipRow[]; qualification: GroupQualificationRow[] }) {
-  const top5 = riskText.match(/Concentracao dos 5 maiores favoritos ao titulo: ([0-9.,]+%)/)?.[1] ?? "n/d";
-  const firstRisk = riskText.match(/Favoritos com maior risco antes do R32: ([^\n]+)/)?.[1]?.split(";")[0] ?? "n/d";
+  const top5 = riskText.match(/Concentra[cç][aã]o dos 5 maiores favoritos ao t[ií]tulo: ([0-9.,]+%)/i)?.[1] ?? "n/d";
+  const firstRisk = firstRiskHighlight(riskText);
   return (
     <section className="panel wide">
       <header className="panel-header"><h2>Riscos globais</h2><ShieldAlert size={18} /></header>
       <div className="risk-grid">
         <MetricCard icon={<AlertTriangle size={18} />} label="Top 5 favoritos" value={top5} detail="Concentração do título" tone="warning" />
-        <MetricCard icon={<Users size={18} />} label="Liderança mais aberta" value={`Grupo ${leadership[0]?.group ?? "n/d"}`} detail={leadership[0] ? `Gap ${pp(leadership[0].leadership_gap_pct)}` : "n/d"} />
-        <MetricCard icon={<Users size={18} />} label="Classificação mais aberta" value={`Grupo ${qualification[0]?.group ?? "n/d"}`} detail={qualification[0] ? `Gap ${pp(qualification[0].qualification_gap_2v3_pct)}` : "n/d"} />
-        <MetricCard icon={<ShieldAlert size={18} />} label="Maior risco pré-mata-mata" value={firstRisk.replace(" elim. grupo", "")} detail="Entre favoritos monitorados" tone="warning" />
+        <MetricCard icon={<Users size={18} />} label="Liderança mais aberta" value={`Grupo ${leadership[0]?.group ?? "n/d"}`} detail={leadership[0] ? `Gap ${gapPp(leadership[0].leadership_gap_pct)}` : "n/d"} />
+        <MetricCard icon={<Users size={18} />} label="Disputa 2º x 3º" value={`Grupo ${qualification[0]?.group ?? "n/d"}`} detail={qualification[0] ? `Gap ${gapPp(qualification[0].qualification_gap_2v3_pct)}` : "n/d"} />
+        <MetricCard icon={<ShieldAlert size={18} />} label="Maior risco pré-mata-mata" value={firstRisk?.team ?? "n/d"} detail={firstRisk ? `${firstRisk.pct} de eliminação no grupo` : "Entre favoritos monitorados"} tone="warning" />
       </div>
       <details className="details-block"><summary>Ver relatório textual completo</summary><pre className="report-text">{riskText || "Sem relatório de risco."}</pre></details>
     </section>
@@ -209,12 +310,54 @@ function RunObservations({ dashboard }: { dashboard: DashboardSummary }) {
     <section className="panel wide">
       <header className="panel-header"><h2>Observações do run</h2><Clock size={18} /></header>
       <div className="observations">
-        <div><strong>Status:</strong> {dashboard.status?.status ?? "n/d"}</div>
-        <div><strong>Recomendação:</strong> {dashboard.status?.recommendation ?? "n/d"}</div>
-        <div><strong>Melhor modelo pelo backtest:</strong> {dashboard.status?.best_backtest_model ?? "n/d"}</div>
+        <div><strong>Status:</strong> {displayRunStatus(dashboard.status?.status, dashboard.status?.recommendation)}</div>
+        <div><strong>Recomendação:</strong> {displayRecommendation(dashboard.status?.recommendation)}</div>
+        <div><strong>Backtest:</strong> {backtestSummary(dashboard)}</div>
+        <div><strong>Tuning dos pesos:</strong> {tuningSummary(dashboard)}</div>
         <div><strong>Última atualização:</strong> {latestReport ? `${formatDate(latestReport.modified_at)} (${latestReport.age_minutes} min)` : "n/d"}</div>
-        <ul>{observations.map((item) => <li key={item}>{item}</li>)}</ul>
+        <ul>{observations.map((item) => <li key={item}>{displayRecommendation(item)}</li>)}</ul>
       </div>
+    </section>
+  );
+}
+
+function DashboardPage({ dashboard, global, selectedRows, metric, onMetricChange, chartRows, leadershipRows, qualificationRows }: { dashboard: DashboardSummary; global: GlobalReport; selectedRows: TeamProbability[]; metric: MetricKey; onMetricChange: (metric: MetricKey) => void; chartRows: { team: string; valor: number | string | undefined | null }[]; leadershipRows: GroupLeadershipRow[]; qualificationRows: GroupQualificationRow[] }) {
+  return (
+    <section className="main-grid">
+      <section className="panel wide">
+        <header className="panel-header"><h2>Modelos de simulação</h2></header>
+        <div className="model-explanation dashboard-model-grid">
+          <article>
+            <strong>Modelo Padrão</strong>
+            <p>Configuração principal e mais estável do simulador. É o cenário de referência para leitura executiva.</p>
+          </article>
+          <article>
+            <strong>Modelo Ajustado</strong>
+            <p>Aplica a calibração encontrada no backtest. Deve ser lido como visão alternativa, não como substituto automático.</p>
+          </article>
+          <article>
+            <strong>Como comparar</strong>
+            <p>Use diferenças em p.p. para entender impacto real da calibração; percentuais isolados mostram probabilidade total.</p>
+          </article>
+        </div>
+      </section>
+      <RunObservations dashboard={dashboard} />
+      <section className="panel wide">
+        <header className="panel-header">
+          <div><h2>Ranking por fase — {metricLabels[metric]}</h2><small>{metricHelp[metric]}</small></div>
+          <div className="mode-toggle phase-toggle">{(Object.keys(metricLabels) as MetricKey[]).map((key) => <button key={key} className={metric === key ? "active" : ""} type="button" onClick={() => onMetricChange(key)}>{metricLabels[key]}</button>)}</div>
+        </header>
+        <div className="chart-box"><ResponsiveContainer width="100%" height={280}><BarChart data={chartRows} layout="vertical" margin={{ left: 24, right: 24 }}><CartesianGrid strokeDasharray="3 3" horizontal={false} /><XAxis type="number" tickFormatter={(value) => `${value}%`} /><YAxis type="category" dataKey="team" width={96} /><Tooltip formatter={(value) => pct(Number(value))} /><ReferenceLine x={10} stroke="#94a3b8" strokeDasharray="3 3" /><Bar dataKey="valor" fill="#2563eb" radius={[0, 4, 4, 0]} /></BarChart></ResponsiveContainer></div>
+      </section>
+      <RankingTable title="Mata-mata" rows={phaseRows(selectedRows, "round32_pct")} field="round32_pct" />
+      <RankingTable title="Oitavas" rows={phaseRows(selectedRows, "round16_pct")} field="round16_pct" />
+      <RankingTable title="Quartas" rows={phaseRows(selectedRows, "quarterfinal_pct")} field="quarterfinal_pct" />
+      <RankingTable title="Semifinal" rows={phaseRows(selectedRows, "semifinal_pct")} field="semifinal_pct" />
+      <RankingTable title="Final" rows={phaseRows(selectedRows, "final_pct")} field="final_pct" />
+      <RankingTable title="Campeão" rows={phaseRows(selectedRows, "winner_pct")} field="winner_pct" />
+      <GroupOutlook title="Liderança mais indefinida" rows={leadershipRows} mode="leadership" />
+      <GroupOutlook title="Disputa 2º x 3º mais indefinida" rows={qualificationRows} mode="qualification" />
+      <RiskCards riskText={global.risk_report} leadership={leadershipRows} qualification={qualificationRows} />
     </section>
   );
 }
@@ -224,10 +367,14 @@ function TeamsPage({ rows }: { rows: TeamProbability[] }) {
   const filtered = rows.filter((row) => normalizeText(row.team).includes(normalizeText(query)) || normalizeText(row.group).includes(normalizeText(query)));
   return (
     <section className="panel wide">
-      <header className="panel-header"><h2>Seleções</h2><input className="search-input" placeholder="Buscar seleção ou grupo" value={query} onChange={(event) => setQuery(event.target.value)} /></header>
+      <header className="panel-header">
+        <div><h2>Seleções</h2><small>Ranking ordenado por chance de campeão no modelo selecionado.</small></div>
+        <input className="search-input" placeholder="Buscar seleção ou grupo" value={query} onChange={(event) => setQuery(event.target.value)} />
+      </header>
+      <div className="table-note">Mata-mata = classificação à primeira fase eliminatória. Valores muito pequenos aparecem como &lt;0.01% para evitar arredondamento enganoso.</div>
       <div className="table-wrap">
         <table>
-          <thead><tr><th>#</th><th>Seleção</th><th>Grupo</th><th>Mata-mata</th><th>Oitavas</th><th>Quartas</th><th>Semi</th><th>Final</th><th>Título</th><th>Elim. grupo</th><th>Adversário no mata-mata</th></tr></thead>
+          <thead><tr><th>#</th><th>Seleção</th><th>Grupo</th><th>Mata-mata</th><th>Oitavas</th><th>Quartas</th><th>Semifinal</th><th>Final</th><th>Campeão</th><th>Eliminado na fase de grupos</th><th>Adversário provável no mata-mata</th></tr></thead>
           <tbody>
             {filtered.map((row, index) => (
               <tr key={row.team}>
@@ -244,49 +391,70 @@ function TeamsPage({ rows }: { rows: TeamProbability[] }) {
 function GroupsPage({ rows, leadership, qualification }: { rows: TeamProbability[]; leadership: GroupLeadershipRow[]; qualification: GroupQualificationRow[] }) {
   const groups = [...new Set(rows.map((row) => row.group))].sort();
   return (
-    <section className="group-grid wide">
-      {groups.map((group) => {
-        const groupRows = rows.filter((row) => row.group === group).sort((a, b) => b.round32_pct - a.round32_pct);
-        const lead = leadership.find((row) => row.group === group);
-        const qual = qualification.find((row) => row.group === group);
-        return (
-          <article className="panel group-card" key={group}>
-            <header className="group-card-header">
-              <div>
-                <span>Grupo</span>
-                <h2>{group}</h2>
-              </div>
-              <div className="group-card-badge">{lead?.favorite_to_win_group ?? "n/d"} lidera</div>
-            </header>
-            <div className="group-team-list">
-              {groupRows.map((row) => (
-                <div className="team-line" key={row.team}>
-                  <div className="team-line-main"><strong>{row.team}</strong><span>{pct(row.round32_pct)}</span></div>
-                  <ProgressBar value={row.round32_pct} label={`${row.team} classificação ao mata-mata`} />
-                  <div className="team-line-meta"><span>1º {pct(row.group_winner_pct)}</span><span>Elim. {pct(row.group_eliminated_pct)}</span><span>Título {pct(row.winner_pct)}</span></div>
+    <section className="main-grid">
+      <section className="panel wide">
+        <header className="panel-header"><h2>Grupos</h2></header>
+        <div className="table-note">Os cards ordenam seleções por chance de mata-mata. O gap 2º x 3º mede disputa de posição no grupo; no formato de 48 seleções, terceiros também podem avançar.</div>
+      </section>
+      <section className="group-grid wide">
+        {groups.map((group) => {
+          const groupRows = rows.filter((row) => row.group === group).sort((a, b) => b.round32_pct - a.round32_pct);
+          const lead = leadership.find((row) => row.group === group);
+          const qual = qualification.find((row) => row.group === group);
+          return (
+            <article className="panel group-card" key={group}>
+              <header className="group-card-header">
+                <div>
+                  <span>Grupo</span>
+                  <h2>{group}</h2>
                 </div>
-              ))}
-            </div>
-            <footer className="group-card-footer">
-              {lead && <GapChip label="Gap de liderança" value={lead.leadership_gap_pct} tone="leadership" />}
-              {qual && <GapChip label="Gap de classificação" value={qual.qualification_gap_2v3_pct} tone="qualification" />}
-            </footer>
-          </article>
-        );
-      })}
+                <div className="group-card-badge">{lead?.favorite_to_win_group ?? "n/d"} lidera</div>
+              </header>
+              <div className="group-team-list">
+                {groupRows.map((row) => (
+                  <div className="team-line" key={row.team}>
+                    <div className="team-line-main"><strong>{row.team}</strong><span>{pct(row.round32_pct)}</span></div>
+                    <ProgressBar value={row.round32_pct} label={`${row.team} classificação ao mata-mata`} />
+                    <div className="team-line-meta"><span>1º {pct(row.group_winner_pct)}</span><span>Elim. grupo {pct(row.group_eliminated_pct)}</span><span>Campeão {pct(row.winner_pct)}</span></div>
+                  </div>
+                ))}
+              </div>
+              <footer className="group-card-footer">
+                {lead && <GapChip label="Gap de liderança" value={lead.leadership_gap_pct} tone="leadership" />}
+                {qual && <GapChip label="Gap 2º x 3º" value={qual.qualification_gap_2v3_pct} tone="qualification" />}
+              </footer>
+            </article>
+          );
+        })}
+      </section>
     </section>
   );
 }
 
 function CalibrationPage({ global }: { global: GlobalReport }) {
+  const rows = global.model_sensitivity;
+  const biggestGain = [...rows].sort((a, b) => b.delta_winner_pct - a.delta_winner_pct)[0];
+  const biggestDrop = [...rows].sort((a, b) => a.delta_winner_pct - b.delta_winner_pct)[0];
+  const biggestRound32 = [...rows].sort((a, b) => Math.abs(b.delta_round32_pct) - Math.abs(a.delta_round32_pct))[0];
+  const maxAbsWinner = Math.max(0, ...rows.map((row) => Math.abs(row.delta_winner_pct)));
   return (
     <section className="main-grid inner-grid">
-      <SensitivityTable rows={global.model_sensitivity} />
       <section className="panel wide">
-        <header className="panel-header"><h2>Modelo e calibração</h2></header>
+        <header className="panel-header"><h2>Resumo da calibração</h2></header>
+        <div className="risk-grid calibration-summary">
+          <MetricCard icon={<Trophy size={18} />} label="Maior alta em campeão" value={biggestGain ? biggestGain.team : "n/d"} detail={biggestGain ? pp(biggestGain.delta_winner_pct) : "n/d"} tone="success" />
+          <MetricCard icon={<AlertTriangle size={18} />} label="Maior queda em campeão" value={biggestDrop ? biggestDrop.team : "n/d"} detail={biggestDrop ? pp(biggestDrop.delta_winner_pct) : "n/d"} tone="warning" />
+          <MetricCard icon={<Users size={18} />} label="Maior impacto no mata-mata" value={biggestRound32 ? biggestRound32.team : "n/d"} detail={biggestRound32 ? pp(biggestRound32.delta_round32_pct) : "n/d"} />
+          <MetricCard icon={<BarChart3 size={18} />} label="Intensidade" value={impactLabel(maxAbsWinner)} detail={`Maior variação em campeão: ${gapPp(maxAbsWinner)}`} />
+        </div>
+      </section>
+      <SensitivityTable rows={rows} />
+      <section className="panel wide">
+        <header className="panel-header"><h2>Como ler esta aba</h2></header>
         <div className="observations">
-          <p>Use esta aba para enxergar quais seleções mudam mais quando o relatório usa o Modelo Ajustado.</p>
-          <p><strong>Regra de leitura:</strong> probabilidades absolutas usam %, diferenças entre modelos usam p.p.</p>
+          <p>O Modelo Padrão usa os pesos principais do simulador. O Modelo Ajustado aplica a calibração encontrada no backtest.</p>
+          <p><strong>%</strong> mostra a chance total de uma seleção. <strong>p.p.</strong> mostra quanto essa chance mudou entre os dois modelos.</p>
+          <p>O Modelo Ajustado não substitui automaticamente o Modelo Padrão. Ele serve para comparar sensibilidade e validar se a calibração muda demais o cenário.</p>
         </div>
       </section>
     </section>
@@ -332,7 +500,11 @@ function OperationsPanel({ actions, onJobFinished }: { actions: CommandAction[];
       const confirmed = window.confirm("Você está prestes a aplicar alterações reais em data/matches.json. Confirme apenas se o dry-run estiver OK e sem conflitos.");
       if (!confirmed) return;
     }
-    if (simulations < 100000 && ["workflow_team", "workflow_global"].includes(action)) {
+    if (action === "odds_fetch_periodic") {
+      const confirmed = window.confirm("A coleta periódica padrão roda 4 coletas com intervalo de 30 minutos. O job pode ficar ativo por mais de 90 minutos. Deseja iniciar?");
+      if (!confirmed) return;
+    }
+    if (simulations < 100000 && ["workflow_team", "workflow_global", "odds_workflow", "odds_workflow_anchor", "odds_workflow_benchmark", "odds_workflow_experimental"].includes(action)) {
       const confirmed = window.confirm("Simulações abaixo de 100.000 são boas para exploração. Para relatório final, recomenda-se 200.000. Deseja continuar?");
       if (!confirmed) return;
     }
@@ -380,11 +552,15 @@ function OperationsPanel({ actions, onJobFinished }: { actions: CommandAction[];
   const failedJobs = jobs.filter((item) => item.status === "failed" && !retriedJobIds.has(item.id)).slice(0, 4);
   const dryRun = latest("dry_run_multisource");
   const update = latest("update_results");
+  const marketOdds = latest("fetch_market_odds") ?? latest("import_market_odds") ?? latest("odds_fetch_periodic");
+  const marketComparison = latest("market_comparison");
+  const oddsWorkflow = latest("odds_workflow");
   const backtest = latest("backtest");
   const tuning = latest("tune_weights");
   const dryRunOk = dryRun?.status === "succeeded";
   const updateOk = update?.status === "succeeded";
-  const calibrationOk = backtest?.status === "succeeded" || tuning?.status === "succeeded";
+  const marketOk = marketOdds?.status === "succeeded" || oddsWorkflow?.status === "succeeded";
+  const calibrationOk = backtest?.status === "succeeded" || tuning?.status === "succeeded" || oddsWorkflow?.status === "succeeded";
   const actionLabel = (action: string) => actions.find((item) => item.action === action)?.label ?? action;
   const busy = Boolean(running || activeJob);
   const stepStatus = (items: (DashboardJob | undefined)[]) => {
@@ -394,11 +570,27 @@ function OperationsPanel({ actions, onJobFinished }: { actions: CommandAction[];
     return "pendente";
   };
 
+  const oddsWorkflowAnchor = latest("odds_workflow_anchor");
+  const oddsWorkflowBenchmark = latest("odds_workflow_benchmark");
+  const oddsWorkflowExperimental = latest("odds_workflow_experimental");
+  const anyOddsWorkflow = oddsWorkflow ?? oddsWorkflowAnchor ?? oddsWorkflowBenchmark ?? oddsWorkflowExperimental;
+
   const stepGroups = [
     { number: 1, title: "Diagnóstico das fontes", status: stepStatus([latest("source_health_check"), dryRun]), detail: "Audita fontes e compara dados sem alterar arquivos.", actions: ["source_health_check", "dry_run_multisource"] },
     { number: 2, title: "Atualização dos dados", status: stepStatus([update]), detail: "Altera data/matches.json, cria snapshot e atualiza integridade dos grupos.", actions: ["update_results"], locked: !dryRunOk, lockReason: "Rode o dry-run sem erro antes de aplicar resultados." },
-    { number: 3, title: "Calibração do modelo", status: stepStatus([backtest, tuning]), detail: "Valida o modelo e gera pesos recomendados sem sobrescrever os pesos padrão.", actions: ["backtest", "tune_weights"] },
-    { number: 4, title: "Simulação e relatórios", status: stepStatus([latest("workflow_team"), latest("workflow_global")]), detail: updateOk || dryRunOk ? "Pronto para gerar probabilidades finais." : "Sem update recente registrado; revise dados antes do relatório final.", actions: ["workflow_team", "workflow_global"] },
+    { number: 3, title: "Odds de mercado", status: stepStatus([marketOdds, marketComparison]), detail: "Atualiza odds do Oddschecker, preserva o CSV/cache manual e compara mercado x modelo quando houver relatório global.", actions: ["fetch_market_odds", "import_market_odds", "market_comparison"] },
+    { number: 4, title: "Calibração do modelo", status: stepStatus([backtest, tuning]), detail: "Valida o modelo e gera pesos recomendados sem sobrescrever os pesos padrão.", actions: ["backtest", "tune_weights"] },
+    {
+      number: 5,
+      title: "Workflow com odds — Corrigir campeão pelo mercado",
+      status: stepStatus([oddsWorkflowAnchor ?? oddsWorkflow]),
+      detail: "Recomendado. Coleta odds, roda simulação global e ancora probabilidade de campeão pelo mercado (title_anchor). Gera Modelo Mercado.",
+      actions: ["odds_workflow_anchor"],
+      highlight: true,
+    },
+    { number: 6, title: "Workflow com odds — Benchmark", status: stepStatus([oddsWorkflowBenchmark]), detail: "Diagnóstico puro: compara modelo x mercado sem alterar probabilidades.", actions: ["odds_workflow_benchmark"] },
+    { number: 7, title: "Workflow com odds — Ajuste experimental", status: stepStatus([oddsWorkflowExperimental]), detail: "Experimental: incorpora mercado no rating. Use apenas para análise comparativa.", actions: ["odds_workflow_experimental"] },
+    { number: 8, title: "Simulação sem odds", status: stepStatus([latest("workflow_team"), latest("workflow_global")]), detail: updateOk || dryRunOk ? "Fluxo tradicional para probabilidades finais sem atualizar odds." : "Sem update recente registrado; revise dados antes do relatório final.", actions: ["workflow_team", "workflow_global"] },
   ];
 
   return (
@@ -411,24 +603,25 @@ function OperationsPanel({ actions, onJobFinished }: { actions: CommandAction[];
         </div>
       </header>
       <div className="ops-body">
+        <div className="info-banner"><strong>Fluxo recomendado:</strong> rode diagnóstico e dry-run antes de aplicar resultados. Para relatório mais realista, use o botão <strong>Workflow com odds</strong>: ele coleta odds, preserva o CSV/cache, roda simulação global e gera comparação modelo x mercado.</div>
         <div className="ops-form">
           <label>Time<input value={team} onChange={(event) => setTeam(event.target.value)} /></label>
           <label>Simulações<input type="number" min={1} max={500000} value={simulations} onChange={(event) => setSimulations(Number(event.target.value))} /></label>
           <label>Seed<input value={seed} onChange={(event) => setSeed(event.target.value)} /></label>
         </div>
         <div className="ops-state">
-          <span>Dry-run: {dryRun?.status ?? "pendente"}</span><span>Update: {update?.status ?? "pendente"}</span><span>Calibração: {calibrationOk ? "ok" : "pendente"}</span><span>Fila: {activeJob ? `${activeJob.request.action} ${activeJob.status}` : "livre"}</span>
+          <span>Dry-run: {dryRun?.status ?? "pendente"}</span><span>Update: {update?.status ?? "pendente"}</span><span>Odds: {marketOk ? "ok" : "pendente"}</span><span>Calibração: {calibrationOk ? "ok" : "pendente"}</span><span>Fila: {activeJob ? `${activeJob.request.action} ${activeJob.status}` : "livre"}</span>
         </div>
         {mode === "recommended" ? (
           <div className="workflow-steps">
             {stepGroups.map((step) => (
-              <article className={`workflow-step status-${step.status.replace(" ", "-")}`} key={step.number}>
+              <article className={`workflow-step status-${step.status.replace(" ", "-")}${(step as {highlight?: boolean}).highlight ? " step-highlight" : ""}`} key={step.number}>
                 <div className="step-index">{step.number}</div>
                 <div className="step-content">
                   <header><strong>{step.title}</strong><span>{step.status}</span></header>
-                  <p>{step.detail}</p>{step.locked && <small>{step.lockReason}</small>}
+                  <p>{step.detail}</p>{(step as {locked?: boolean; lockReason?: string}).locked && <small>{(step as {locked?: boolean; lockReason?: string}).lockReason}</small>}
                   <div className="step-actions">
-                    {step.actions.map((action) => <button className="command-button" type="button" key={action} disabled={busy || Boolean(step.locked)} onClick={() => execute(action)}><Play size={15} />{running === action ? "Executando..." : actionLabel(action)}</button>)}
+                    {step.actions.map((action) => <button className={`command-button${(step as {highlight?: boolean}).highlight ? " primary" : ""}`} type="button" key={action} disabled={busy || Boolean((step as {locked?: boolean}).locked)} onClick={() => execute(action)}><Play size={15} />{running === action ? "Executando..." : actionLabel(action)}</button>)}
                   </div>
                 </div>
               </article>
@@ -447,6 +640,123 @@ function OperationsPanel({ actions, onJobFinished }: { actions: CommandAction[];
   );
 }
 
+function MarketPage({ marketReport }: { marketReport: MarketReport | null }) {
+  if (!marketReport) {
+    return (
+      <section className="panel wide">
+        <header className="panel-header"><h2>Mercado</h2></header>
+        <div className="info-banner">Dados de mercado não disponíveis. Execute o <strong>Workflow com odds — Corrigir campeão pelo mercado</strong> na aba Operações para gerar este relatório.</div>
+      </section>
+    );
+  }
+  const { anchor, alerts, odds_summary, comparison } = marketReport;
+  const anchorRows: MarketAnchorRow[] = anchor?.rows ?? [];
+  const alertList = alerts?.alerts ?? [];
+  const summary = anchor?.summary;
+  const marketMode = anchor?.market_mode ?? "title_anchor";
+
+  const modeBadge = {
+    benchmark: "Odds usadas como benchmark",
+    title_anchor: "Odds ancorando campeão",
+    rating_adjustment: "Odds ajustando rating",
+  }[marketMode] ?? marketMode;
+
+  return (
+    <div className="market-page">
+      {/* Cards de resumo */}
+      <section className="panel wide">
+        <header className="panel-header"><h2>Mercado — Odds de Campeão</h2></header>
+        <div className="market-summary-grid">
+          <MetricCard icon={<Database size={20} />} label="Odds carregadas" value={String(odds_summary?.teams ?? summary?.teams_with_odds ?? "n/d")} detail={`${summary?.teams_without_odds ?? 0} seleções sem odds`} />
+          <MetricCard icon={<BarChart3 size={20} />} label="Overround" value={odds_summary?.overround_pct != null ? `${odds_summary.overround_pct.toFixed(2)}%` : "n/d"} detail="soma das probabilidades brutas" />
+          {summary?.biggest_above_market && <MetricCard icon={<AlertTriangle size={20} />} label="Maior acima do mercado" value={summary.biggest_above_market.team} detail={`${summary.biggest_above_market.delta_pp > 0 ? "+" : ""}${summary.biggest_above_market.delta_pp.toFixed(2)} p.p.`} tone="warning" />}
+          {summary?.biggest_below_market && <MetricCard icon={<AlertTriangle size={20} />} label="Maior abaixo do mercado" value={summary.biggest_below_market.team} detail={`${summary.biggest_below_market.delta_pp.toFixed(2)} p.p.`} tone="warning" />}
+          <MetricCard icon={<ShieldAlert size={20} />} label="Modo de mercado" value={modeBadge} detail={`${alerts?.alert_count ?? 0} alertas (|Δ| ≥ 3 p.p.)`} />
+        </div>
+      </section>
+
+      {/* Alertas */}
+      {alertList.length > 0 && (
+        <section className="panel wide">
+          <header className="panel-header"><h2>Alertas de divergência (|Δ| ≥ 3 p.p.)</h2></header>
+          <div className="table-wrap">
+            <table>
+              <thead><tr><th>Seleção</th><th>Modelo</th><th>Mercado</th><th>Modelo Mercado</th><th>Delta</th><th>Severidade</th></tr></thead>
+              <tbody>
+                {alertList.map((alert) => (
+                  <tr key={alert.team} className={`severity-${alert.severity}`}>
+                    <td><strong>{alert.team}</strong></td>
+                    <td>{pct(alert.model_winner_pct)}</td>
+                    <td>{pct(alert.market_winner_pct)}</td>
+                    <td>{pct(alert.anchor_winner_pct)}</td>
+                    <td className={alert.delta_pp > 0 ? "delta-positive" : "delta-negative"}>{alert.delta_pp > 0 ? "+" : ""}{alert.delta_pp.toFixed(2)} p.p.</td>
+                    <td><span className={`badge badge-${alert.severity}`}>{alert.severity}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {/* Tabela principal anchor */}
+      {anchorRows.length > 0 && (
+        <section className="panel wide">
+          <header className="panel-header"><h2>Comparação: Modelo Padrão × Mercado × Modelo Mercado</h2></header>
+          <div className="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th><th>Seleção</th><th>Grupo</th>
+                  <th>Modelo Padrão</th><th>Mercado</th><th>Modelo Mercado</th>
+                  <th>Δ Mod × Merc</th><th>Ajuste aplicado</th><th>Diagnóstico</th>
+                </tr>
+              </thead>
+              <tbody>
+                {anchorRows.map((row, idx) => {
+                  const diagLabel: Record<string, string> = {
+                    capped_above_market:    "Modelo muito acima do mercado (cap aplicado)",
+                    capped_below_market:    "Modelo muito abaixo do mercado (cap aplicado)",
+                    above_market_in_band:   "Modelo acima do mercado (dentro da banda)",
+                    below_market_in_band:   "Modelo abaixo do mercado (dentro da banda)",
+                    within_market_band:     "Alinhado com o mercado",
+                    missing_market_odds:    "Sem odds de mercado",
+                    insufficient_market_coverage: "Cobertura insuficiente",
+                  };
+                  const delta = row.delta_model_vs_market_pp;
+                  const adj = row.adjustment_applied_pp;
+                  return (
+                    <tr key={row.team}>
+                      <td>{idx + 1}</td>
+                      <td><strong>{row.team}</strong></td>
+                      <td>{row.group}</td>
+                      <td>{pct(row.model_winner_pct)}</td>
+                      <td>{row.market_winner_pct != null ? pct(row.market_winner_pct) : "n/d"}</td>
+                      <td><strong>{pct(row.anchor_winner_pct)}</strong></td>
+                      <td className={delta != null ? (delta > 0 ? "delta-positive" : delta < 0 ? "delta-negative" : "delta-neutral") : ""}>
+                        {delta != null ? `${delta > 0 ? "+" : ""}${delta.toFixed(2)} p.p.` : "n/d"}
+                      </td>
+                      <td className={adj > 0.01 ? "delta-positive" : adj < -0.01 ? "delta-negative" : "delta-neutral"}>
+                        {adj > 0 ? "+" : ""}{adj.toFixed(2)} p.p.
+                      </td>
+                      <td>{diagLabel[row.anchor_reason] ?? row.anchor_reason}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <div className="table-note">
+            Modelo Mercado = média ponderada 50/50 entre Modelo Padrão e probabilidade de mercado normalizada,
+            com cap máximo de ±5 p.p. em relação ao mercado e renormalização final.
+            O Modelo Padrão é preservado para auditoria.
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
 function App() {
   const [dashboard, setDashboard] = useState<DashboardSummary | null>(null);
   const [global, setGlobal] = useState<GlobalReport | null>(null);
@@ -457,12 +767,15 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [lastRefresh, setLastRefresh] = useState<Date | null>(null);
+  const [marketReport, setMarketReport] = useState<MarketReport | null>(null);
 
   const refreshData = useCallback(async (selectedModel: ModelName = model) => {
     setLoading(true); setError("");
     try {
       const [dashboardData, globalData, commandData] = await Promise.all([fetchDashboard(selectedModel), fetchGlobalReport(), fetchCommands()]);
       setDashboard(dashboardData); setGlobal(globalData); setActions(commandData.actions); setLastRefresh(new Date());
+      // Tenta carregar market report (opcional — não falha se não existir)
+      fetchMarketReport().then(setMarketReport).catch(() => setMarketReport(null));
     } catch (err) { setError((err as Error).message); } finally { setLoading(false); }
   }, [model]);
 
@@ -479,14 +792,15 @@ function App() {
 
   return (
     <main className="shell">
-      <aside className="sidebar"><div className="brand"><Trophy size={24} /><span>Copa 2026</span></div><nav>{[{k:"dashboard",l:"Dashboard"},{k:"teams",l:"Seleções"},{k:"groups",l:"Grupos"},{k:"calibration",l:"Calibração"},{k:"operations",l:"Operações"}].map((item) => <button key={item.k} className={tab === item.k ? "active" : ""} type="button" onClick={() => setTab(item.k as TabKey)}>{item.l}</button>)}</nav></aside>
+      <aside className="sidebar"><div className="brand"><Trophy size={24} /><span>Copa 2026</span></div><nav>{[{k:"dashboard",l:"Dashboard"},{k:"teams",l:"Seleções"},{k:"groups",l:"Grupos"},{k:"calibration",l:"Calibração"},{k:"market",l:"Mercado"},{k:"operations",l:"Operações"}].map((item) => <button key={item.k} className={tab === item.k ? "active" : ""} type="button" onClick={() => setTab(item.k as TabKey)}>{item.l}</button>)}</nav></aside>
       <section className="content">
         <header className="topbar"><div><h1>Dashboard de Simulação</h1><p>Relatórios locais gerados pelo simulador Monte Carlo. {lastRefresh ? `Atualizado às ${formatDate(lastRefresh.toISOString())}.` : ""}</p></div><div className="topbar-actions"><ModelToggle model={model} onChange={setModel} available={dashboard.available_models ?? ["balanced", "tuned"]} /><button className="ghost-button" type="button" disabled={loading} onClick={() => refreshData(model)}><RefreshCw size={16} />{loading ? "Atualizando..." : "Atualizar dados"}</button></div></header>
-        {tab !== "operations" && <section className="metrics-grid"><MetricCard icon={<Activity size={20} />} label="Simulações" value={String(dashboard.meta.simulations ?? "n/d")} detail={`Seed ${dashboard.meta.seed ?? "n/d"}`} /><MetricCard icon={<Trophy size={20} />} label="Favorito" value={selectedRows[0]?.team ?? "n/d"} detail={`${pct(selectedRows[0]?.winner_pct)} de título no ${modelLabels[model]}`} /><MetricCard icon={<BarChart3 size={20} />} label="Relatórios" value={String(dashboard.report_files.length)} detail="arquivos em output/" /><MetricCard icon={<Database size={20} />} label="Fonte" value="Local" detail="global reports + workflow" /></section>}
-        {tab === "dashboard" && <section className="main-grid"><section className="panel wide"><header className="panel-header"><h2>Modelos de simulação</h2></header><div className="model-explanation"><p>O Modelo Padrão usa a configuração principal do simulador e serve como cenário mais estável.</p><p>O Modelo Ajustado usa pesos calibrados pelo backtest e pode reagir mais às partidas recentes.</p></div></section><RunObservations dashboard={dashboard} /><section className="panel wide"><header className="panel-header"><div><h2>Ranking por fase — {metricLabels[metric]}</h2><small>{metricHelp[metric]}</small></div><div className="mode-toggle phase-toggle">{(Object.keys(metricLabels) as MetricKey[]).map((key) => <button key={key} className={metric === key ? "active" : ""} type="button" onClick={() => setMetric(key)}>{metricLabels[key]}</button>)}</div></header><div className="chart-box"><ResponsiveContainer width="100%" height={280}><BarChart data={chartRows} layout="vertical" margin={{ left: 24, right: 24 }}><CartesianGrid strokeDasharray="3 3" horizontal={false} /><XAxis type="number" tickFormatter={(value) => `${value}%`} /><YAxis type="category" dataKey="team" width={96} /><Tooltip formatter={(value) => pct(Number(value))} /><ReferenceLine x={10} stroke="#94a3b8" strokeDasharray="3 3" /><Bar dataKey="valor" fill="#2563eb" radius={[0, 4, 4, 0]} /></BarChart></ResponsiveContainer></div></section><RankingTable title="Mata-mata" rows={phaseRows(selectedRows, "round32_pct")} field="round32_pct" /><RankingTable title="Oitavas" rows={phaseRows(selectedRows, "round16_pct")} field="round16_pct" /><RankingTable title="Quartas" rows={phaseRows(selectedRows, "quarterfinal_pct")} field="quarterfinal_pct" /><RankingTable title="Semifinal" rows={phaseRows(selectedRows, "semifinal_pct")} field="semifinal_pct" /><RankingTable title="Final" rows={phaseRows(selectedRows, "final_pct")} field="final_pct" /><RankingTable title="Campeão" rows={phaseRows(selectedRows, "winner_pct")} field="winner_pct" /><GroupOutlook title="Liderança mais indefinida" rows={leadershipRows} mode="leadership" /><GroupOutlook title="Classificação mais indefinida" rows={qualificationRows} mode="qualification" /><RiskCards riskText={global.risk_report} leadership={leadershipRows} qualification={qualificationRows} /></section>}
+        {tab !== "operations" && tab !== "market" && <section className="metrics-grid"><MetricCard icon={<Activity size={20} />} label="Simulações" value={String(dashboard.meta.simulations ?? "n/d")} detail={`Seed ${dashboard.meta.seed ?? "n/d"}`} /><MetricCard icon={<Trophy size={20} />} label="Favorito" value={selectedRows[0]?.team ?? "n/d"} detail={`${pct(selectedRows[0]?.winner_pct)} de título no ${modelLabels[model]}`} /><MetricCard icon={<BarChart3 size={20} />} label="Relatórios" value={String(dashboard.report_files.length)} detail="arquivos em output/" /><MetricCard icon={<Database size={20} />} label="Fonte" value="Local" detail="global reports + workflow" /></section>}
+        {tab === "dashboard" && <DashboardPage dashboard={dashboard} global={global} selectedRows={selectedRows} metric={metric} onMetricChange={setMetric} chartRows={chartRows} leadershipRows={leadershipRows} qualificationRows={qualificationRows} />}
         {tab === "teams" && <section className="main-grid"><TeamsPage rows={selectedRows} /></section>}
-        {tab === "groups" && <section className="main-grid"><GroupsPage rows={selectedRows} leadership={leadershipRows} qualification={qualificationRows} /></section>}
+        {tab === "groups" && <GroupsPage rows={selectedRows} leadership={leadershipRows} qualification={qualificationRows} />}
         {tab === "calibration" && <CalibrationPage global={global} />}
+        {tab === "market" && <MarketPage marketReport={marketReport} />}
         {tab === "operations" && <section className="main-grid"><OperationsPanel actions={actions} onJobFinished={() => refreshData(model)} /><section className="panel wide"><header className="panel-header"><h2>Relatórios disponíveis</h2><FileText size={18} /></header><div className="table-wrap"><table><thead><tr><th>Arquivo</th><th>Atualizado</th><th>Idade</th><th>Tamanho</th></tr></thead><tbody>{dashboard.reports.slice(0, 20).map((report) => <tr key={report.name}><td>{report.name}</td><td>{formatDate(report.modified_at)}</td><td>{report.age_minutes} min</td><td>{Math.round(report.size_bytes / 1024)} KB</td></tr>)}</tbody></table></div></section></section>}
       </section>
     </main>

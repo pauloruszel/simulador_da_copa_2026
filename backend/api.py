@@ -19,6 +19,8 @@ class RunCommandPayload(BaseModel):
     team: str = "Brasil"
     simulations: int = Field(default=50000, ge=1, le=500000)
     seed: int | None = 42
+    market_mode: str | None = None
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -47,6 +49,12 @@ def full_dashboard(model: str = Query(default="balanced")) -> dict:
 @app.get("/api/global")
 def global_report() -> dict:
     return store.global_report()
+
+
+@app.get("/api/market")
+def market_report() -> dict:
+    """Retorna dados da aba Mercado: anchor, alerts, odds."""
+    return store.market_report()
 
 
 @app.get("/api/workflows/latest")

@@ -44,5 +44,14 @@
     "upset_floor_group_stage": 0.08,
     "probability_temperature": 1.05,
     "strong_favorite_rating_gap_threshold": 250
+  },
+  "market_title_anchor": {
+    "enabled": true,
+    "market_weight": 0.5,
+    "model_weight": 0.5,
+    "max_positive_delta_pp": 5.0,
+    "max_negative_delta_pp": 5.0,
+    "min_market_coverage_teams": 12,
+    "renormalize_after_anchor": true
   }
 }

@@ -137,9 +137,52 @@ def recency_multiplier(match_date: datetime, reference_date: datetime) -> float:
 
 
 def market_implied_team_strength(odds_data: dict[str, Any], ratings: dict[str, int]) -> dict[str, float]:
-    # Placeholder for normalized odds providers. Returns zero deltas when no
-    # explicit model-ready team probabilities are available.
-    return {team: 0.0 for team in ratings}
+    """Return market-derived rating deltas from normalized winner odds.
+
+    The odds feed is intentionally used as a soft anchor: it compares the
+    market's normalized title probabilities with a rating-prior distribution
+    derived from the current ratings and converts the difference into bounded
+    rating deltas. The caller still applies ``market_odds_weight``, so by
+    default this remains a benchmark/light adjustment rather than a hard
+    replacement for the model.
+    """
+    deltas = {team: 0.0 for team in ratings}
+    outrights = odds_data.get("outrights", []) if isinstance(odds_data, dict) else []
+    market_probs = {
+        item.get("team"): float(item.get("market_probability", 0.0))
+        for item in outrights
+        if item.get("team") in ratings and isinstance(item.get("market_probability"), (int, float))
+    }
+    if len(market_probs) < 2:
+        return deltas
+
+    scale = odds_data.get("rating_scale", 350) if isinstance(odds_data, dict) else 350
+    try:
+        scale = float(scale)
+    except (TypeError, ValueError):
+        scale = 350.0
+    scale = max(scale, 50.0)
+    max_delta = odds_data.get("max_market_rating_delta", 80) if isinstance(odds_data, dict) else 80
+    pp_to_rating = odds_data.get("pp_to_rating", 8) if isinstance(odds_data, dict) else 8
+    try:
+        max_delta = float(max_delta)
+        pp_to_rating = float(pp_to_rating)
+    except (TypeError, ValueError):
+        max_delta = 80.0
+        pp_to_rating = 8.0
+
+    teams = list(market_probs)
+    max_rating = max(ratings[team] for team in teams)
+    rating_raw = {team: math.exp((ratings[team] - max_rating) / scale) for team in teams}
+    rating_total = sum(rating_raw.values())
+    if rating_total <= 0:
+        return deltas
+    rating_probs = {team: value / rating_total for team, value in rating_raw.items()}
+
+    for team in teams:
+        diff_pp = (market_probs[team] - rating_probs[team]) * 100
+        deltas[team] = max(-max_delta, min(max_delta, diff_pp * pp_to_rating))
+    return deltas
 
 
 def build_calibrated_ratings(
@@ -192,7 +235,7 @@ def build_calibrated_ratings(
             "uncertainty_adjustment": uncertainty_adjustment,
             "final_rating": final_rating,
             "delta_total": final_rating - base,
-            "explanation": _explain(team, final_rating - base, form_component, opponent_component, home_component),
+            "explanation": _explain(team, final_rating - base, form_component, opponent_component, home_component, market_component),
         }
     return {
         "source": "calibrated",
@@ -264,12 +307,14 @@ def _uncertainty_adjustment(team: str, matches: list[Match]) -> int:
     return -3 if played < 2 else 0
 
 
-def _explain(team: str, total: int, form: int, opponent: int, home: int) -> str:
+def _explain(team: str, total: int, form: int, opponent: int, home: int, market: int = 0) -> str:
     parts = []
     if form:
         parts.append(f"forma recente {form:+}")
     if opponent:
         parts.append(f"forca dos adversarios {opponent:+}")
+    if market:
+        parts.append(f"mercado/odds {market:+}")
     if home:
         parts.append(f"mando/sede {home:+}")
     if not parts:

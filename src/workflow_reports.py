@@ -51,10 +51,13 @@ def _workflow_recommendation(steps: list[dict], metrics: dict) -> str:
     conflicts = max(dry.get("conflicts", 0) or 0, update.get("conflicts", 0) or 0)
     changed_real = max(dry.get("changed_real", 0) or 0, update.get("changed_real", 0) or 0)
     warnings = max(dry.get("warnings", 0) or 0, update.get("warnings", 0) or 0)
+    live_score = max(dry.get("non_final_score_detected", 0) or 0, update.get("non_final_score_detected", 0) or 0)
     if conflicts:
         return "dados com alerta: ha conflitos de fontes"
-    if warnings and not changed_real:
+    if live_score and not changed_real:
         return "dados confiaveis com alerta leve: ha placar live/nao-final ignorado com seguranca"
+    if warnings and not changed_real:
+        return "dados confiaveis com alerta leve: ha warnings do multi-source sem conflitos; revisar relatorio"
     if warnings:
         return "dados com alerta: revisar warnings do multi-source"
     return "dados confiaveis"
@@ -357,20 +360,20 @@ def _global_risk_lines(global_metrics: dict) -> list[str]:
     risks: list[str] = []
     leadership = global_metrics.get("most_uncertain_leadership_groups_balanced") or []
     if leadership:
-        risks.append("Liderancas mais indefinidas: " + "; ".join(
-            f"Grupo {row.get('group')} (gap {_pct(row.get('leadership_gap_pct'))})"
+        risks.append("Lideranças mais indefinidas: " + "; ".join(
+            f"Grupo {row.get('group')} (gap {float(row.get('leadership_gap_pct') or 0):.2f} p.p.)"
             for row in leadership[:3]
         ))
     qualification = global_metrics.get("most_uncertain_qualification_groups_balanced") or []
     if qualification:
-        risks.append("Classificacoes mais indefinidas: " + "; ".join(
-            f"Grupo {row.get('group')} (2v3 {_pct(row.get('qualification_gap_2v3_pct'))})"
+        risks.append("Disputas 2º x 3º mais indefinidas: " + "; ".join(
+            f"Grupo {row.get('group')} (2º x 3º {float(row.get('qualification_gap_2v3_pct') or 0):.2f} p.p.)"
             for row in qualification[:3]
         ))
     top_title = global_metrics.get("top_title_balanced") or []
     if top_title:
         top5_sum = sum(float(item.get("pct") or item.get("winner_pct") or 0) for item in top_title[:5])
-        risks.append(f"Concentracao dos 5 maiores favoritos ao titulo: {_pct(top5_sum)}")
+        risks.append(f"Concentração dos 5 maiores favoritos ao título: {_pct(top5_sum)}")
     top_r32 = global_metrics.get("top_round32_risks_balanced") or []
     if top_r32:
         risks.append("Favoritos com maior risco antes do mata-mata: " + "; ".join(
@@ -649,6 +652,24 @@ def _write_workflow_report(workflow: str, steps: list[dict], metrics: dict, outp
     for key in ("dry_run", "update", "backtest", "tuning", "balanced", "tuned", "global_report"):
         if key in metrics:
             lines.append(f"{key}: {json.dumps(metrics[key], ensure_ascii=False)}")
+    # market_mode e anchor — incluídos separadamente para atender critério de aceite
+    if "market_comparison" in metrics:
+        mc = metrics["market_comparison"]
+        market_mode_val = mc.get("market_mode", "n/d")
+        lines.append(f"market_mode: {market_mode_val}")
+        lines.append(f"market_comparison: selecoes_com_odds={mc.get('rows_with_odds', 'n/d')} sem_odds={mc.get('rows_without_odds', 'n/d')}")
+    if "market_title_anchor" in metrics:
+        mta = metrics["market_title_anchor"]
+        s = mta.get("summary", {})
+        lines.append(f"market_title_anchor: favorito={mta.get('leader', 'n/d')} overround={s.get('overround_pct', 'n/d')}% alertas={s.get('alerts_count', 'n/d')}")
+        if s.get("biggest_above_market"):
+            b = s["biggest_above_market"]
+            lines.append(f"  maior_acima_do_mercado: {b['team']} {b['delta_pp']:+.2f} p.p.")
+        if s.get("biggest_below_market"):
+            b = s["biggest_below_market"]
+            lines.append(f"  maior_abaixo_do_mercado: {b['team']} {b['delta_pp']:+.2f} p.p.")
+    if "market_benchmark" in metrics:
+        lines.append(f"market_mode: benchmark (apenas diagnóstico, sem alteração de probabilidades)")
     lines += ["", f"Recomendacao final: {recommendation}"]
     text = "\n".join(lines) + "\n"
     report_path.write_text(text, encoding="utf-8")

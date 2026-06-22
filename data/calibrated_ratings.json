@@ -1,52 +1,52 @@
 {
   "source": "calibrated",
-  "last_updated": "2026-06-21T22:38:51.395514Z",
+  "last_updated": "2026-06-22T13:44:38.547681Z",
   "preset": "weights_file",
   "ratings": {
-    "Argentina": 2138,
-    "Spain": 2105,
-    "France": 2099,
-    "England": 2076,
-    "Portugal": 2045,
-    "Brazil": 2046,
-    "Morocco": 2007,
+    "Argentina": 2139,
+    "Spain": 2108,
+    "France": 2103,
+    "England": 2079,
+    "Portugal": 2046,
+    "Brazil": 2047,
+    "Morocco": 2005,
     "Netherlands": 1996,
-    "Germany": 1990,
-    "Belgium": 1953,
-    "Uruguay": 1937,
-    "Colombia": 1933,
-    "Croatia": 1903,
+    "Germany": 1991,
+    "Belgium": 1952,
+    "Uruguay": 1932,
+    "Colombia": 1932,
+    "Croatia": 1902,
     "United States": 1913,
-    "Switzerland": 1869,
+    "Switzerland": 1868,
     "Japan": 1871,
-    "Senegal": 1850,
+    "Senegal": 1849,
     "Norway": 1844,
-    "Austria": 1839,
-    "Sweden": 1835,
+    "Austria": 1838,
+    "Sweden": 1834,
     "Mexico": 1857,
-    "Ecuador": 1802,
-    "Ivory Coast": 1809,
+    "Ecuador": 1801,
+    "Ivory Coast": 1808,
     "Iran": 1796,
     "Ghana": 1779,
-    "Australia": 1771,
+    "Australia": 1770,
     "Turkey": 1752,
-    "Paraguay": 1762,
-    "Egypt": 1756,
-    "Canada": 1774,
-    "South Korea": 1741,
+    "Paraguay": 1761,
+    "Egypt": 1762,
+    "Canada": 1773,
+    "South Korea": 1740,
     "Czechia": 1728,
     "Algeria": 1726,
     "Tunisia": 1707,
     "Saudi Arabia": 1697,
     "DR Congo": 1689,
-    "Bosnia and Herzegovina": 1678,
-    "New Zealand": 1659,
+    "Bosnia and Herzegovina": 1677,
+    "New Zealand": 1658,
     "South Africa": 1654,
     "Scotland": 1652,
-    "Qatar": 1634,
+    "Qatar": 1635,
     "Iraq": 1620,
     "Panama": 1610,
-    "Cape Verde": 1613,
+    "Cape Verde": 1624,
     "Uzbekistan": 1601,
     "Jordan": 1575,
     "Haiti": 1535,
@@ -60,12 +60,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": 1,
-      "market_component": 0,
+      "market_component": 1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": -3,
-      "final_rating": 2138,
-      "delta_total": -2,
-      "explanation": "Argentina: delta total -2; forca dos adversarios +1."
+      "final_rating": 2139,
+      "delta_total": -1,
+      "explanation": "Argentina: delta total -1; forca dos adversarios +1, mercado/odds +1."
     },
     "Spain": {
       "team": "Spain",
@@ -74,12 +74,12 @@
       "elo_component": 0,
       "tournament_form_component": -1,
       "opponent_adjusted_component": -4,
-      "market_component": 0,
+      "market_component": 3,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 2105,
-      "delta_total": -5,
-      "explanation": "Spain: delta total -5; forma recente -1, forca dos adversarios -4."
+      "final_rating": 2108,
+      "delta_total": -2,
+      "explanation": "Spain: delta total -2; forma recente -1, forca dos adversarios -4, mercado/odds +3."
     },
     "France": {
       "team": "France",
@@ -88,12 +88,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": 2,
-      "market_component": 0,
+      "market_component": 4,
       "home_advantage_component": 0,
       "uncertainty_adjustment": -3,
-      "final_rating": 2099,
-      "delta_total": -1,
-      "explanation": "France: delta total -1; forca dos adversarios +2."
+      "final_rating": 2103,
+      "delta_total": 3,
+      "explanation": "France: delta total +3; forca dos adversarios +2, mercado/odds +4."
     },
     "England": {
       "team": "England",
@@ -102,12 +102,12 @@
       "elo_component": 0,
       "tournament_form_component": 1,
       "opponent_adjusted_component": 3,
-      "market_component": 0,
+      "market_component": 3,
       "home_advantage_component": 0,
       "uncertainty_adjustment": -3,
-      "final_rating": 2076,
-      "delta_total": 1,
-      "explanation": "England: delta total +1; forma recente +1, forca dos adversarios +3."
+      "final_rating": 2079,
+      "delta_total": 4,
+      "explanation": "England: delta total +4; forma recente +1, forca dos adversarios +3, mercado/odds +3."
     },
     "Portugal": {
       "team": "Portugal",
@@ -116,12 +116,12 @@
       "elo_component": 0,
       "tournament_form_component": -1,
       "opponent_adjusted_component": -6,
-      "market_component": 0,
+      "market_component": 1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": -3,
-      "final_rating": 2045,
-      "delta_total": -10,
-      "explanation": "Portugal: delta total -10; forma recente -1, forca dos adversarios -6."
+      "final_rating": 2046,
+      "delta_total": -9,
+      "explanation": "Portugal: delta total -9; forma recente -1, forca dos adversarios -6, mercado/odds +1."
     },
     "Brazil": {
       "team": "Brazil",
@@ -130,12 +130,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": 1,
-      "market_component": 0,
+      "market_component": 1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 2046,
-      "delta_total": 1,
-      "explanation": "Brazil: delta total +1; forca dos adversarios +1."
+      "final_rating": 2047,
+      "delta_total": 2,
+      "explanation": "Brazil: delta total +2; forca dos adversarios +1, mercado/odds +1."
     },
     "Morocco": {
       "team": "Morocco",
@@ -143,13 +143,13 @@
       "fifa_component": 0,
       "elo_component": 0,
       "tournament_form_component": 0,
-      "opponent_adjusted_component": 2,
-      "market_component": 0,
+      "opponent_adjusted_component": 1,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 2007,
-      "delta_total": 2,
-      "explanation": "Morocco: delta total +2; forca dos adversarios +2."
+      "final_rating": 2005,
+      "delta_total": 0,
+      "explanation": "Morocco: delta total +0; forca dos adversarios +1, mercado/odds -1."
     },
     "Netherlands": {
       "team": "Netherlands",
@@ -172,12 +172,12 @@
       "elo_component": 0,
       "tournament_form_component": 1,
       "opponent_adjusted_component": 4,
-      "market_component": 0,
+      "market_component": 1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 1990,
-      "delta_total": 5,
-      "explanation": "Germany: delta total +5; forma recente +1, forca dos adversarios +4."
+      "final_rating": 1991,
+      "delta_total": 6,
+      "explanation": "Germany: delta total +6; forma recente +1, forca dos adversarios +4, mercado/odds +1."
     },
     "Belgium": {
       "team": "Belgium",
@@ -186,26 +186,26 @@
       "elo_component": 0,
       "tournament_form_component": -1,
       "opponent_adjusted_component": -6,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 1953,
-      "delta_total": -7,
-      "explanation": "Belgium: delta total -7; forma recente -1, forca dos adversarios -6."
+      "final_rating": 1952,
+      "delta_total": -8,
+      "explanation": "Belgium: delta total -8; forma recente -1, forca dos adversarios -6, mercado/odds -1."
     },
     "Uruguay": {
       "team": "Uruguay",
       "base_rating": 1945,
       "fifa_component": 0,
       "elo_component": 0,
-      "tournament_form_component": -1,
-      "opponent_adjusted_component": -4,
-      "market_component": 0,
+      "tournament_form_component": -2,
+      "opponent_adjusted_component": -10,
+      "market_component": -1,
       "home_advantage_component": 0,
-      "uncertainty_adjustment": -3,
-      "final_rating": 1937,
-      "delta_total": -8,
-      "explanation": "Uruguay: delta total -8; forma recente -1, forca dos adversarios -4."
+      "uncertainty_adjustment": 0,
+      "final_rating": 1932,
+      "delta_total": -13,
+      "explanation": "Uruguay: delta total -13; forma recente -2, forca dos adversarios -10, mercado/odds -1."
     },
     "Colombia": {
       "team": "Colombia",
@@ -214,12 +214,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": 1,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": -3,
-      "final_rating": 1933,
-      "delta_total": -2,
-      "explanation": "Colombia: delta total -2; forca dos adversarios +1."
+      "final_rating": 1932,
+      "delta_total": -3,
+      "explanation": "Colombia: delta total -3; forca dos adversarios +1, mercado/odds -1."
     },
     "Croatia": {
       "team": "Croatia",
@@ -228,12 +228,12 @@
       "elo_component": 0,
       "tournament_form_component": -1,
       "opponent_adjusted_component": -3,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": -3,
-      "final_rating": 1903,
-      "delta_total": -7,
-      "explanation": "Croatia: delta total -7; forma recente -1, forca dos adversarios -3."
+      "final_rating": 1902,
+      "delta_total": -8,
+      "explanation": "Croatia: delta total -8; forma recente -1, forca dos adversarios -3, mercado/odds -1."
     },
     "United States": {
       "team": "United States",
@@ -256,12 +256,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": -1,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 1869,
-      "delta_total": -1,
-      "explanation": "Switzerland: delta total -1; forca dos adversarios -1."
+      "final_rating": 1868,
+      "delta_total": -2,
+      "explanation": "Switzerland: delta total -2; forca dos adversarios -1, mercado/odds -1."
     },
     "Japan": {
       "team": "Japan",
@@ -284,12 +284,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": -2,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": -3,
-      "final_rating": 1850,
-      "delta_total": -5,
-      "explanation": "Senegal: delta total -5; forca dos adversarios -2."
+      "final_rating": 1849,
+      "delta_total": -6,
+      "explanation": "Senegal: delta total -6; forca dos adversarios -2, mercado/odds -1."
     },
     "Norway": {
       "team": "Norway",
@@ -312,12 +312,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": 2,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": -3,
-      "final_rating": 1839,
-      "delta_total": -1,
-      "explanation": "Austria: delta total -1; forca dos adversarios +2."
+      "final_rating": 1838,
+      "delta_total": -2,
+      "explanation": "Austria: delta total -2; forca dos adversarios +2, mercado/odds -1."
     },
     "Sweden": {
       "team": "Sweden",
@@ -326,12 +326,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": 0,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 1835,
-      "delta_total": 0,
-      "explanation": "Sweden: delta total +0; sem ajuste relevante."
+      "final_rating": 1834,
+      "delta_total": -1,
+      "explanation": "Sweden: delta total -1; mercado/odds -1."
     },
     "Mexico": {
       "team": "Mexico",
@@ -354,12 +354,12 @@
       "elo_component": 0,
       "tournament_form_component": -2,
       "opponent_adjusted_component": -11,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 1802,
-      "delta_total": -13,
-      "explanation": "Ecuador: delta total -13; forma recente -2, forca dos adversarios -11."
+      "final_rating": 1801,
+      "delta_total": -14,
+      "explanation": "Ecuador: delta total -14; forma recente -2, forca dos adversarios -11, mercado/odds -1."
     },
     "Ivory Coast": {
       "team": "Ivory Coast",
@@ -368,12 +368,12 @@
       "elo_component": 0,
       "tournament_form_component": 1,
       "opponent_adjusted_component": 3,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 1809,
-      "delta_total": 4,
-      "explanation": "Ivory Coast: delta total +4; forma recente +1, forca dos adversarios +3."
+      "final_rating": 1808,
+      "delta_total": 3,
+      "explanation": "Ivory Coast: delta total +3; forma recente +1, forca dos adversarios +3, mercado/odds -1."
     },
     "Iran": {
       "team": "Iran",
@@ -410,12 +410,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": 1,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 1771,
-      "delta_total": 1,
-      "explanation": "Australia: delta total +1; forca dos adversarios +1."
+      "final_rating": 1770,
+      "delta_total": 0,
+      "explanation": "Australia: delta total +0; forca dos adversarios +1, mercado/odds -1."
     },
     "Turkey": {
       "team": "Turkey",
@@ -438,12 +438,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": 2,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 1762,
-      "delta_total": 2,
-      "explanation": "Paraguay: delta total +2; forca dos adversarios +2."
+      "final_rating": 1761,
+      "delta_total": 1,
+      "explanation": "Paraguay: delta total +1; forca dos adversarios +2, mercado/odds -1."
     },
     "Egypt": {
       "team": "Egypt",
@@ -451,13 +451,13 @@
       "fifa_component": 0,
       "elo_component": 0,
       "tournament_form_component": 1,
-      "opponent_adjusted_component": 3,
-      "market_component": 0,
+      "opponent_adjusted_component": 7,
+      "market_component": -1,
       "home_advantage_component": 0,
-      "uncertainty_adjustment": -3,
-      "final_rating": 1756,
-      "delta_total": 1,
-      "explanation": "Egypt: delta total +1; forma recente +1, forca dos adversarios +3."
+      "uncertainty_adjustment": 0,
+      "final_rating": 1762,
+      "delta_total": 7,
+      "explanation": "Egypt: delta total +7; forma recente +1, forca dos adversarios +7, mercado/odds -1."
     },
     "Canada": {
       "team": "Canada",
@@ -466,12 +466,12 @@
       "elo_component": 0,
       "tournament_form_component": 1,
       "opponent_adjusted_component": 3,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 25,
       "uncertainty_adjustment": 0,
-      "final_rating": 1774,
-      "delta_total": 29,
-      "explanation": "Canada: delta total +29; forma recente +1, forca dos adversarios +3, mando/sede +25."
+      "final_rating": 1773,
+      "delta_total": 28,
+      "explanation": "Canada: delta total +28; forma recente +1, forca dos adversarios +3, mercado/odds -1, mando/sede +25."
     },
     "South Korea": {
       "team": "South Korea",
@@ -480,12 +480,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": 1,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 1741,
-      "delta_total": 1,
-      "explanation": "South Korea: delta total +1; forca dos adversarios +1."
+      "final_rating": 1740,
+      "delta_total": 0,
+      "explanation": "South Korea: delta total +0; forca dos adversarios +1, mercado/odds -1."
     },
     "Czechia": {
       "team": "Czechia",
@@ -564,12 +564,12 @@
       "elo_component": 0,
       "tournament_form_component": 0,
       "opponent_adjusted_component": -2,
-      "market_component": 0,
+      "market_component": -1,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 1678,
-      "delta_total": -2,
-      "explanation": "Bosnia and Herzegovina: delta total -2; forca dos adversarios -2."
+      "final_rating": 1677,
+      "delta_total": -3,
+      "explanation": "Bosnia and Herzegovina: delta total -3; forca dos adversarios -2, mercado/odds -1."
     },
     "New Zealand": {
       "team": "New Zealand",
@@ -577,13 +577,13 @@
       "fifa_component": 0,
       "elo_component": 0,
       "tournament_form_component": 0,
-      "opponent_adjusted_component": 2,
+      "opponent_adjusted_component": -2,
       "market_component": 0,
       "home_advantage_component": 0,
-      "uncertainty_adjustment": -3,
-      "final_rating": 1659,
-      "delta_total": -1,
-      "explanation": "New Zealand: delta total -1; forca dos adversarios +2."
+      "uncertainty_adjustment": 0,
+      "final_rating": 1658,
+      "delta_total": -2,
+      "explanation": "New Zealand: delta total -2; forca dos adversarios -2."
     },
     "South Africa": {
       "team": "South Africa",
@@ -619,13 +619,13 @@
       "fifa_component": 0,
       "elo_component": 0,
       "tournament_form_component": 0,
-      "opponent_adjusted_component": -1,
+      "opponent_adjusted_component": 0,
       "market_component": 0,
       "home_advantage_component": 0,
       "uncertainty_adjustment": 0,
-      "final_rating": 1634,
-      "delta_total": -1,
-      "explanation": "Qatar: delta total -1; forca dos adversarios -1."
+      "final_rating": 1635,
+      "delta_total": 0,
+      "explanation": "Qatar: delta total +0; sem ajuste relevante."
     },
     "Iraq": {
       "team": "Iraq",
@@ -660,14 +660,14 @@
       "base_rating": 1610,
       "fifa_component": 0,
       "elo_component": 0,
-      "tournament_form_component": 1,
-      "opponent_adjusted_component": 5,
+      "tournament_form_component": 2,
+      "opponent_adjusted_component": 12,
       "market_component": 0,
       "home_advantage_component": 0,
-      "uncertainty_adjustment": -3,
-      "final_rating": 1613,
-      "delta_total": 3,
-      "explanation": "Cape Verde: delta total +3; forma recente +1, forca dos adversarios +5."
+      "uncertainty_adjustment": 0,
+      "final_rating": 1624,
+      "delta_total": 14,
+      "explanation": "Cape Verde: delta total +14; forma recente +2, forca dos adversarios +12."
     },
     "Uzbekistan": {
       "team": "Uzbekistan",
@@ -772,6 +772,15 @@
       "upset_floor_group_stage": 0.08,
       "probability_temperature": 1.0,
       "strong_favorite_rating_gap_threshold": 250
+    },
+    "market_title_anchor": {
+      "enabled": true,
+      "market_weight": 0.5,
+      "model_weight": 0.5,
+      "max_positive_delta_pp": 5.0,
+      "max_negative_delta_pp": 5.0,
+      "min_market_coverage_teams": 12,
+      "renormalize_after_anchor": true
     },
     "preset": "weights_file",
     "weights_file": "output\\best_model_weights.json"

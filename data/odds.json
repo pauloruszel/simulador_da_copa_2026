@@ -1,6 +1,826 @@
 {
-  "source": null,
-  "last_updated": null,
-  "matches": []
+  "source": "market_odds",
+  "provider": "oddschecker_manual_or_scraped",
+  "last_updated": "2026-06-22T13:43:33.396910Z",
+  "markets": [
+    "winner"
+  ],
+  "overround": 1.1330420604885334,
+  "outrights": [
+    {
+      "market_type": "winner",
+      "team": "France",
+      "odds_decimal": 5.0,
+      "raw_implied_probability": 0.2,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "France",
+          "group": null,
+          "odds_decimal": 5.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.1765159537976605,
+      "market_probability_pct": 17.65159537976605
+    },
+    {
+      "market_type": "winner",
+      "team": "Spain",
+      "odds_decimal": 7.0,
+      "raw_implied_probability": 0.14285714285714285,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Spain",
+          "group": null,
+          "odds_decimal": 7.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.12608282414118605,
+      "market_probability_pct": 12.608282414118605
+    },
+    {
+      "market_type": "winner",
+      "team": "England",
+      "odds_decimal": 7.5,
+      "raw_implied_probability": 0.13333333333333333,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "England",
+          "group": null,
+          "odds_decimal": 7.5,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.11767730253177365,
+      "market_probability_pct": 11.767730253177366
+    },
+    {
+      "market_type": "winner",
+      "team": "Argentina",
+      "odds_decimal": 9.05,
+      "raw_implied_probability": 0.11049723756906077,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Argentina",
+          "group": null,
+          "odds_decimal": 9.05,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.09752262640754723,
+      "market_probability_pct": 9.752262640754724
+    },
+    {
+      "market_type": "winner",
+      "team": "Portugal",
+      "odds_decimal": 12.0,
+      "raw_implied_probability": 0.08333333333333333,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Portugal",
+          "group": null,
+          "odds_decimal": 12.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.07354831408235853,
+      "market_probability_pct": 7.354831408235853
+    },
+    {
+      "market_type": "winner",
+      "team": "Brazil",
+      "odds_decimal": 13.0,
+      "raw_implied_probability": 0.07692307692307693,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Brazil",
+          "group": null,
+          "odds_decimal": 13.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.06789075146063865,
+      "market_probability_pct": 6.789075146063865
+    },
+    {
+      "market_type": "winner",
+      "team": "Germany",
+      "odds_decimal": 15.0,
+      "raw_implied_probability": 0.06666666666666667,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Germany",
+          "group": null,
+          "odds_decimal": 15.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.058838651265886825,
+      "market_probability_pct": 5.883865126588683
+    },
+    {
+      "market_type": "winner",
+      "team": "Netherlands",
+      "odds_decimal": 17.0,
+      "raw_implied_probability": 0.058823529411764705,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Netherlands",
+          "group": null,
+          "odds_decimal": 17.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.051916456999311904,
+      "market_probability_pct": 5.191645699931191
+    },
+    {
+      "market_type": "winner",
+      "team": "Norway",
+      "odds_decimal": 34.0,
+      "raw_implied_probability": 0.029411764705882353,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Norway",
+          "group": null,
+          "odds_decimal": 34.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.025958228499655952,
+      "market_probability_pct": 2.5958228499655953
+    },
+    {
+      "market_type": "winner",
+      "team": "United States",
+      "odds_decimal": 34.0,
+      "raw_implied_probability": 0.029411764705882353,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "United States",
+          "group": null,
+          "odds_decimal": 34.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.025958228499655952,
+      "market_probability_pct": 2.5958228499655953
+    },
+    {
+      "market_type": "winner",
+      "team": "Morocco",
+      "odds_decimal": 34.0,
+      "raw_implied_probability": 0.029411764705882353,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Morocco",
+          "group": null,
+          "odds_decimal": 34.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.025958228499655952,
+      "market_probability_pct": 2.5958228499655953
+    },
+    {
+      "market_type": "winner",
+      "team": "Japan",
+      "odds_decimal": 41.0,
+      "raw_implied_probability": 0.024390243902439025,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Japan",
+          "group": null,
+          "odds_decimal": 41.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.021526335828982987,
+      "market_probability_pct": 2.1526335828982988
+    },
+    {
+      "market_type": "winner",
+      "team": "Mexico",
+      "odds_decimal": 51.0,
+      "raw_implied_probability": 0.0196078431372549,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Mexico",
+          "group": null,
+          "odds_decimal": 51.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.017305485666437304,
+      "market_probability_pct": 1.7305485666437304
+    },
+    {
+      "market_type": "winner",
+      "team": "Colombia",
+      "odds_decimal": 51.0,
+      "raw_implied_probability": 0.0196078431372549,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Colombia",
+          "group": null,
+          "odds_decimal": 51.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.017305485666437304,
+      "market_probability_pct": 1.7305485666437304
+    },
+    {
+      "market_type": "winner",
+      "team": "Belgium",
+      "odds_decimal": 61.0,
+      "raw_implied_probability": 0.01639344262295082,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Belgium",
+          "group": null,
+          "odds_decimal": 61.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.014468520803086925,
+      "market_probability_pct": 1.4468520803086926
+    },
+    {
+      "market_type": "winner",
+      "team": "Switzerland",
+      "odds_decimal": 81.0,
+      "raw_implied_probability": 0.012345679012345678,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Switzerland",
+          "group": null,
+          "odds_decimal": 81.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.010896046530719782,
+      "market_probability_pct": 1.0896046530719783
+    },
+    {
+      "market_type": "winner",
+      "team": "Uruguay",
+      "odds_decimal": 101.0,
+      "raw_implied_probability": 0.009900990099009901,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Uruguay",
+          "group": null,
+          "odds_decimal": 101.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.008738413554339628,
+      "market_probability_pct": 0.8738413554339628
+    },
+    {
+      "market_type": "winner",
+      "team": "Croatia",
+      "odds_decimal": 101.0,
+      "raw_implied_probability": 0.009900990099009901,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Croatia",
+          "group": null,
+          "odds_decimal": 101.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.008738413554339628,
+      "market_probability_pct": 0.8738413554339628
+    },
+    {
+      "market_type": "winner",
+      "team": "Senegal",
+      "odds_decimal": 126.0,
+      "raw_implied_probability": 0.007936507936507936,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Senegal",
+          "group": null,
+          "odds_decimal": 126.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.007004601341177003,
+      "market_probability_pct": 0.7004601341177004
+    },
+    {
+      "market_type": "winner",
+      "team": "Austria",
+      "odds_decimal": 130.0,
+      "raw_implied_probability": 0.007692307692307693,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Austria",
+          "group": null,
+          "odds_decimal": 130.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.006789075146063865,
+      "market_probability_pct": 0.6789075146063865
+    },
+    {
+      "market_type": "winner",
+      "team": "Ivory Coast",
+      "odds_decimal": 150.0,
+      "raw_implied_probability": 0.006666666666666667,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Ivory Coast",
+          "group": null,
+          "odds_decimal": 150.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.005883865126588683,
+      "market_probability_pct": 0.5883865126588683
+    },
+    {
+      "market_type": "winner",
+      "team": "Australia",
+      "odds_decimal": 160.0,
+      "raw_implied_probability": 0.00625,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Australia",
+          "group": null,
+          "odds_decimal": 160.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.0055161235561768905,
+      "market_probability_pct": 0.5516123556176891
+    },
+    {
+      "market_type": "winner",
+      "team": "Canada",
+      "odds_decimal": 160.0,
+      "raw_implied_probability": 0.00625,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Canada",
+          "group": null,
+          "odds_decimal": 160.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.0055161235561768905,
+      "market_probability_pct": 0.5516123556176891
+    },
+    {
+      "market_type": "winner",
+      "team": "Sweden",
+      "odds_decimal": 201.0,
+      "raw_implied_probability": 0.004975124378109453,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Sweden",
+          "group": null,
+          "odds_decimal": 201.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.004390944124319913,
+      "market_probability_pct": 0.43909441243199127
+    },
+    {
+      "market_type": "winner",
+      "team": "Egypt",
+      "odds_decimal": 251.0,
+      "raw_implied_probability": 0.00398406374501992,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Egypt",
+          "group": null,
+          "odds_decimal": 251.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.0035162540597143523,
+      "market_probability_pct": 0.3516254059714352
+    },
+    {
+      "market_type": "winner",
+      "team": "Ecuador",
+      "odds_decimal": 251.0,
+      "raw_implied_probability": 0.00398406374501992,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Ecuador",
+          "group": null,
+          "odds_decimal": 251.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.0035162540597143523,
+      "market_probability_pct": 0.3516254059714352
+    },
+    {
+      "market_type": "winner",
+      "team": "Scotland",
+      "odds_decimal": 260.0,
+      "raw_implied_probability": 0.0038461538461538464,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Scotland",
+          "group": null,
+          "odds_decimal": 260.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.0033945375730319327,
+      "market_probability_pct": 0.33945375730319327
+    },
+    {
+      "market_type": "winner",
+      "team": "South Korea",
+      "odds_decimal": 301.0,
+      "raw_implied_probability": 0.0033222591362126247,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "South Korea",
+          "group": null,
+          "odds_decimal": 301.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.0029321587009578155,
+      "market_probability_pct": 0.29321587009578154
+    },
+    {
+      "market_type": "winner",
+      "team": "Paraguay",
+      "odds_decimal": 301.0,
+      "raw_implied_probability": 0.0033222591362126247,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Paraguay",
+          "group": null,
+          "odds_decimal": 301.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.0029321587009578155,
+      "market_probability_pct": 0.29321587009578154
+    },
+    {
+      "market_type": "winner",
+      "team": "Bosnia and Herzegovina",
+      "odds_decimal": 501.0,
+      "raw_implied_probability": 0.001996007984031936,
+      "bookmakers": [
+        "Oddschecker_best"
+      ],
+      "source_urls": [
+        "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite"
+      ],
+      "collected_at": "2026-06-22T00:55:00Z",
+      "records": [
+        {
+          "market_type": "winner",
+          "team": "Bosnia and Herzegovina",
+          "group": null,
+          "odds_decimal": 501.0,
+          "bookmaker": "Oddschecker_best",
+          "source_url": "https://www.oddschecker.com/br/futebol/internacional/copa-do-mundo-fifa/copa-do-mundo/vencedor?utm_source=oddschecker&utm_medium=referral&utm_campaign=uksite",
+          "collected_at": "2026-06-22T00:55:00Z",
+          "notes": "manual seed from logged Oddschecker winner market"
+        }
+      ],
+      "market_probability": 0.0017616362654457134,
+      "market_probability_pct": 0.17616362654457135
+    }
+  ],
+  "matches": [],
+  "fetch_status": "cache_fallback",
+  "scraped_records": 0,
+  "cached_records": 30,
+  "merged_records": 30
 }
-
